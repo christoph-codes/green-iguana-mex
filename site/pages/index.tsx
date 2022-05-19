@@ -12,7 +12,7 @@ const Home: NextPage = (): any => (
 		</Head>
 
 		<main className={styles.main}>
-			<h1 className={styles.title}>
+			<h1 className="animate__animated animate__bounce">
 				Welcome to <a href="https://nextjs.org">Next.js!</a>
 			</h1>
 
