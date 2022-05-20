@@ -30,3 +30,4 @@ $colors: (
 // Color utility classes
 @include modifiers($colors, 'text', 'color');
 @include modifiers($colors, 'bg', 'background-color');
+@include modifiers($colors, 'bc', 'border-color');
