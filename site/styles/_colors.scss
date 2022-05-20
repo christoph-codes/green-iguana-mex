@@ -1,0 +1,32 @@
+@import './utilities';
+$primary: #0BAA6D;
+$primaryhover: #078052;
+$secondary: #FFC924;
+$secondaryhover: #d5a81f;
+$tertiary: #DD1B1B;
+$tertiaryhover: #b01616;
+$grey: #3F3931;
+$greyhover: #292621;
+$grey-light: #977B7B;
+$white: #FFFFFF;
+$offwhite: #F9F9F9;
+$whitegrey: #F5F5F5;
+
+$colors: (
+	'primary': $primary,
+	'primaryhover': $primaryhover,
+	'secondary': $secondary,
+	'secondaryhover': $secondaryhover,
+	'tertiary': $tertiary,
+	'tertiaryhover': $tertiaryhover,
+	'grey': $grey,
+	'greyhover': $greyhover,
+	'grey-light': $grey-light,
+	'white': $white,
+	'offwhite': $offwhite,
+	'whitegrey': $whitegrey,
+);
+
+// Color utility classes
+@include modifiers($colors, 'text', 'color');
+@include modifiers($colors, 'bg', 'background-color');

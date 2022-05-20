@@ -1,0 +1,9 @@
+@mixin modifiers($map, $name, $attribute, $separator: '-') {
+	@each $item, $value in $map {
+		.#{$name} {
+			&#{$separator}#{$item} {
+			#{$attribute}: $value;
+			}
+		}
+	}
+}
