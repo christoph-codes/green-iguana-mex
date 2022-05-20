@@ -2,7 +2,7 @@
 	@each $item, $value in $map {
 		.#{$name} {
 			&#{$separator}#{$item} {
-			#{$attribute}: $value;
+				#{$attribute}: $value;
 			}
 		}
 	}
