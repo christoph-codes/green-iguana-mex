@@ -1,7 +1,7 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
-import styles from '../styles/Home.module.css';
+import styles from '../styles/Home.module.scss';
 
 const Home: NextPage = (): any => (
 	<div className={styles.container}>
@@ -12,54 +12,67 @@ const Home: NextPage = (): any => (
 		</Head>
 
 		<main className={styles.main}>
-			<h1 className="animate__animated animate__bounce">
-				Welcome to <a href="https://nextjs.org">Next.js!</a>
-			</h1>
-
-			<p className={styles.description}>
-				Get started by editing{' '}
+			<h1 className="animate__animated animate__bounce">Welcome to </h1>
+			<p style={{ width: '50%' }} className={styles.description}>
+				Get started by editing this block of code over and over but I
+				have to make sure that everything is good before I approve of
+				this font size.{' '}
 				<code className={styles.code}>pages/index.tsx</code>
+				<a href="https://nextjs.org">
+					Next.js! Longer title to see how it wraps
+				</a>
 			</p>
 
-			<div className={styles.grid}>
-				<a href="https://nextjs.org/docs" className={styles.card}>
-					<h2>Documentation &rarr;</h2>
-					<p>
-						Find in-depth information about Next.js features and
-						API.
-					</p>
-				</a>
+			<h2 className="animate__animated animate__bounce">
+				Welcome to <a href="https://nextjs.org">Next.js!</a>
+			</h2>
+			<ul style={{ width: '50%' }} className={styles.description}>
+				<li>Hello bro</li>
+				<li>Hello gal</li>
+				<li>Hello mama</li>
+				<ul>
+					<li>Hello dada</li>
+					<li>Hello sister</li>
+				</ul>
+				<li>Hello grandma</li>
+			</ul>
+			<h3 className="animate__animated animate__bounce">
+				Welcome to <a href="https://nextjs.org">Next.js!</a>
+			</h3>
+			<p style={{ width: '50%' }} className={styles.description}>
+				Get started by editing this block of code over and over but I
+				have to make sure that everything is good before I approve of
+				this font size.{' '}
+				<code className={styles.code}>pages/index.tsx</code>
+			</p>
+			<h4 className="animate__animated animate__bounce">
+				Welcome to <a href="https://nextjs.org">Next.js!</a>
+			</h4>
+			<p style={{ width: '50%' }} className={styles.description}>
+				Get started by editing this block of code over and over but I
+				have to make sure that everything is good before I approve of
+				this font size.{' '}
+				<code className={styles.code}>pages/index.tsx</code>
+			</p>
+			<h5 className="animate__animated animate__bounce">
+				Welcome to <a href="https://nextjs.org">Next.js!</a>
+			</h5>
+			<p style={{ width: '50%' }} className={styles.description}>
+				Get started by editing this block of code over and over but I
+				have to make sure that everything is good before I approve of
+				this font size.{' '}
+				<code className={styles.code}>pages/index.tsx</code>
+			</p>
+			<h6 className="animate__animated animate__bounce">
+				Welcome to <a href="https://nextjs.org">Next.js!</a>
+			</h6>
 
-				<a href="https://nextjs.org/learn" className={styles.card}>
-					<h2>Learn &rarr;</h2>
-					<p>
-						Learn about Next.js in an interactive course with
-						quizzes!
-					</p>
-				</a>
-
-				<a
-					href="https://github.com/vercel/next.js/tree/canary/examples"
-					className={styles.card}
-				>
-					<h2>Examples &rarr;</h2>
-					<p>
-						Discover and deploy boilerplate example Next.js
-						projects.
-					</p>
-				</a>
-
-				<a
-					href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-					className={styles.card}
-				>
-					<h2>Deploy &rarr;</h2>
-					<p>
-						Instantly deploy your Next.js site to a public URL with
-						Vercel.
-					</p>
-				</a>
-			</div>
+			<p style={{ width: '50%' }} className={styles.description}>
+				Get started by editing this block of code over and over but I
+				have to make sure that everything is good before I approve of
+				this font size.{' '}
+				<code className={styles.code}>pages/index.tsx</code>
+			</p>
 		</main>
 
 		<footer className={styles.footer}>
