@@ -11,8 +11,10 @@ const Home: NextPage = (): any => (
 			<link rel="icon" href="/favicon.ico" />
 		</Head>
 
-		<main className={styles.main}>
-			<h1 className="animate__animated animate__bounce">Welcome to </h1>
+		<main className="bg-offwhite">
+			<h1 className="animate__animated animate__bounce">
+				Welcome to Green Iguana
+			</h1>
 			<p style={{ width: '50%' }} className={styles.description}>
 				Get started by editing this block of code over and over but I
 				have to make sure that everything is good before I approve of
@@ -24,7 +26,7 @@ const Home: NextPage = (): any => (
 			</p>
 
 			<h2 className="animate__animated animate__bounce">
-				Welcome to <a href="https://nextjs.org">Next.js!</a>
+				Welcome to Green Iguana
 			</h2>
 			<ul style={{ width: '50%' }} className={styles.description}>
 				<li>Hello bro</li>
@@ -37,7 +39,7 @@ const Home: NextPage = (): any => (
 				<li>Hello grandma</li>
 			</ul>
 			<h3 className="animate__animated animate__bounce">
-				Welcome to <a href="https://nextjs.org">Next.js!</a>
+				Welcome to Green Iguana
 			</h3>
 			<p style={{ width: '50%' }} className={styles.description}>
 				Get started by editing this block of code over and over but I
@@ -46,7 +48,7 @@ const Home: NextPage = (): any => (
 				<code className={styles.code}>pages/index.tsx</code>
 			</p>
 			<h4 className="animate__animated animate__bounce">
-				Welcome to <a href="https://nextjs.org">Next.js!</a>
+				Welcome to Green Iguana
 			</h4>
 			<p style={{ width: '50%' }} className={styles.description}>
 				Get started by editing this block of code over and over but I
@@ -55,7 +57,7 @@ const Home: NextPage = (): any => (
 				<code className={styles.code}>pages/index.tsx</code>
 			</p>
 			<h5 className="animate__animated animate__bounce">
-				Welcome to <a href="https://nextjs.org">Next.js!</a>
+				Welcome to Green Iguana
 			</h5>
 			<p style={{ width: '50%' }} className={styles.description}>
 				Get started by editing this block of code over and over but I
@@ -64,7 +66,7 @@ const Home: NextPage = (): any => (
 				<code className={styles.code}>pages/index.tsx</code>
 			</p>
 			<h6 className="animate__animated animate__bounce">
-				Welcome to <a href="https://nextjs.org">Next.js!</a>
+				Welcome to Green Iguana
 			</h6>
 
 			<p style={{ width: '50%' }} className={styles.description}>
