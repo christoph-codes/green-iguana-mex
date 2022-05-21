@@ -24,20 +24,21 @@ const Home: NextPage = (): any => (
 					Next.js! Longer title to see how it wraps
 				</a>
 			</p>
-
-			<h2 className="animate__animated animate__bounce ML-AUTO P-2 bg-primary text-white">
-				Welcome to Green Iguana
-			</h2>
-			<ul style={{ width: '50%' }} className={styles.description}>
-				<li>Hello bro</li>
-				<li>Hello gal</li>
-				<li>Hello mama</li>
-				<ul>
-					<li>Hello dada</li>
-					<li>Hello sister</li>
+			<div className="D-FLEX ALIGN-CENTER JUSTIFY-CENTER">
+				<h2 className="animate__animated animate__bounce ML-AUTO P-2 bg-primary text-white">
+					Welcome to Green Iguana
+				</h2>
+				<ul style={{ width: '50%' }} className={styles.description}>
+					<li>Hello bro</li>
+					<li>Hello gal</li>
+					<li>Hello mama</li>
+					<ul>
+						<li>Hello dada</li>
+						<li>Hello sister</li>
+					</ul>
+					<li>Hello grandma</li>
 				</ul>
-				<li>Hello grandma</li>
-			</ul>
+			</div>
 			<h3 className="animate__animated animate__bounce">
 				Welcome to Green Iguana
 			</h3>

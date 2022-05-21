@@ -1,0 +1,20 @@
+$display: (
+	'FLEX': flex,
+	'BLOCK': block,
+	'NONE': none,
+);
+
+$displayUtilities: (
+	'D': 'display',
+);
+
+$flex: (
+	'JUSTIFY': justify-content,
+	'ALIGN': align-items,
+);
+$flexUtilities: (
+	'LEFT': flex-start,
+	'CENTER': center,
+	'RIGHT': flex-end,
+	'BETWEEN': space-between,
+);
