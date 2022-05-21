@@ -2,6 +2,7 @@
 @use './colors' as *;
 @use './spacing' as *;
 @use './alignment' as *;
+@use './display' as *;
 
 // Color utility classes
 // @include modifiers($colors, 'text', 'color');
@@ -11,3 +12,5 @@
 @include modifiers($spacers, $spacing);
 @include modifiers($colors, $colorUtilities);
 @include modifiers($alignments, $alignmentUtilities);
+@include modifiers($display, $displayUtilities);
+@include modifiers($flex, $flexUtilities);
