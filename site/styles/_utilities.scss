@@ -1,6 +1,7 @@
 @use './mixins' as *;
 @use './colors' as *;
 @use './spacing' as *;
+@use './alignment' as *;
 
 // Color utility classes
 // @include modifiers($colors, 'text', 'color');
@@ -9,3 +10,4 @@
 
 @include modifiers($spacers, $spacing);
 @include modifiers($colors, $colorUtilities);
+@include modifiers($alignments, $alignmentUtilities);
