@@ -47,7 +47,7 @@ const Home: NextPage = (): any => (
 				this font size.{' '}
 				<code className={styles.code}>pages/index.tsx</code>
 			</p>
-			<h4 className="animate__animated animate__bounce">
+			<h4 className="animate__animated animate__bounce MY-6">
 				Welcome to Green Iguana
 			</h4>
 			<p style={{ width: '50%' }} className={styles.description}>
