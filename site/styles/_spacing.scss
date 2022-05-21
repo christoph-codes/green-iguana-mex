@@ -29,13 +29,13 @@ $utilities: (
 @include modifiers($spacers, 'MB', 'margin-bottom');
 @include modifiers($spacers, 'ML', 'margin-left');
 @include modifiers($spacers, 'MR', 'margin-right');
-// @include modifiers($spacers, 'MY', 'margin-top margin-bottom');
-// @include modifiers($spacers, 'MX', 'margin-left margin-right');
+@include modifiers($spacers, 'MY', ('margin-top', 'margin-bottom'));
+@include modifiers($spacers, 'MX', ('margin-left', 'margin-right'));
 
 @include modifiers($spacers, 'P', 'padding');
 @include modifiers($spacers, 'PT', 'padding-top');
 @include modifiers($spacers, 'PB', 'padding-bottom');
 @include modifiers($spacers, 'PL', 'padding-left');
 @include modifiers($spacers, 'PR', 'padding-right');
-// @include modifiers($spacers, 'PY', 'padding-top padding-bottom');
-// @include modifiers($spacers, 'PX', 'padding-left padding-right');
+@include modifiers($spacers, 'PY', ('padding-top', 'padding-bottom'));
+@include modifiers($spacers, 'PX', ('padding-left', 'padding-right'));
