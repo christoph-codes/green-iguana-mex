@@ -1,4 +1,3 @@
-@import './utilities';
 $primary: #0BAA6D;
 $primaryhover: #078052;
 $secondary: #FFC924;
@@ -26,8 +25,8 @@ $colors: (
 	'offwhite': $offwhite,
 	'whitegrey': $whitegrey,
 );
-
-// Color utility classes
-@include modifiers($colors, 'text', 'color');
-@include modifiers($colors, 'bg', 'background-color');
-@include modifiers($colors, 'bc', 'border-color');
+$colorUtilities: (
+	'text': 'color',
+	'bg': 'background-color',
+	'b': 'border-color',
+)

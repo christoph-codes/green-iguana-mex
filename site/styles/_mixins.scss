@@ -1,0 +1,13 @@
+@mixin modifiers($map, $attributes) {
+	@each $utility, $attribute in $attributes {
+		@each $item, $value in $map {
+			.#{$utility} {
+				&-#{$item} {
+					@each $attr in $attribute {
+						#{$attr}: $value;
+					}
+				}
+			}
+		}
+	}
+}
