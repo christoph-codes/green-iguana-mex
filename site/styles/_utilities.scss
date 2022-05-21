@@ -1,11 +1,11 @@
-@mixin modifiers($map, $name, $attributes) {
-	@each $item, $value in $map {
-		.#{$name} {
-			&-#{$item} {
-				@each $attribute in $attributes {
-					#{$attribute}: $value;
-				}
-			}
-		}
-	}
-}
+@use './mixins' as *;
+@use './colors' as *;
+@use './spacing' as *;
+
+// Color utility classes
+// @include modifiers($colors, 'text', 'color');
+// @include modifiers($colors, 'bg', 'background-color');
+// @include modifiers($colors, 'bc', 'border-color');
+
+@include modifiers($spacers, $spacing);
+@include modifiers($colors, $colorUtilities);
