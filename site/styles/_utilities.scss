@@ -1,8 +1,10 @@
-@mixin modifiers($map, $name, $attribute, $separator: '-') {
+@mixin modifiers($map, $name, $attributes) {
 	@each $item, $value in $map {
 		.#{$name} {
-			&#{$separator}#{$item} {
-			#{$attribute}: $value;
+			&-#{$item} {
+				@each $attribute in $attributes {
+					#{$attribute}: $value;
+				}
 			}
 		}
 	}

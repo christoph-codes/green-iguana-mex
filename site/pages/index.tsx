@@ -15,7 +15,7 @@ const Home: NextPage = (): any => (
 			<h1 className="animate__animated animate__bounce">
 				Welcome to Green Iguana
 			</h1>
-			<p style={{ width: '50%' }} className={styles.description}>
+			<p style={{ width: '50%' }} className="MT-6">
 				Get started by editing this block of code over and over but I
 				have to make sure that everything is good before I approve of
 				this font size.{' '}
@@ -25,7 +25,7 @@ const Home: NextPage = (): any => (
 				</a>
 			</p>
 
-			<h2 className="animate__animated animate__bounce">
+			<h2 className="animate__animated animate__bounce ML-AUTO P-2 bg-primary text-white">
 				Welcome to Green Iguana
 			</h2>
 			<ul style={{ width: '50%' }} className={styles.description}>
@@ -47,7 +47,7 @@ const Home: NextPage = (): any => (
 				this font size.{' '}
 				<code className={styles.code}>pages/index.tsx</code>
 			</p>
-			<h4 className="animate__animated animate__bounce">
+			<h4 className="animate__animated animate__bounce MY-6">
 				Welcome to Green Iguana
 			</h4>
 			<p style={{ width: '50%' }} className={styles.description}>
