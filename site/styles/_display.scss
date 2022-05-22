@@ -1,20 +1,20 @@
 $display: (
-	'FLEX': flex,
-	'BLOCK': block,
-	'NONE': none,
+	'flex': flex,
+	'block': block,
+	'none': none,
 );
 
 $displayUtilities: (
-	'D': 'display',
+	'd': 'display',
 );
 
 $flex: (
-	'JUSTIFY': justify-content,
-	'ALIGN': align-items,
+	'justify': justify-content,
+	'align': align-items,
 );
 $flexUtilities: (
-	'LEFT': flex-start,
-	'CENTER': center,
-	'RIGHT': flex-end,
-	'BETWEEN': space-between,
+	'left': flex-start,
+	'center': center,
+	'right': flex-end,
+	'between': space-between,
 );

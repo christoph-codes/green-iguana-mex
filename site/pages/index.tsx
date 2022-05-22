@@ -11,11 +11,11 @@ const Home: NextPage = (): any => (
 			<link rel="icon" href="/favicon.ico" />
 		</Head>
 
-		<main className="bg-offwhite">
-			<h1 className="animate__animated animate__bounce b-primary">
+		<main className="🔥bg-offwhite">
+			<h1 className="animate__animated animate__bounce 🔥b-primary">
 				Welcome to Green Iguana
 			</h1>
-			<p style={{ width: '50%' }} className="MT-6">
+			<p style={{ width: '50%' }} className="🔥mt-6">
 				Get started by editing this block of code over and over but I
 				have to make sure that everything is good before I approve of
 				this font size.{' '}
@@ -24,11 +24,11 @@ const Home: NextPage = (): any => (
 					Next.js! Longer title to see how it wraps
 				</a>
 			</p>
-			<div className="D-FLEX ALIGN-CENTER JUSTIFY-CENTER">
-				<h2 className="animate__animated animate__bounce ML-AUTO P-2 bg-primary text-white">
+			<div className="🔥d-flex 🔥d-md-block 🔥align-center 🔥justify-center">
+				<h2 className="animate__animated animate__bounce 🔥ml-auto 🔥p-2 🔥bg-primary 🔥bg-md-tertiary 🔥bg-lg-secondary 🔥text-white">
 					Welcome to Green Iguana
 				</h2>
-				<ul style={{ width: '50%' }} className={styles.description}>
+				<ul style={{ width: '50%' }} className="🔥text-sm-tertiary">
 					<li>Hello bro</li>
 					<li>Hello gal</li>
 					<li>Hello mama</li>
@@ -42,22 +42,22 @@ const Home: NextPage = (): any => (
 			<h3 className="animate__animated animate__bounce">
 				Welcome to Green Iguana
 			</h3>
-			<p style={{ width: '50%' }} className="text-right">
+			<p style={{ width: '50%' }} className="🔥text-right">
 				Get started by editing this block of code over and over but I
 				have to make sure that everything is good before I approve of
 				this font size.{' '}
 				<code className={styles.code}>pages/index.tsx</code>
 			</p>
-			<h4 className="animate__animated animate__bounce MY-6">
+			<h4 className="animate__animated animate__bounce 🔥my-6">
 				Welcome to Green Iguana
 			</h4>
-			<p style={{ width: '50%' }} className="PX-4 text-center">
+			<p style={{ width: '50%' }} className="🔥px-4 🔥text-center">
 				Get started by editing this block of code over and over but I
 				have to make sure that everything is good before I approve of
 				this font size.{' '}
 				<code className={styles.code}>pages/index.tsx</code>
 			</p>
-			<h5 className="animate__animated animate__bounce text-tertiary">
+			<h5 className="animate__animated animate__bounce 🔥text-tertiary">
 				Welcome to Green Iguana
 			</h5>
 			<p style={{ width: '50%' }} className={styles.description}>
@@ -70,7 +70,7 @@ const Home: NextPage = (): any => (
 				Welcome to Green Iguana
 			</h6>
 
-			<p style={{ width: '50%' }} className="text-primary">
+			<p style={{ width: '50%' }} className="🔥text-primary">
 				Get started by editing this block of code over and over but I
 				have to make sure that everything is good before I approve of
 				this font size.{' '}
