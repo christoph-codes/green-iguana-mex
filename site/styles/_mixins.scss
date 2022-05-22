@@ -1,4 +1,9 @@
 @use './breakpoints' as *;
+@mixin mq($bp) {
+	@media(min-width: $bp) {
+		@content;
+	}
+}
 @mixin modifiers($map, $attributes) {
 	@each $utility, $attribute in $attributes {
 		@each $item, $value in $map {
@@ -6,7 +11,7 @@
 				@each $bplabel, $bp in $breakpoints {
 					@if ($bplabel != 'xs') {
 						&-#{$bplabel} {
-							@media(min-width: $bp) {
+							@include mq($bp) {
 								&-#{$item} {
 									@each $attr in $attribute {
 										#{$attr}: $value;
