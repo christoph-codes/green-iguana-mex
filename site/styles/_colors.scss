@@ -29,4 +29,9 @@ $colorUtilities: (
 	'text': 'color',
 	'bg': 'background-color',
 	'b': 'border-color',
-)
+);
+[class*="b-"] {
+	border-width: 2px;
+	border-style: solid;
+	border-radius: 0.5rem;
+}

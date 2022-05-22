@@ -1,13 +1,9 @@
+
 @use './mixins' as *;
 @use './colors' as *;
 @use './spacing' as *;
 @use './alignment' as *;
 @use './display' as *;
-
-// Color utility classes
-// @include modifiers($colors, 'text', 'color');
-// @include modifiers($colors, 'bg', 'background-color');
-// @include modifiers($colors, 'bc', 'border-color');
 
 @include modifiers($spacers, $spacing);
 @include modifiers($colors, $colorUtilities);
