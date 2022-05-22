@@ -1,0 +1,11 @@
+@use '../../styles/breakpoints' as *;
+@use '../../styles/mixins' as *;
+.Container {
+	max-width: 75rem;
+	margin-left: auto;
+	margin-right: auto;
+	@include maxq($lg) {
+		margin-left: 1rem;
+		margin-right: 1rem;
+	}
+};
