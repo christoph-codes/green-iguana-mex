@@ -1,10 +1,30 @@
+@use './breakpoints' as *;
+@mixin mq($bp) {
+	@media(min-width: $bp) {
+		@content;
+	}
+}
 @mixin modifiers($map, $attributes) {
 	@each $utility, $attribute in $attributes {
 		@each $item, $value in $map {
-			.#{$utility} {
-				&-#{$item} {
-					@each $attr in $attribute {
-						#{$attr}: $value;
+			.🔥#{$utility} {
+				@each $bplabel, $bp in $breakpoints {
+					@if ($bplabel != 'xs') {
+						&-#{$bplabel} {
+							@include mq($bp) {
+								&-#{$item} {
+									@each $attr in $attribute {
+										#{$attr}: $value;
+									}
+								}
+							}
+						}
+					} @else {
+						&-#{$item} {
+							@each $attr in $attribute {
+								#{$attr}: $value;
+							}
+						}
 					}
 				}
 			}
