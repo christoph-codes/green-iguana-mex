@@ -1,6 +1,10 @@
+$xs: 0;
+$sm: 25.875rem;
+$md: 48rem;
+$lg: 75rem;
 $breakpoints: (
-	xs: 0,
-	sm: 25.875rem,
-	md: 48rem,
-	lg: 75rem,
+	xs: $xs,
+	sm: $sm,
+	md: $md,
+	lg: $lg,
 );
