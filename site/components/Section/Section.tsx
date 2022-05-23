@@ -6,7 +6,7 @@ export type ISectionProps = {
 	children?: ReactNode;
 	className?: string[];
 	hideContainer?: boolean;
-	bgColor?: 'primary' | 'secondary' | 'tertiary' | 'grey' | 'greylight';
+	bgColor?: 'primary' | 'secondary' | 'tertiary' | 'grey' | 'offwhite';
 	title?: string;
 };
 
@@ -24,11 +24,14 @@ const Section: FC<ISectionProps> = ({
 	>
 		{!hideContainer ? (
 			<Container>
-				<h2 className={styles.SectionTitle}>{title}</h2>
+				{title && <h2 className={styles.SectionTitle}>{title}</h2>}
 				{children}
 			</Container>
 		) : (
-			children
+			<>
+				{title && <h2 className={styles.SectionTitle}>{title}</h2>}
+				{children}
+			</>
 		)}
 	</section>
 );
