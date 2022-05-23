@@ -2,6 +2,7 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
 import Container from '../components/Container';
+import Section from '../components/Section';
 import styles from '../styles/Home.module.scss';
 
 const Home: NextPage = (): any => (
@@ -12,9 +13,12 @@ const Home: NextPage = (): any => (
 			<link rel="icon" href="/favicon.ico" />
 		</Head>
 
-		<Container className="🔥bg-secondary">
+		<Section className="🔥bg-secondary">
 			<h3>Hello Bro!</h3>
-		</Container>
+		</Section>
+		<Section>
+			<h3>Hello Bro!</h3>
+		</Section>
 
 		<main className="🔥bg-offwhite">
 			<Container>
