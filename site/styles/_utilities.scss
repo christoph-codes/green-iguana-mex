@@ -5,7 +5,7 @@
 @use './alignment' as *;
 @use './display' as *;
 
-@include modifiers($spacers, $spacing);
+@include modifiers($spacers, $spacersUtilities);
 @include modifiers($colors, $colorUtilities);
 @include modifiers($alignments, $alignmentUtilities);
 @include modifiers($display, $displayUtilities);

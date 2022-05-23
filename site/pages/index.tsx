@@ -13,27 +13,27 @@ const Home: NextPage = (): any => (
 			<link rel="icon" href="/favicon.ico" />
 		</Head>
 
-		<Section className="🔥bg-secondary">
+		<Section bgColor="offwhite">
 			<h3>Hello Bro!</h3>
+			<h1 className="animate__animated animate__bounce">
+				Welcome to Green Iguana
+			</h1>
+			<p>
+				Get started by editing this block of code over and over but I
+				have to make sure that everything is good before I approve of
+				this font size.{' '}
+				<code className={styles.code}>pages/index.tsx</code>
+				<a href="https://nextjs.org">
+					Next.js! Longer title to see how it wraps
+				</a>
+			</p>
 		</Section>
-		<Section>
-			<h3>Hello Bro!</h3>
+		<Section title="Hello Bro!" bgColor="offwhite" className="🔥pt-0">
+			<p>Hello</p>
 		</Section>
 
 		<main className="🔥bg-offwhite">
 			<Container>
-				<h1 className="animate__animated animate__bounce 🔥b-primary">
-					Welcome to Green Iguana
-				</h1>
-				<p style={{ width: '50%' }} className="🔥mt-6">
-					Get started by editing this block of code over and over but
-					I have to make sure that everything is good before I approve
-					of this font size.{' '}
-					<code className={styles.code}>pages/index.tsx</code>
-					<a href="https://nextjs.org">
-						Next.js! Longer title to see how it wraps
-					</a>
-				</p>
 				<div className="🔥d-flex 🔥d-md-block 🔥align-center 🔥justify-center">
 					<h2 className="animate__animated animate__bounce 🔥ml-auto 🔥p-2 🔥bg-primary 🔥bg-md-tertiary 🔥bg-lg-secondary 🔥text-white">
 						Welcome to Green Iguana
