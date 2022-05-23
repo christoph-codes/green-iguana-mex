@@ -19,7 +19,7 @@
 							@include minq($bp) {
 								&-#{$item} {
 									@each $attr in $attribute {
-										#{$attr}: $value;
+										#{$attr}: $value !important;
 									}
 								}
 							}
@@ -27,7 +27,7 @@
 					} @else {
 						&-#{$item} {
 							@each $attr in $attribute {
-								#{$attr}: $value;
+								#{$attr}: $value !important;
 							}
 						}
 					}

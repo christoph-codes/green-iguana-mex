@@ -28,5 +28,7 @@ module.exports = {
 		'react/react-in-jsx-scope': 'off',
 		'react/jsx-props-no-spreading': 'off',
 		'no-restricted-exports': 0,
+		'react/jsx-no-useless-fragment': 0,
+		'react/require-default-props': 0,
 	},
 };
