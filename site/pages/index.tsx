@@ -30,17 +30,18 @@ const Home: NextPage = (): any => (
 			</p>
 		</Section>
 		<Section title="Hello Bro!" bgColor="offwhite" className="🔥pt-0">
-			<Row
-				columns={{
-					xs: [4, 1, 2],
-					sm: [2, 7],
-				}}
-			>
+			<Row align="center">
 				<div className="🔥bg-primary">
 					<p>Hello</p>
 				</div>
 				<div className="🔥bg-tertiary">
-					<p>Hello</p>
+					<p>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit.
+						Cum odit voluptatem nulla tempore? Praesentium vitae
+						laborum rem eius. Repudiandae ipsum tenetur dolorum
+						earum saepe vero recusandae excepturi consectetur fugit
+						modi.
+					</p>
 				</div>
 				<div className="🔥bg-secondary">
 					<p>Hello</p>
