@@ -4,9 +4,11 @@
 @use './spacing' as *;
 @use './alignment' as *;
 @use './display' as *;
+@use './layout' as *;
 
 @include modifiers($spacers, $spacersUtilities);
 @include modifiers($colors, $colorUtilities);
 @include modifiers($alignments, $alignmentUtilities);
 @include modifiers($display, $displayUtilities);
 @include modifiers($flex, $flexUtilities);
+@include modifiers($columns, $columnsUtilities);

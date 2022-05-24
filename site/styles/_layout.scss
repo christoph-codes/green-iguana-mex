@@ -1,0 +1,19 @@
+$columnWidth: 100%;
+$maxColumns: 12;
+$columns: (
+	'1': (1 / $maxColumns) * $columnWidth,
+	'2': (2 / $maxColumns) * $columnWidth,
+	'3': (3 / $maxColumns) * $columnWidth,
+	'4': (4 / $maxColumns) * $columnWidth,
+	'5': (5 / $maxColumns) * $columnWidth,
+	'6': (6 / $maxColumns) * $columnWidth,
+	'7': (7 / $maxColumns) * $columnWidth,
+	'8': (8 / $maxColumns) * $columnWidth,
+	'9': (9 / $maxColumns) * $columnWidth,
+	'10': (10 / $maxColumns) * $columnWidth,
+	'11': (11 / $maxColumns) * $columnWidth,
+	'12': (12 / $maxColumns) * $columnWidth,
+);
+$columnsUtilities: (
+	'col': 'width',
+);

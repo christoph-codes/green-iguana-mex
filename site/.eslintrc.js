@@ -30,5 +30,6 @@ module.exports = {
 		'no-restricted-exports': 0,
 		'react/jsx-no-useless-fragment': 0,
 		'react/require-default-props': 0,
+		'react/no-array-index-key': 0,
 	},
 };
