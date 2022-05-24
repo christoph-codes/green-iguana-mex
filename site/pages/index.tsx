@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Container from '../components/Container';
 import Section from '../components/Section';
+import Row from '../components/Row';
 import styles from '../styles/Home.module.scss';
 
 const Home: NextPage = (): any => (
@@ -29,12 +30,22 @@ const Home: NextPage = (): any => (
 			</p>
 		</Section>
 		<Section title="Hello Bro!" bgColor="offwhite" className="🔥pt-0">
-			<p>Hello</p>
+			<Row>
+				<div className="🔥bg-primary">
+					<p>Hello</p>
+				</div>
+				<div className="🔥bg-tertiary">
+					<p>Hello</p>
+				</div>
+				<div className="🔥bg-secondary">
+					<p>Hello</p>
+				</div>
+			</Row>
 		</Section>
 
 		<main className="🔥bg-offwhite">
 			<Container>
-				<div className="🔥d-flex 🔥d-md-block 🔥align-center 🔥justify-center">
+				<div className="🔥d-md-flex 🔥d-block 🔥align-center 🔥justify-center">
 					<h2 className="animate__animated animate__bounce 🔥ml-auto 🔥p-2 🔥bg-primary 🔥bg-md-tertiary 🔥bg-lg-secondary 🔥text-white">
 						Welcome to Green Iguana
 					</h2>
