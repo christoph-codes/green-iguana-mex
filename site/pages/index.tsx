@@ -30,7 +30,12 @@ const Home: NextPage = (): any => (
 			</p>
 		</Section>
 		<Section title="Hello Bro!" bgColor="offwhite" className="🔥pt-0">
-			<Row>
+			<Row
+				columns={{
+					xs: [4, 1, 2],
+					sm: [2, 7],
+				}}
+			>
 				<div className="🔥bg-primary">
 					<p>Hello</p>
 				</div>
