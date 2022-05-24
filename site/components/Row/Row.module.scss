@@ -1,0 +1,13 @@
+.Row {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	gap: 1.5rem;
+}
+.Col {
+	flex: 1 0 auto;
+	// &[class*=🔥col-] {
+	// 	flex: 0 0 auto;
+	// }
+}
