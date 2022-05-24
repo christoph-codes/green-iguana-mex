@@ -3,6 +3,25 @@
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: space-between;
+	&__justify {
+		&--center {
+			justify-content: center;
+		}
+		&--end {
+			justify-content: end;
+		}
+		&--between {
+			justify-content: space-between;
+		}
+	}
+	&__align {
+		&--center {
+			align-items: center;
+		}
+		&--end {
+			align-items: end;
+		}
+	}
 	gap: 1.5rem;
 }
 .Col {

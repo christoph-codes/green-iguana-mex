@@ -37,6 +37,8 @@ export type IRowProps = {
 	children: ReactElement<IColProps>[];
 	className?: string[];
 	columns?: TColumnSize;
+	align?: 'center' | 'end';
+	justify?: 'start' | 'end' | 'between';
 };
 
 const Col: FC<IColProps> = ({ children, className = '', xs, sm, md, lg }) => {
@@ -44,31 +46,40 @@ const Col: FC<IColProps> = ({ children, className = '', xs, sm, md, lg }) => {
 		md ? `🔥col-md-${md}` : ''
 	} ${lg ? `🔥col-lg-${lg}` : ''} ${xs ? `🔥col-${xs}` : ''}`;
 	return (
-		<div className={`${styles.Col} ${className} ${generateClasses}`}>
+		<div className={`${styles.Col} ${className} ${generateClasses} `}>
 			{children}
 		</div>
 	);
 };
 
-const Row: FC<IRowProps> = ({ children, className, columns }) => {
+const Row: FC<IRowProps> = ({
+	children,
+	className,
+	columns,
+	align,
+	justify,
+}) => {
 	const renderedColumns = (): any =>
 		// Map over the children and add the column sizes relative to the columns prop
-		Children.toArray(children).map((child: any, index) => {
-			console.log('columns:', columns);
-			return (
-				<Col
-					key={index}
-					xs={columns?.xs && columns.xs[index]}
-					sm={columns?.sm && columns.sm[index]}
-					md={columns?.md && columns.md[index]}
-					lg={columns?.lg && columns.lg[index]}
-				>
-					{child}
-				</Col>
-			);
-		});
+		Children.toArray(children).map((child: any, index) => (
+			<Col
+				key={index}
+				xs={columns?.xs && columns.xs[index]}
+				sm={columns?.sm && columns.sm[index]}
+				md={columns?.md && columns.md[index]}
+				lg={columns?.lg && columns.lg[index]}
+			>
+				{child}
+			</Col>
+		));
 	return (
-		<div className={`${styles.Row} ${className}`}>{renderedColumns()}</div>
+		<div
+			className={`${styles.Row} ${className} ${
+				justify ? styles[`Row__justify--${justify}`] : ''
+			} ${align ? styles[`Row__align--${align}`] : ''}`}
+		>
+			{renderedColumns()}
+		</div>
 	);
 };
 export default Row;
