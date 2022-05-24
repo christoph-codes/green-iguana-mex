@@ -6,8 +6,8 @@
 	gap: 1.5rem;
 }
 .Col {
-	flex: 1 0 auto;
-	// &[class*=🔥col-] {
-	// 	flex: 0 0 auto;
-	// }
+	flex: 1 0;
+	&[class*=🔥col-] {
+		flex: 0 0 auto;
+	}
 }
