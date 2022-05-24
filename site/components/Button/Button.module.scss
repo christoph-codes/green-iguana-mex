@@ -1,0 +1,86 @@
+@use '../../styles/colors' as *;
+.Button {
+	padding: 1rem 1.5rem;
+	font-weight: bold;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-transform: uppercase;
+	border-width: 2px;
+	border-style: solid;
+	border-radius: 0.25rem;
+	font-family: 'Kanit', sans-serif;
+	font-size: 1.125rem;
+	letter-spacing: 1px;
+	cursor:pointer;
+	transition: .15s ease-in-out;
+	line-height: 1;
+	text-decoration: none !important;
+	&:hover {
+		background-size: 0;
+	}
+	&__fullWidth {
+		width: 100%;
+	}
+	&__primary {
+		background-color: $primary;
+		border-color: $primary;
+		color: $white;
+		&:hover {
+			background-color: $primaryhover;
+			border-color: $primaryhover;
+			color: $white;
+		}
+	}
+	&__primary-outline {
+		background-color: transparent;
+		border-color: $primary;
+		color: $primary;
+		&:hover {
+			background-color: transparent;
+			border-color: $primaryhover;
+			color: $primaryhover;
+		}
+	}
+	&__secondary {
+		background-color: $secondary;
+		border-color: $secondary;
+		color: $grey;
+		&:hover {
+			background-color: $secondaryhover;
+			border-color: $secondaryhover;
+			color: $grey;
+		}
+	}
+	&__secondary-outline {
+		background-color: transparent;
+		border-color: $secondary;
+		color: $grey;
+		&:hover {
+			background-color: transparent;
+			border-color: $secondaryhover;
+			color: $greyhover;
+		}
+	}
+	&__tertiary {
+		background-color: $tertiary;
+		border-color: $tertiary;
+		color: $white;
+		&:hover {
+			background-color: $tertiaryhover;
+			border-color: $tertiaryhover;
+			color: $white;
+		}
+	}
+	&__tertiary-outline {
+		background-color: transparent;
+		border-color: $tertiary;
+		color: $tertiary;
+		&:hover {
+			background-color: transparent;
+			border-color: $tertiaryhover;
+			color: $tertiaryhover;
+		}
+	}
+}
