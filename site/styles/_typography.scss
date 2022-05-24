@@ -1,12 +1,15 @@
 @use './colors' as *;
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,700;1,500;1,700&display=swap');
-h1,h2,h3,h4,h5,h6,p,li,a {
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,500;0,900;1,500;1,900&family=Montserrat:ital,wght@0,500;0,700;1,500;1,700&display=swap');
+* {
 	font-family: 'Montserrat', sans-serif;
+}
+h1,h2,h3,h4,h5,h6,p,li,a {
 	line-height: 1;
 	margin-bottom: 1rem;
 }
 h1,h2,h3,h4,h5,h6 {
 	font-weight: bold;
+	font-family: 'Kanit', sans-serif;
 }
 h1,.h1 {
 	font-size: 3.5rem;

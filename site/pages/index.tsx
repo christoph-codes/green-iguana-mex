@@ -5,6 +5,7 @@ import Container from '../components/Container';
 import Section from '../components/Section';
 import Row from '../components/Row';
 import styles from '../styles/Home.module.scss';
+import Button from '../components/Button';
 
 const Home: NextPage = (): any => (
 	<div className={styles.container}>
@@ -55,6 +56,25 @@ const Home: NextPage = (): any => (
 					<h2 className="animate__animated animate__bounce 🔥ml-auto 🔥p-2 🔥bg-primary 🔥bg-md-tertiary 🔥bg-lg-secondary 🔥text-white">
 						Welcome to Green Iguana
 					</h2>
+					<Row>
+						<Button>Primary!</Button>
+						<Button variant="primary-outline">
+							Primary Outline!
+						</Button>
+						<Button variant="secondary">Secondary!</Button>
+						<Button variant="secondary-outline">
+							Secondary Outline!
+						</Button>
+						<Button variant="tertiary">Tertiary!</Button>
+						<Button variant="tertiary-outline">
+							Tertiary Outline!
+						</Button>
+						<Button fullWidth>FullWidth!</Button>
+						<Button href="/contact" fullWidth>
+							HREF!
+						</Button>
+						<Button fullWidth>Primary!</Button>
+					</Row>
 					<ul style={{ width: '50%' }} className="🔥text-sm-tertiary">
 						<li>Hello bro</li>
 						<li>Hello gal</li>

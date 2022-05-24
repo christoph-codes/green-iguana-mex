@@ -18,8 +18,10 @@ This component is used to page Rows and uses the Container component.
 
 ## Props
 
-| Prop        | Type                                   | Description                                                                              | Default |
-| ----------- | -------------------------------------- | ---------------------------------------------------------------------------------------- | ------- |
-| `children`  | React.Nodes[]                          | However many elements are passed in between the Row tag will be rendered in flex columns | -       |
-| `className` | string                                 | The class names to be added to the Row                                                   | ''      |
-| `columns`   | { xs?: [], sm?: [], md?: [], lg?: [] } | An array of number of columns each element should span                                   | -       |
+| Prop        | Type                                   | Description                                                                              | Default   |
+| ----------- | -------------------------------------- | ---------------------------------------------------------------------------------------- | --------- |
+| `children`  | React.Nodes[]                          | However many elements are passed in between the Row tag will be rendered in flex columns | -         |
+| `className` | string                                 | The class names to be added to the Row                                                   | ''        |
+| `columns`   | { xs?: [], sm?: [], md?: [], lg?: [] } | An array of number of columns each element should span                                   | -         |
+| `justify`   | 'center', 'end', 'between'             | Justifies the columns on the Y axis based on flex properties                             | 'between' |
+| `align`     | 'center', 'end'                        | Aligns the columns on the X axis based on flex properties                                | -         |
