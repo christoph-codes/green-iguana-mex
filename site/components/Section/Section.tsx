@@ -24,12 +24,12 @@ const Section: FC<ISectionProps> = ({
 	>
 		{!hideContainer ? (
 			<Container>
-				{title && <h2 className={styles.SectionTitle}>{title}</h2>}
+				{title && <h2 className={styles.Section__title}>{title}</h2>}
 				{children}
 			</Container>
 		) : (
 			<>
-				{title && <h2 className={styles.SectionTitle}>{title}</h2>}
+				{title && <h2 className={styles.Section__title}>{title}</h2>}
 				{children}
 			</>
 		)}
