@@ -10,6 +10,7 @@ import Button from '../components/Button';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import iguana from '../assets/images/iguana.svg';
+import MenuItem from '../components/MenuItem';
 
 const Home: NextPage = (): any => (
 	<div className={styles.container}>
@@ -35,6 +36,27 @@ const Home: NextPage = (): any => (
 				},
 			]}
 		/>
+		<Container>
+			<MenuItem
+				category="NEW"
+				title="Green Iguana Plato Especiales**"
+				description="Charbroiled Chicken Breast | Green Sauce | Tortilla Strips | Mixed Cheese | Pico | 
+				Guacomole | Sour Cream | Rice | Fresh Veggies."
+				price="12.99"
+			/>
+			<MenuItem
+				title="Green Iguana Plato Especiales**"
+				description="Charbroiled Chicken Breast | Green Sauce | Tortilla Strips | Mixed Cheese | Pico | 
+				Guacomole | Sour Cream | Rice | Fresh Veggies."
+				price="12.99"
+			/>
+			<MenuItem
+				title="Green Iguana Plato Especiales**"
+				description="Charbroiled Chicken Breast | Green Sauce | Tortilla Strips | Mixed Cheese | Pico | 
+				Guacomole | Sour Cream | Rice | Fresh Veggies."
+				price="12.99"
+			/>
+		</Container>
 		<Footer
 			img={iguana}
 			links={[
