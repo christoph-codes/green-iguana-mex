@@ -38,43 +38,55 @@ const Header: FC<THeaderProps> = ({ links, sticky, className }) => {
 						<Image src={greenIguanaLogo} alt="Green Iguana Logo" />
 					</span>
 				</Link>
-				<nav className={`${styles.Header__container__nav}`}>
-					{links?.map((link: TLink, index: number) => (
-						<li
-							className={styles.Header__container__nav__link}
-							key={index}
-						>
-							<Link
-								target={link.newTab ? '_blank' : '_self'}
-								href={link.path}
+				{links && (
+					<>
+						<nav className={`${styles.Header__container__nav}`}>
+							{links?.map((link: TLink, index: number) => (
+								<li
+									className={
+										styles.Header__container__nav__link
+									}
+									key={index}
+								>
+									<Link
+										target={
+											link.newTab ? '_blank' : '_self'
+										}
+										href={link.path}
+									>
+										{/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+										<a>
+											{link.icon && link.icon}
+											{link.label}
+										</a>
+									</Link>
+								</li>
+							))}
+							<li
+								className={
+									styles[
+										`Header__container__nav__link--button`
+									]
+								}
 							>
-								{/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-								<a>
-									{link.icon && link.icon}
-									{link.label}
-								</a>
-							</Link>
-						</li>
-					))}
-					<li
-						className={
-							styles[`Header__container__nav__link--button`]
-						}
-					>
-						<Button href={toastTabLink}>Order Online</Button>
-					</li>
-				</nav>
-				<button
-					type="button"
-					onClick={() => toggleSideNav()}
-					className={styles.Header__container__hamburger}
-				>
-					{!isOpen ? (
-						<GiHamburgerMenu size={32} />
-					) : (
-						<IoCloseCircle size={32} />
-					)}
-				</button>
+								<Button href={toastTabLink}>
+									Order Online
+								</Button>
+							</li>
+						</nav>
+						<button
+							type="button"
+							onClick={() => toggleSideNav()}
+							className={styles.Header__container__hamburger}
+						>
+							{!isOpen ? (
+								<GiHamburgerMenu size={32} />
+							) : (
+								<IoCloseCircle size={32} />
+							)}
+						</button>
+					</>
+				)}
 			</Container>
 		</header>
 	);
