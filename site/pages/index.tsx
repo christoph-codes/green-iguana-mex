@@ -8,6 +8,8 @@ import Row from '../components/Row';
 import styles from '../styles/Home.module.scss';
 import Button from '../components/Button';
 import Header from '../components/Header';
+import Footer from '../components/Footer';
+import iguana from '../assets/images/iguana.svg';
 
 const Home: NextPage = (): any => (
 	<div className={styles.container}>
@@ -31,6 +33,16 @@ const Home: NextPage = (): any => (
 					path: 'https://twitter.com/green-iguana',
 					icon: <FaTwitter size={32} />,
 				},
+			]}
+		/>
+		<Footer
+			img={iguana}
+			links={[
+				{ label: 'Menu', path: '/menu' },
+				{ label: 'Catering', path: '/catering' },
+				{ label: 'Locations', path: '/locations' },
+				{ label: 'Order Online', path: '/order-online' },
+				{ label: 'Contact', path: '/contact' },
 			]}
 		/>
 
