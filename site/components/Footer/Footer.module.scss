@@ -1,0 +1,46 @@
+@use '../../styles/colors' as *;
+@use '../../styles/mixins' as *;
+.Footer {
+	padding: 3rem 0;
+	&__container {
+		text-align: center;
+	}
+	&__content {
+		&__nav {
+			display: flex;
+			justify-content: center;
+			gap: 2rem;
+			margin-top: 2rem;
+			@include maxq(48rem) {
+				flex-direction: column;
+			}
+			li {
+				list-style: none;
+				background-image: linear-gradient(to right, transparent, transparent), linear-gradient(to right, $offwhite, $white);
+				background-size: 100% 2px, 0 2px;
+				margin-bottom: 0;
+				a {
+					color: $white;
+					&:hover {
+						background-image: linear-gradient(to right, transparent, transparent), linear-gradient(to right, $offwhite, $white);
+						background-size: 0 2px, 100% 2px;
+					}
+				}
+			}
+		}
+	}
+	&__image {
+		margin-left: auto;
+		margin-right: auto;
+	}
+	hr {
+		border-color: rgba(255,255,255,0.2);
+		border-style: solid;
+		border-width: 0.5px;
+		margin: 1.5rem auto;
+		width: 60%;
+	}
+	p {
+		color: $white;
+	}
+}
