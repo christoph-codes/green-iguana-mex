@@ -1,3 +1,7 @@
 @use './reset';
 @use './utilities';
 @use './typography';
+body {
+	position: relative;
+	overflow-x: hidden;
+}
