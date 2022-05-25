@@ -1,4 +1,11 @@
-import { createContext, ReactNode, useState, useContext, FC } from 'react';
+import {
+	createContext,
+	ReactNode,
+	useState,
+	useContext,
+	FC,
+	useEffect,
+} from 'react';
 import SideNav from '../components/SideNav';
 
 export interface ISideNavContext {
@@ -17,6 +24,13 @@ export const SideNavContext = createContext<ISideNavContext>({
 const SideNavProvider: FC<TSideNavProps> = ({ children }) => {
 	const [isOpen, setIsOpen] = useState(false);
 	const toggleSideNav = () => setIsOpen(!isOpen);
+	useEffect(() => {
+		if (isOpen) {
+			document.body.style.overflowY = 'hidden';
+		} else {
+			document.body.style.overflowY = 'scroll';
+		}
+	}, [isOpen]);
 	return (
 		<SideNavContext.Provider value={{ isOpen, toggleSideNav }}>
 			{children}
