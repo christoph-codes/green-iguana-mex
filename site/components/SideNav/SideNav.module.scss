@@ -1,0 +1,49 @@
+@use '../../styles/colors' as *;
+.SideNav {
+	width: 20rem;
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: $offwhite;
+    z-index: 11;
+    padding: 2rem;
+    transform: translateX(20rem);
+	transition: transform ease-in-out 0.15s;
+	box-shadow: 0;
+	display: flex;
+    flex-direction: column;
+	height: 100vh;
+	max-width: 90%;
+	&__isOpen {
+		transform: translateX(0rem);
+		box-shadow: 0 -0.5rem 1rem rgba(63, 57, 49, 0.4);
+	}
+	&__link {
+		list-style-type: none;
+		margin-top: 1rem;
+		text-align: center;
+		a {
+			color: $grey;
+			font-size: 1.5rem;
+		}
+		&--button {
+			margin-top: auto;
+			margin-bottom: 0;
+			a {
+				margin-bottom: 0;
+			}
+		}
+	}
+	&__close {
+		background-color: transparent;
+		border: none;
+		color: $greylight;
+		margin-left: auto;
+		display: block;
+		cursor: pointer;
+		&:hover {
+			color: $greyhover;
+		}
+	}
+}

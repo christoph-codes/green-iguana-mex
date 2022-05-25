@@ -1,0 +1,59 @@
+@use '../../styles/colors' as *;
+@use '../../styles/mixins' as *;
+.Header {
+	background-color: $secondary;
+	padding: 1.5rem 0;
+	border-bottom: solid 2px $secondaryhover;
+	&__sticky {
+		position: sticky;
+		top: 0;
+		z-index: 10;
+	}
+	&__container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		&__logo {
+			max-width: 4rem;
+		}
+		&__nav {
+			display: flex;
+			justify-content: flex-end;
+			align-items: center;
+			@include maxq(48rem) {
+				display: none;
+			}
+			li {
+				margin: 0;
+				list-style-type: none;
+				padding: 0 1rem;
+				text-transform: uppercase;
+				@include maxq(48rem) {
+					padding: 0 0.5rem;
+				}
+				> a {
+					color: $grey !important;
+					font-family: 'Kanit', sans-serif;
+					&:hover {
+						color: $primary !important;
+					}
+				}
+				&:last-child {
+					a {
+						color: $white !important;
+					}
+				}
+			}
+		}
+		&__hamburger {
+			display: none;
+			background-color: transparent;
+			border: none;
+			color: $grey;
+			cursor: pointer;
+			@include maxq(48rem) {
+				display: block;
+			}
+		}
+	}
+}

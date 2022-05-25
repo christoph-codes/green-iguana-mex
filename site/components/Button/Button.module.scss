@@ -1,6 +1,6 @@
 @use '../../styles/colors' as *;
 .Button {
-	padding: 1rem 1.5rem;
+	padding: 0.75rem 1.25rem;
 	font-weight: bold;
 	text-align: center;
 	display: flex;
@@ -26,7 +26,7 @@
 	&__primary {
 		background-color: $primary;
 		border-color: $primary;
-		color: $white;
+		color: $white !important;
 		&:hover {
 			background-color: $primaryhover;
 			border-color: $primaryhover;
