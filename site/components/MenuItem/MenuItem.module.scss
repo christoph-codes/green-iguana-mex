@@ -1,0 +1,34 @@
+@use '../../styles/colors' as *;
+@use '../../styles/mixins' as *;
+.MenuItem {
+	justify-content: space-between;
+	padding: 1.5rem 0;
+	&__text {
+		h4 {
+			@include maxq(48rem) {
+				display: flex;
+				gap: 0.25rem;
+				flex-direction: column;
+			}
+		}
+		span {
+			padding: 0.5rem;
+			background-color: $whitegrey;
+			border-radius: 0.25rem;
+			margin-bottom: 0.25rem;
+			display: inline-flex;
+			color: $greylight;
+			font-size: 0.875rem;
+			@include maxq(48rem) {
+				margin-top: 0.25rem;
+				width: min-content;
+			}
+		}
+		p {
+			margin-bottom: 0;
+		}
+	}
+	&__price {
+		text-align: right;
+	}
+}
