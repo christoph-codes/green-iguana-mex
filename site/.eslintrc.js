@@ -20,7 +20,10 @@ module.exports = {
 	plugins: ['react', '@typescript-eslint'],
 	rules: {
 		semi: ['error', 'always'],
-		'react/jsx-filename-extension': [1, { extensions: ['.js', '.tsx'] }],
+		'react/jsx-filename-extension': [
+			1,
+			{ extensions: ['.js', '.ts', '.tsx'] },
+		],
 		'react/function-component-definition': [
 			2,
 			{ namedComponents: 'arrow-function' },
@@ -31,5 +34,7 @@ module.exports = {
 		'react/jsx-no-useless-fragment': 0,
 		'react/require-default-props': 0,
 		'react/no-array-index-key': 0,
+		'react/jsx-no-constructed-context-values': 0,
+		'import/extensions': 0,
 	},
 };
