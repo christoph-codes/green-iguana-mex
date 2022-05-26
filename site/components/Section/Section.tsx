@@ -7,6 +7,7 @@ export type ISectionProps = {
 	className?: string[];
 	hideContainer?: boolean;
 	bgColor?: 'primary' | 'secondary' | 'tertiary' | 'grey' | 'offwhite';
+	bgImg?: string;
 	title?: string;
 };
 
@@ -15,12 +16,18 @@ const Section: FC<ISectionProps> = ({
 	className,
 	hideContainer,
 	bgColor,
+	bgImg,
 	title,
 }) => (
 	<section
 		className={`${styles.Section} ${className} ${
 			bgColor ? `🔥bg-${bgColor}` : ''
 		}`}
+		style={
+			bgImg
+				? { backgroundImage: `url(${bgImg})`, backgroundColor: 'unset' }
+				: {}
+		}
 	>
 		{!hideContainer ? (
 			<Container>
