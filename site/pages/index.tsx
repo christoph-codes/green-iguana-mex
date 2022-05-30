@@ -1,9 +1,7 @@
 import type { NextPage } from 'next';
-import Image from 'next/image';
 import Container from '../components/Container';
 import Section from '../components/Section';
 import Row from '../components/Row';
-import styles from '../styles/Home.module.scss';
 import Button from '../components/Button';
 import Footer from '../components/Footer';
 import iguana from '../assets/images/iguana.svg';
@@ -12,6 +10,7 @@ import PageTemplate from '../templates/Page';
 import greenIguanaSEO from '../assets/images/gim-seo_image.png';
 import homeHero from '../assets/images/home-hero.png';
 import { toastTabLink } from '../util/navLinks';
+import styles from './home/Home.module.scss';
 
 const Home: NextPage = (): any => (
 	<PageTemplate
@@ -27,7 +26,7 @@ const Home: NextPage = (): any => (
 			className={`${styles.Home__hero} 🔥bg-primary`}
 			bgImg={homeHero}
 		>
-			<Row columns={{ xs: [7, 4] }} align="center">
+			<Row columns={{ xs: [8, 4] }} align="center" noGap>
 				<article className={styles.Home__hero__text}>
 					<h1>Welcome Home</h1>
 					<p>
@@ -194,24 +193,6 @@ const Home: NextPage = (): any => (
 				</p>
 			</Container>
 		</main>
-
-		<footer className={styles.footer}>
-			<a
-				href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-				target="_blank"
-				rel="noopener noreferrer"
-			>
-				Powered by{' '}
-				<span className={styles.logo}>
-					<Image
-						src="/vercel.svg"
-						alt="Vercel Logo"
-						width={72}
-						height={16}
-					/>
-				</span>
-			</a>
-		</footer>
 	</PageTemplate>
 );
 
