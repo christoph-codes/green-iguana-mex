@@ -11,7 +11,7 @@ const CateringPage: NextPage = (): any => (
 				'Green Iguana Mexican Restaurant catering is like no other, offering authentic home cooked mexican food right to the venue of your choice!',
 			image: '/image-url',
 		}}
-		className={styles.container}
+		className={styles.CateringPage}
 	>
 		<Section title="Catering">
 			<p>Catering Content will go here.</p>
