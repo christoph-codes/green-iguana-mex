@@ -18,13 +18,13 @@ const SideNav: FC<TSideNav> = ({ isOpen, toggleSideNav, className }) => (
 			isOpen ? styles.SideNav__isOpen : ''
 		}`}
 	>
-		<button
-			className={styles.SideNav__close}
-			type="button"
-			onClick={() => toggleSideNav()}
+		<li
+			className={`${styles.SideNav__link} ${styles['SideNav__link--button']}`}
 		>
-			<IoCloseCircle size={32} />
-		</button>
+			<Button fullWidth href={toastTabLink}>
+				Order Online
+			</Button>
+		</li>
 		{navLinks?.map((link: TLink, index: number) => (
 			<li className={styles.SideNav__link} key={index}>
 				<Link
@@ -32,18 +32,20 @@ const SideNav: FC<TSideNav> = ({ isOpen, toggleSideNav, className }) => (
 					href={link.path}
 				>
 					{/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-					<a>
+					<button type="button" onClick={() => toggleSideNav()}>
 						{link.icon && link.icon}
 						{link.label}
-					</a>
+					</button>
 				</Link>
 			</li>
 		))}
-		<li
-			className={`${styles.SideNav__link} ${styles['SideNav__link--button']}`}
+		<button
+			className={styles.SideNav__close}
+			type="button"
+			onClick={() => toggleSideNav()}
 		>
-			<Button href={toastTabLink}>Order Online</Button>
-		</li>
+			Close <IoCloseCircle size={32} />
+		</button>
 	</aside>
 );
 
