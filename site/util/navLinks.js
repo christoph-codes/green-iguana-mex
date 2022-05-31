@@ -3,6 +3,7 @@ import { FaFacebookF, FaTwitter } from 'react-icons/fa';
 export const toastTabLink = `https://www.toasttab.com/greeniguanastg/v3`;
 
 const navLinks = [
+	{ label: 'Home', path: '/' },
 	{ label: 'Menu', path: '/menu' },
 	{ label: 'Catering', path: '/catering' },
 	{ label: 'Locations', path: '/locations' },
