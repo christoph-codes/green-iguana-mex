@@ -16,23 +16,20 @@ const MenuItem: FC<TMenuItemProps> = ({
 	price,
 	category,
 	className,
-}) => {
-	console.log('hello');
-	return (
-		<article className={`${styles.MenuItem} ${className}`}>
-			<Row columns={{ xs: [9, 2] }}>
-				<div className={styles.MenuItem__text}>
-					<h4>
-						{title} {category && <span>{category}</span>}
-					</h4>
-					<p>{description}</p>
-				</div>
-				<h5 className={`${styles.MenuItem__price} h4 🔥text-tertiary`}>
-					${price}
-				</h5>
-			</Row>
-		</article>
-	);
-};
+}) => (
+	<article className={`${styles.MenuItem} ${className}`}>
+		<Row columns={{ xs: [9, 2] }}>
+			<div className={styles.MenuItem__text}>
+				<h4>
+					{title} {category && <span>{category}</span>}
+				</h4>
+				<p>{description}</p>
+			</div>
+			<h5 className={`${styles.MenuItem__price} h4 🔥text-tertiary`}>
+				${price}
+			</h5>
+		</Row>
+	</article>
+);
 
 export default MenuItem;
