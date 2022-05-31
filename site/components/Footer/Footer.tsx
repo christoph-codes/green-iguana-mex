@@ -4,7 +4,6 @@ import { FaHeart } from 'react-icons/fa';
 import Image from 'next/image';
 import THeaderProps from '../Header';
 import Container from '../Container';
-import Row from '../Row';
 import styles from './Footer.module.scss';
 
 export type TFooterProps = {
@@ -40,35 +39,31 @@ const Footer: FC<TFooterProps> = ({
 							alt="Footer Icon"
 						/>
 					)}
-					<Row justify="center" xs={6}>
-						<div className={styles.Footer__content}>
-							{links && (
-								<nav className={styles.Footer__content__nav}>
-									{links.map((link, index) => (
-										<li
-											key={index}
-											className={
-												styles.Footer__content__nav__link
+					<div className={styles.Footer__content}>
+						{links && (
+							<nav className={styles.Footer__content__nav}>
+								{links.map((link, index) => (
+									<li
+										key={index}
+										className={
+											styles.Footer__content__nav__link
+										}
+									>
+										<Link
+											href={link.path}
+											target={
+												link.newTab ? '_blank' : '_self'
 											}
 										>
-											<Link
-												href={link.path}
-												target={
-													link.newTab
-														? '_blank'
-														: '_self'
-												}
-											>
-												{link.label}
-											</Link>
-										</li>
-									))}
-								</nav>
-							)}
-							<hr />
-							<p className="🔥text-center">{copyright}</p>
-						</div>
-					</Row>
+											{link.label}
+										</Link>
+									</li>
+								))}
+							</nav>
+						)}
+						<hr />
+						<p className="🔥text-center">{copyright}</p>
+					</div>
 				</Container>
 			</footer>
 			{poweredbyTKC && (
