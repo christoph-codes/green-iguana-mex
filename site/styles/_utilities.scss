@@ -6,8 +6,8 @@
 @use './display' as *;
 @use './layout' as *;
 
-@include modifiers($spacers, $spacersUtilities);
 @include modifiers($colors, $colorUtilities);
+@include modifiers($spacers, $spacersUtilities);
 @include modifiers($alignments, $alignmentUtilities);
 @include modifiers($display, $displayUtilities);
 @include modifiers($flex, $flexUtilities);

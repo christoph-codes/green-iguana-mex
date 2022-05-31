@@ -6,6 +6,10 @@
 		text-align: center;
 	}
 	&__content {
+		@include maxq(48rem) {
+			padding-left: 1rem;
+			padding-right: 1rem;
+		}
 		&__nav {
 			display: flex;
 			justify-content: center;
