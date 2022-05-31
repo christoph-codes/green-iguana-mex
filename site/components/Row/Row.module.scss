@@ -1,7 +1,7 @@
 @use '../../styles/layout' as *;
 .Row {
 	display: flex;
-	flex-direction: row;
+	// flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: space-between;
 	&__justify {
@@ -26,11 +26,10 @@
 	row-gap: $gap;
 }
 .Col {
-	flex: 1 0;
+	flex-grow: 1;
+	flex-shrink: 0;
 	&[class*=🔥col-] {
-		flex: 0 0;
-	}
-	& > * {
-		padding: 1rem;
+		flex-grow: 0;
+		flex-shrink: 0;
 	}
 }
