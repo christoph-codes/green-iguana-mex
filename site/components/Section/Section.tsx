@@ -10,6 +10,7 @@ export type ISectionProps = {
 	bgColor?: 'primary' | 'secondary' | 'tertiary' | 'grey' | 'offwhite';
 	bgImg?: StaticImageData;
 	title?: string;
+	description?: string;
 };
 
 const Section: FC<ISectionProps> = ({
@@ -19,10 +20,14 @@ const Section: FC<ISectionProps> = ({
 	bgColor,
 	bgImg,
 	title,
+	description,
 }) => {
 	const content = (
 		<>
 			{title && <h2 className={styles.Section__title}>{title}</h2>}
+			{description && (
+				<p className={styles.Section__description}>{description}</p>
+			)}
 			{children}
 		</>
 	);
