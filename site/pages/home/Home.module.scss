@@ -1,0 +1,39 @@
+@use '../../styles/colors' as *;
+@use '../../styles/mixins' as *;
+.Home {
+	&__hero {
+		&__text {
+			h1, p {
+				color:$white;
+			}
+			h1 {
+				font-size: 5rem;
+				@include maxq(48rem) {
+					font-size: 4rem;
+				}
+			}
+			p {
+				font-size: 2rem;
+				line-height: 1.25;
+				font-weight: bold;
+			}
+		}
+		&__welcome_card {
+			border-radius: 0.5rem;
+		}
+	}
+	&__actions {
+		margin-top: -2rem;
+		background-color: $grey;
+		max-width: 75rem;
+		width: 95%;
+		border-radius: 0 0.5rem 0.5rem 0;
+		padding: 1rem;
+		p {
+			margin-bottom: 0;
+		}
+		* {
+			color: $white;
+		}
+	}
+}

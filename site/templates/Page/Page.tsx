@@ -5,6 +5,7 @@ import { FaFacebookF, FaTwitter } from 'react-icons/fa';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import iguana from '../../assets/images/iguana.svg';
+import greenIguanaSEO from '../../assets/images/gim-seo_image.png';
 import styles from './Page.module.scss';
 
 export type PageProps = {
@@ -19,7 +20,11 @@ export type PageProps = {
 /**
  * 'Page Template: Use this template to establish the Green Iguana layout and structure of all `pages`.'
  */
-const PageTemplate: FC<PageProps> = ({ className, metaData, children }) => {
+const PageTemplate: FC<PageProps> = ({
+	className,
+	metaData = { greenIguanaSEO },
+	children,
+}) => {
 	const router = useRouter();
 	const domain = 'https://greeniguanamex.com';
 	const url = router && router.asPath ? router.asPath : undefined;

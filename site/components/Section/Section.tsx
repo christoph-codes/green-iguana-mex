@@ -1,3 +1,4 @@
+import { StaticImageData } from 'next/image';
 import { FC, ReactNode } from 'react';
 import Container from '../Container';
 import styles from './Section.module.scss';
@@ -7,7 +8,9 @@ export type ISectionProps = {
 	className?: string[];
 	hideContainer?: boolean;
 	bgColor?: 'primary' | 'secondary' | 'tertiary' | 'grey' | 'offwhite';
+	bgImg?: StaticImageData;
 	title?: string;
+	description?: string;
 };
 
 const Section: FC<ISectionProps> = ({
@@ -15,24 +18,35 @@ const Section: FC<ISectionProps> = ({
 	className,
 	hideContainer,
 	bgColor,
+	bgImg,
 	title,
-}) => (
-	<section
-		className={`${styles.Section} ${className} ${
-			bgColor ? `🔥bg-${bgColor}` : ''
-		}`}
-	>
-		{!hideContainer ? (
-			<Container>
-				{title && <h2 className={styles.Section__title}>{title}</h2>}
-				{children}
-			</Container>
-		) : (
-			<>
-				{title && <h2 className={styles.Section__title}>{title}</h2>}
-				{children}
-			</>
-		)}
-	</section>
-);
+	description,
+}) => {
+	const content = (
+		<>
+			{title && <h2 className={styles.Section__title}>{title}</h2>}
+			{description && (
+				<p className={styles.Section__description}>{description}</p>
+			)}
+			{children}
+		</>
+	);
+	return (
+		<section
+			className={`${styles.Section} ${className} ${
+				bgColor ? `🔥bg-${bgColor}` : ''
+			}`}
+			style={
+				bgImg
+					? {
+							backgroundImage: `url(${bgImg.src})`,
+							backgroundColor: 'unset',
+					  }
+					: {}
+			}
+		>
+			{!hideContainer ? <Container>{content}</Container> : content}
+		</section>
+	);
+};
 export default Section;

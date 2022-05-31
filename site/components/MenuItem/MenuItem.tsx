@@ -18,7 +18,7 @@ const MenuItem: FC<TMenuItemProps> = ({
 	className,
 }) => (
 	<article className={`${styles.MenuItem} ${className}`}>
-		<Row columns={{ xs: [9, 2] }}>
+		<Row columns={{ xs: [8, 4] }}>
 			<div className={styles.MenuItem__text}>
 				<h4>
 					{title} {category && <span>{category}</span>}

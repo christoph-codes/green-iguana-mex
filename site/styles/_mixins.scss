@@ -10,13 +10,13 @@
 	}
 }
 @mixin modifiers($map, $attributes) {
-	@each $utility, $attribute in $attributes {
-		@each $item, $value in $map {
-			.🔥#{$utility} {
-				@each $bplabel, $bp in $breakpoints {
-					@if ($bplabel != 'xs') {
-						&-#{$bplabel} {
-							@include minq($bp) {
+	@each $bplabel, $bp in $breakpoints {
+		@if ($bplabel != 'xs') {
+			@include minq($bp) {
+				@each $utility, $attribute in $attributes {
+					@each $item, $value in $map {
+						.🔥#{$utility} {
+							&-#{$bplabel} {
 								&-#{$item} {
 									@each $attr in $attribute {
 										#{$attr}: $value !important;
@@ -24,7 +24,13 @@
 								}
 							}
 						}
-					} @else {
+					}
+				}
+			}
+		} @else {
+			@each $utility, $attribute in $attributes {
+				@each $item, $value in $map {
+					.🔥#{$utility} {
 						&-#{$item} {
 							@each $attr in $attribute {
 								#{$attr}: $value !important;

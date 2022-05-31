@@ -2,7 +2,6 @@ import type { NextPage } from 'next';
 import Container from '../components/Container';
 import Section from '../components/Section';
 import Row from '../components/Row';
-import styles from '../styles/Home.module.scss';
 import MenuItem from '../components/MenuItem';
 import PageTemplate from '../templates/Page';
 
@@ -13,7 +12,6 @@ const Test: NextPage = (): any => (
 			description: 'This is a test description',
 			image: '/image-url',
 		}}
-		className={styles.container}
 	>
 		<Container>
 			<MenuItem
@@ -44,8 +42,7 @@ const Test: NextPage = (): any => (
 			<p>
 				Get started by editing this block of code over and over but I
 				have to make sure that everything is good before I approve of
-				this font size.{' '}
-				<code className={styles.code}>pages/index.tsx</code>
+				this font size. <code>pages/index.tsx</code>
 				<a href="https://nextjs.org">
 					Next.js! Longer title to see how it wraps
 				</a>
