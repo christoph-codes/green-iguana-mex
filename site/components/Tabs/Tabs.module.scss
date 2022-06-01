@@ -1,0 +1,44 @@
+@use '../../styles/colors' as *;
+.Tabs {
+	padding: 1.5rem 0;
+	display: flex;
+	flex: 1 0 auto;
+	align-items: center;
+	&__item {
+		border: none;
+		cursor: pointer;
+		padding: 1rem;
+		list-style-type: none;
+		text-decoration: none;
+		font-weight: bold;
+		color: $primary;
+		transition: all ease-in-out 0.15s;
+		background:
+	    linear-gradient(
+	      to right,
+	      transparent,
+		  transparent
+	    ),
+	    linear-gradient(
+	      to right,
+	      $primary,
+	      $primaryhover
+	  	);
+		background-color: $offwhite;
+		background-size: 100% 2px, 0 2px;
+		background-position: 100% 100%, 0 100%;
+		background-repeat: no-repeat;
+		transition: background-size 200ms;
+		flex-grow: 1;
+    	text-align: center;
+		&:hover {
+			text-decoration: none;
+			color: $primaryhover;
+			background-size: 0 2px, 100% 2px;
+		}
+		&--active {
+			color: $primaryhover;
+			background-size: 0 2px, 100% 2px;
+		}
+	}
+}
