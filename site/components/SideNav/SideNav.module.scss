@@ -23,25 +23,59 @@
 		list-style-type: none;
 		margin-top: 1rem;
 		text-align: center;
-		a {
+		button {
 			color: $grey;
 			font-size: 1.5rem;
+			font-weight: bold;
+			background-color: transparent;
+			border: none;
+			cursor: pointer;
+			transition: all ease-in-out 0.15s;
+			background:
+		    linear-gradient(
+		      to right,
+		      transparent,
+			  transparent
+		    ),
+		    linear-gradient(
+		      to right,
+		      $primary,
+		      $primaryhover
+		  	);
+			background-size: 100% 2px, 0 2px;
+			background-position: 100% 100%, 0 100%;
+			background-repeat: no-repeat;
+			transition: background-size color 200ms;
+			&:hover {
+				text-decoration: none;
+				color: $primary;
+				background-size: 0 2px, 100% 2px;
+			}
 		}
 		&--button {
-			margin-top: auto;
-			margin-bottom: 0;
+			margin-bottom: 1rem;
+			margin-top: 0;
 			a {
-				margin-bottom: 0;
+				margin-top: 0;
 			}
 		}
 	}
 	&__close {
-		background-color: transparent;
-		border: none;
+		background-color: $whitegrey;
 		color: $greylight;
-		margin-left: auto;
-		display: block;
+		border: none;
+		padding: 0.5rem;
+		border-radius: 0.5rem;
+		margin-top: auto;
 		cursor: pointer;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition: background-color 0.15s ease-in-out;
+		&:hover {
+			background-color: $greylight;
+			color: $grey;
+		}
 		&:hover {
 			color: $greyhover;
 		}
