@@ -5,7 +5,7 @@ import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import iguana from '../../assets/images/iguana.svg';
 import greenIguanaSEO from '../../assets/images/gim-seo_image.png';
-import navLinks from '../../util/navLinks';
+import { navLinks } from '../../util/navLinks';
 import styles from './Page.module.scss';
 
 export type PageProps = {
