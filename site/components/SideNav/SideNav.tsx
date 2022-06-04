@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import Link from 'next/link';
 import { IoCloseCircle } from 'react-icons/io5';
-import navLinks, { toastTabLink } from '../../util/navLinks';
+import { mobileLinks, toastTabLink } from '../../util/navLinks';
 import Button from '../Button';
 import styles from './SideNav.module.scss';
 import TLink from '../Header';
@@ -25,7 +25,7 @@ const SideNav: FC<TSideNav> = ({ isOpen, toggleSideNav, className }) => (
 				Order Online
 			</Button>
 		</li>
-		{navLinks?.map((link: TLink, index: number) => (
+		{mobileLinks?.map((link: TLink, index: number) => (
 			<li className={styles.SideNav__link} key={index}>
 				<Link
 					target={link.newTab ? '_blank' : '_self'}

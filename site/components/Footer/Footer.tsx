@@ -2,9 +2,10 @@ import Link from 'next/link';
 import { FC } from 'react';
 import { FaHeart } from 'react-icons/fa';
 import Image from 'next/image';
-import THeaderProps from '../Header';
+import THeaderProps, { TLink } from '../Header';
 import Container from '../Container';
 import styles from './Footer.module.scss';
+import { mobileLinks } from '../../util/navLinks';
 
 export type TFooterProps = {
 	className?: string;
@@ -40,7 +41,7 @@ const Footer: FC<TFooterProps> = ({
 				<div className={styles.Footer__content}>
 					{links && (
 						<nav className={styles.Footer__content__nav}>
-							{links.map((link, index) => (
+							{mobileLinks.map((link: TLink, index: number) => (
 								<li
 									key={index}
 									className={
@@ -52,8 +53,13 @@ const Footer: FC<TFooterProps> = ({
 										target={
 											link.newTab ? '_blank' : '_self'
 										}
+										passHref={!!link.external}
 									>
-										{link.label}
+										{/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+										<a>
+											{link.icon && link.icon}
+											{link.label}
+										</a>
 									</Link>
 								</li>
 							))}

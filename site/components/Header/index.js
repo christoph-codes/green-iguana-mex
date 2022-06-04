@@ -1,1 +1,1 @@
-export { default } from './Header.tsx';
+export { default, TLink } from './Header.tsx';
