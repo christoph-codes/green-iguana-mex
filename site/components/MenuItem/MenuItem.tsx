@@ -31,6 +31,7 @@ const MenuItem: FC<TMenuItemProps> = ({
 				</h5>
 			)}
 		</Row>
+		<div className="p">{description}</div>
 	</article>
 );
 

@@ -74,7 +74,7 @@ const Tabs: FC<TTabs> = ({ data }) => {
 					)}
 					{data[activeTab]?.description && (
 						<div
-							className={`${styles.Tabs__content__description} 🔥text-center 🔥mb-2 🔥pb-2`}
+							className={`${styles.Tabs__content__description} p 🔥text-center 🔥mb-2 🔥pb-2`}
 						>
 							{data[activeTab]?.description}
 						</div>
