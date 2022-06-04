@@ -2,6 +2,8 @@ import type { NextPage } from 'next';
 import PageTemplate from '../../templates/Page';
 import Section from '../../components/Section';
 import styles from './MenuPage.module.scss';
+import Tabs from '../../components/Tabs';
+import menu from '../../util/menu';
 
 const MenuPage: NextPage = (): any => (
 	<PageTemplate
@@ -13,8 +15,8 @@ const MenuPage: NextPage = (): any => (
 		}}
 		className={styles.Menu}
 	>
-		<Section title="Menu">
-			<p>Menu Content will go here.</p>
+		<Section className="🔥pt-2 🔥pb-1" title="Menu">
+			<Tabs data={menu} />
 		</Section>
 	</PageTemplate>
 );

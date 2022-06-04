@@ -12,8 +12,9 @@ import { toastTabLink } from '../../util/navLinks';
 import { useSideNav } from '../../providers/SideNavProvider';
 
 export type TLink = {
-	label: string;
+	label?: string;
 	path: string;
+	external?: boolean;
 	newTab?: boolean;
 	icon?: string;
 };
@@ -52,6 +53,7 @@ const Header: FC<THeaderProps> = ({ links, sticky, className }) => {
 										target={
 											link.newTab ? '_blank' : '_self'
 										}
+										// passHref={!!link.external}
 										href={link.path}
 									>
 										{/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}

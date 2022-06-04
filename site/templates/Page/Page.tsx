@@ -1,11 +1,11 @@
 import { ReactNode, FC } from 'react';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
-import { FaFacebookF, FaTwitter } from 'react-icons/fa';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import iguana from '../../assets/images/iguana.svg';
 import greenIguanaSEO from '../../assets/images/gim-seo_image.png';
+import navLinks from '../../util/navLinks';
 import styles from './Page.module.scss';
 
 export type PageProps = {
@@ -96,35 +96,11 @@ const PageTemplate: FC<PageProps> = ({
 					</>
 				)}
 			</Head>
-			<Header
-				sticky
-				links={[
-					{ label: 'Menu', path: '/menu' },
-					{ label: 'Catering', path: '/catering' },
-					{ label: 'Locations', path: '/locations' },
-					{
-						path: 'https://facebook.com/green-iguana',
-						icon: <FaFacebookF size={32} />,
-					},
-					{
-						path: 'https://twitter.com/green-iguana',
-						icon: <FaTwitter size={32} />,
-					},
-				]}
-			/>
+			<Header sticky links={navLinks} />
 			<main className={`${styles.PageTemplate} ${className}`}>
 				{children}
 			</main>
-			<Footer
-				img={iguana}
-				links={[
-					{ label: 'Menu', path: '/menu' },
-					{ label: 'Catering', path: '/catering' },
-					{ label: 'Locations', path: '/locations' },
-					{ label: 'Order Online', path: '/order-online' },
-					{ label: 'Contact', path: '/contact' },
-				]}
-			/>
+			<Footer img={iguana} links={navLinks} />
 		</>
 	);
 };

@@ -1,1 +1,1 @@
-export { default } from './MenuItem.tsx';
+export { default, TMenuItemProps } from './MenuItem.tsx';
