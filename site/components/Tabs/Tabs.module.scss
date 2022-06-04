@@ -1,13 +1,62 @@
 @use '../../styles/colors' as *;
+@use '../../styles/mixins' as *;
 .Tabs {
-	padding: 1.5rem 0;
-	display: flex;
-	flex: 1 0 auto;
-	align-items: center;
+	border-top: solid 2px $primaryhover;
+	margin-top: 2rem;
+	padding-bottom: 0;
+	&__tablist {
+		border-right: solid 2px $primaryhover;
+		height: 100%;
+		background-color: $offwhite;
+		padding: 0;
+		@include maxq(48rem) {
+			display: none;
+		}
+	}
+	&__select {
+		@include minq(48rem) {
+			display: none;
+		}
+		&::before {
+			content: 'Select Category';
+			color: $grey;
+			margin-top: 1rem;
+			margin-bottom: 1rem;
+			display: block;
+			text-align: center;
+		}
+		&::after {
+			content: "▼";
+			position: absolute;
+			width: 1rem;
+			height: 1rem;
+			color: $primary;
+			right: 2rem;
+			margin-top: 1.25rem;
+		}
+		select {
+			appearance: none;
+			width: 100%;
+			padding: 1rem;
+			font-weight: bold;
+			font-size: 1.25rem;
+			background-color: $offwhite;
+			color: $primary;
+			border: solid 2px $primary;
+			z-index: 1;
+			border-radius: 0.25rem;
+			@include maxq(48rem) {
+				width: 100%;
+			}
+			
+		}
+	}
 	&__item {
+		display: block;
+		width: 100%;
 		border: none;
 		cursor: pointer;
-		padding: 1rem;
+		padding: 1.5rem 1rem;
 		list-style-type: none;
 		text-decoration: none;
 		font-weight: bold;
@@ -25,20 +74,43 @@
 	      $primaryhover
 	  	);
 		background-color: $offwhite;
-		background-size: 100% 2px, 0 2px;
-		background-position: 100% 100%, 0 100%;
+		background-size: 0px 100%;
+		background-position: 0% 100%, 100% 100%;
 		background-repeat: no-repeat;
-		transition: background-size 200ms;
+		transition: background-size color 200ms;
 		flex-grow: 1;
     	text-align: center;
+		&:last-child {
+			border-bottom: solid 2px $primaryhover;
+		}
 		&:hover {
 			text-decoration: none;
-			color: $primaryhover;
-			background-size: 0 2px, 100% 2px;
+			color: $white;
+			background-size: 100% 100%;
 		}
 		&--active {
-			color: $primaryhover;
-			background-size: 0 2px, 100% 2px;
+			color: $white;
+			background-size: 100% 100%;
+		}
+	}
+	&__content {
+		padding: 2rem 1rem;
+		&__description {
+			border-bottom: solid 2px $offwhite;
+		}
+		&__columns {
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+			column-gap: 2rem;
+			&__column {
+				width: calc(50% - 2rem);
+				flex-shrink: 0;
+				padding: 0 0 1.5rem;
+				@include maxq(48rem) {
+					width: 100%;
+				}
+			}
 		}
 	}
 }

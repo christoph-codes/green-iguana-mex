@@ -15,9 +15,8 @@ const MenuPage: NextPage = (): any => (
 		}}
 		className={styles.Menu}
 	>
-		<Section title="Menu">
+		<Section className="🔥pt-2 🔥pb-1" title="Menu">
 			<Tabs data={menu} />
-			<p>Menu Content will go here.</p>
 		</Section>
 	</PageTemplate>
 );
