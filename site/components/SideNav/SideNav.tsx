@@ -4,7 +4,7 @@ import { IoCloseCircle } from 'react-icons/io5';
 import { mobileLinks, toastTabLink } from '../../util/navLinks';
 import Button from '../Button';
 import styles from './SideNav.module.scss';
-import TLink from '../Header';
+import { TLink } from '../Header';
 
 export type TSideNav = {
 	isOpen?: boolean;
