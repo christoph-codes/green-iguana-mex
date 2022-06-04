@@ -1,0 +1,28 @@
+@use '../../styles/colors' as *;
+@use '../../styles/mixins' as *;
+.Locations {
+	iframe {
+		border-radius: 1rem;
+	}
+	&__details {
+		display: flex;
+		justify-content: center;
+		height: 100%;
+		align-items: center;
+		flex-direction: column;
+		&__card {
+			background-color: $offwhite;
+			padding: 2rem;
+			z-index: 2;
+			margin-left: -15rem;
+			border: solid 1px $whitegrey;
+			box-shadow: 0 0 10px -5px rgba(0,0,0,0.5);
+			border-radius: 1rem;
+			@include maxq(48rem) {
+				width: 90%;
+				margin-left: unset;
+				margin-top: -10rem;
+			}
+		}
+	}
+}
