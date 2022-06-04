@@ -12,7 +12,7 @@ const LocationsPage: NextPage = (): any => (
 			title: 'Locations | Green Iguana Mexican Restaurant',
 			description:
 				'Find a Green Iguana Mexican Restaurant Location Near You!',
-			image: '/image-url',
+			image: { greenIguanaBuilding },
 		}}
 		className={styles.Locations}
 	>
