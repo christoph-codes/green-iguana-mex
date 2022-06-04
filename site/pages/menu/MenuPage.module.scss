@@ -1,0 +1,17 @@
+@use '../../styles/mixins' as *;
+.Menu {
+	&__columns {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		column-gap: 2rem;
+		&__column {
+			width: calc(50% - 2rem);
+			flex-shrink: 0;
+			padding: 0 0 1.5rem;
+			@include maxq(48rem) {
+				width: 100%;
+			}
+		}
+	}
+}
