@@ -23,7 +23,6 @@ const MenuItem: FC<TMenuItemProps> = ({
 				<h4>
 					{title} {category && <span>{category}</span>}
 				</h4>
-				<p>{description}</p>
 			</div>
 			{price && (
 				<h5 className={`${styles.MenuItem__price} h4 🔥text-tertiary`}>
