@@ -1,7 +1,8 @@
 import { NextPage } from "next";
 
 const Notion: NextPage = (): any => {
-    const pageData = fetch('/api/notion/get-page').then(res => {
+    const pageData = fetch('/api/notion/get-page')
+    .then(res => {
         if(res.status === 200) {
             return res.json();
         }
