@@ -38,7 +38,6 @@ const FormProvider: FC<IFormProviderProps> = ({ children }) => {
 		} else {
 			let exists = false;
 			const newErrors = errors.map((err) => {
-				console.log('original', err);
 				if (exists) return err;
 
 				if (err.key === name) {
@@ -46,7 +45,6 @@ const FormProvider: FC<IFormProviderProps> = ({ children }) => {
 					if (!err.messages.includes(validity)) {
 						err.messages.push(validity);
 					}
-					console.log('updated', err);
 					return err;
 				}
 				return err;
