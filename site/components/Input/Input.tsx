@@ -1,4 +1,4 @@
-import { FC, useState } from 'react';
+import { FC } from 'react';
 import { useForm } from '../../providers/FormContext';
 import inputValidations from '../../util/inputValidations';
 import styles from './Input.module.scss';
@@ -22,7 +22,6 @@ const Input: FC<TInputProps> = ({
 }) => {
 	const { form, formUpdate, errors, errorUpdate } = useForm();
 	const validate = (inputValue: any) => {
-		console.log('inputValue:', inputValue);
 		validation.forEach((iv) => {
 			if (inputValidations[iv as keyof typeof inputValidations]) {
 				// isValid returns `true` or `string of error message`
@@ -31,14 +30,13 @@ const Input: FC<TInputProps> = ({
 					inputValidations[iv as keyof typeof inputValidations](
 						inputValue
 					);
-				console.log('isValid:', isValid);
 				errorUpdate(name, isValid);
 			} else {
-				console.error('Not a valid input validator.');
+				throw new Error('Not a valid input validator.');
+				// console.error('Not a valid input validator.');
 			}
 		});
 	};
-	console.log('errors', errors);
 	return (
 		<label htmlFor={name}>
 			<>
