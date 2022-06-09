@@ -20,49 +20,48 @@ const Input: FC<TInputProps> = ({
 	required = false,
 	validation,
 }) => {
-	const { form, formUpdate } = useForm();
-	const [errors, setErrors] = useState({});
-	const validate = () => {
-		const inputName = form[name as keyof typeof form];
-		console.log('iName:', form[name as keyof typeof form]);
+	const { form, formUpdate, errors, errorUpdate } = useForm();
+	const validate = (inputValue: any) => {
+		console.log('inputValue:', inputValue);
 		validation.forEach((iv) => {
 			if (inputValidations[iv as keyof typeof inputValidations]) {
 				// isValid returns `true` or `string of error message`
+				// checks validation
 				const isValid =
 					inputValidations[iv as keyof typeof inputValidations](
-						inputName
+						inputValue
 					);
-				if (typeof isValid !== 'string') {
-					delete errors[inputName as keyof typeof errors];
-				} else {
-					setErrors({
-						...errors,
-						[form[name as keyof typeof form]]: isValid,
-					});
-				}
+				console.log('isValid:', isValid);
+				errorUpdate(name, isValid);
 			} else {
-				console.error('This does not exist as an input validator.');
+				console.error('Not a valid input validator.');
 			}
 		});
 	};
+	console.log('errors', errors);
 	return (
 		<label htmlFor={name}>
-			<span className={styles.Input__label}>{label}</span>
-			<input
-				className={`${styles.Input__input}`}
-				name={name}
-				placeholder={placeholder}
-				type={type}
-				id={name}
-				value={form[name as keyof typeof form]}
-				onChange={formUpdate}
-				required={required}
-				onBlur={() => validate()}
-			/>
-			{errors &&
-				Object.keys(errors).map((err, index) => (
-					<p key={index}>{err}</p>
-				))}
+			<>
+				<span className={styles.Input__label}>{label}</span>
+				<input
+					className={`${styles.Input__input}`}
+					name={name}
+					placeholder={placeholder}
+					type={type}
+					id={name}
+					value={form[name as keyof typeof form]}
+					onChange={formUpdate}
+					required={required}
+					onBlur={() => validate(form[name as keyof typeof form])}
+				/>
+				{errors.length &&
+					errors.map(
+						(err) =>
+							err.key === name && (
+								<p key={err.key}>{err.messages.join(', ')}</p>
+							)
+					)}
+			</>
 		</label>
 	);
 };
