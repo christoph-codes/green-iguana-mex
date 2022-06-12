@@ -1,18 +1,21 @@
-import { ReactNode, FC } from 'react';
+import { FC, ReactNode } from 'react';
+import Image from 'next/image';
 import {
-	FaChartLine,
-	FaStethoscope,
 	FaCalendarAlt,
+	FaChartLine,
 	FaMoneyBillWave,
-	FaUmbrellaBeach,
 	FaPiggyBank,
+	FaStethoscope,
 	FaTag,
+	FaUmbrellaBeach,
 } from 'react-icons/fa';
 import { GiTacos } from 'react-icons/gi';
-import Section from '../../components/Section';
+import Button from '../../components/Button';
 import Row from '../../components/Row';
+import Section from '../../components/Section';
 import Page from '../Page';
 import { PageProps } from '../Page/Page';
+import gimInterior from '../../assets/images/gim-interior.jpg';
 import styles from './JobListing.module.scss';
 
 export type TJobListingProps = {
@@ -79,26 +82,46 @@ const JobListing: FC<TJobListingProps> = ({
 						<strong>{pay}</strong>
 					</h4>
 				)}
+				<Button
+					className={styles.JobListing__apply_btn}
+					href="#apply"
+					variant="secondary"
+				>
+					Apply Now
+				</Button>
 			</Section>
-			<Section>
+			<Section className="🔥pb-0">
 				<p className="🔥text-center">{description}</p>
 			</Section>
 			<Section
 				title="Serving Up Fresh Opportunities! "
 				description="Green Iguana is looking to hire energetic Team Members to join our #greeniguanafamily."
 			>
-				<p>
-					Stop in for an in-person interview from 2-4:30PM daily! Ask
-					for the manager.
-				</p>
-				<ul>
-					<li>Fun, fast-paced work environment</li>
-					<li>Raises within your first year</li>
-					<li>30+ hours per week</li>
-					<li>Part-Time and Full-Time available</li>
-					<li>FREE MEALS on shifts</li>
-					<li>Growth opportunities/opportunities for advancement</li>
-				</ul>
+				<Row columns={{ xs: [12, 12], md: [6, 6] }} align="center">
+					<div className="🔥py-1 🔥p-md-2">
+						<Image
+							src={gimInterior}
+							alt="Green Iguana Mexican Restaurant interior"
+						/>
+					</div>
+					<div className="🔥p-md-2 🔥py-0">
+						<p>
+							Stop in for an in-person interview from 2-4:30PM
+							daily! Ask for the manager.
+						</p>
+						<ul>
+							<li>Fun, fast-paced work environment</li>
+							<li>Raises within your first year</li>
+							<li>30+ hours per week</li>
+							<li>Part-Time and Full-Time available</li>
+							<li>FREE MEALS on shifts</li>
+							<li>
+								Growth opportunities/opportunities for
+								advancement
+							</li>
+						</ul>
+					</div>
+				</Row>
 			</Section>
 			<Section
 				bgColor="offwhite"
@@ -126,8 +149,16 @@ const JobListing: FC<TJobListingProps> = ({
 			<Section
 				title="Piqued your interest? "
 				description="We would love to meet you, so apply today!"
+				id="apply"
 			>
 				** FORM WILL GO HERE! **
+				<Button
+					className={styles.JobListing__careers_btn}
+					href="#apply"
+					variant="primary-outline"
+				>
+					‹ Back to Careers
+				</Button>
 			</Section>
 		</Page>
 	);
