@@ -1,0 +1,14 @@
+@use '../../styles/colors' as *;
+.JobListing {
+    &__perks {
+        &__perk {
+            text-align: center;
+            padding: 2rem;
+            margin-bottom: 1rem;
+            h5 {
+                margin-top: 1rem;
+                color: $grey;
+            }
+        }
+    }
+}
