@@ -2,14 +2,14 @@ const burritos = {
 	title: 'Grande Burritos',
 	description: (
 		<>
-			Choose From Green l White l Red or Tres Quesos Sauce. Includes Rice
-			l Beans.
-			<br /> Add Lettuce & Tomatoes to any Burrito for $1.99
-			<br />
-			<small>
-				*Substitute for a side Salad for only .69¢.
-				<br /> *Add a Side Salad for only $1.99
-			</small>
+			<p>Choose From Green l White l Red or Tres Quesos Sauce. Includes Rice l Beans.</p>
+			<p>Add Lettuce & Tomatoes to any Burrito for $1.99 </p>
+			<p>
+				<strong>
+					*Substitute for a side Salad for only .69¢.
+					<br /> *Add a Side Salad for only $1.99
+				</strong>
+			</p>
 		</>
 	),
 	content: [
@@ -25,7 +25,7 @@ const burritos = {
 		},
 		{
 			title: 'Fajita Burrito',
-			description: `Choice of Carne Asada or Charbroiled Chicken l Peppers l Onions l Pico l Guacamole l Sour Cream l Cheese. Add Shrimp for $2.99`,
+			description: <>Choice of Carne Asada or Charbroiled Chicken l Peppers l Onions l Pico l Guacamole l Sour Cream l Cheese. <strong>Add Shrimp for $2.99</strong></>,
 			price: 12.49,
 		},
 		{
@@ -35,7 +35,7 @@ const burritos = {
 		},
 		{
 			title: 'Smothered Burrito',
-			description: `Rice l Pico l Cheese l Lettuce l Choice of non grilled meat l Choice of sauce l Topped with Cheese`,
+			description: `Choose from Shredded Chicken l Ground Beef l Shredded Beef l Carnitas or Sweet Pork l Rice l Pico l Cheese`,
 			price: 11.99,
 		},
 		{
@@ -50,6 +50,7 @@ const burritos = {
 		},
 		{
 			title: 'Carne Asada Burrito',
+			description: 'Carne Asada l Pico l Guacamole l Rice l Cheese',
 			price: 12.49,
 		},
 	],
