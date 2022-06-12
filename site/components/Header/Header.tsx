@@ -23,15 +23,17 @@ export type THeaderProps = {
 	sticky?: boolean;
 	links?: TLink[];
 	className?: string;
+	rest?: any[];
 };
 
-const Header: FC<THeaderProps> = ({ links, sticky, className }) => {
+const Header: FC<THeaderProps> = ({ links, sticky, className, ...rest }) => {
 	const { isOpen, toggleSideNav } = useSideNav();
 	return (
 		<header
 			className={`${styles.Header} ${className} ${
 				sticky ? styles.Header__sticky : ''
 			}`}
+			{...rest}
 		>
 			<Container className={styles.Header__container}>
 				<Link href="/">

@@ -4,9 +4,16 @@ import styles from './Container.module.scss';
 export type IContainerProps = {
 	children: ReactNode;
 	className: string[];
+	rest: any[];
 };
 
-const Container: FC<IContainerProps> = ({ children, className = '' }) => (
-	<div className={`${styles.Container} ${className}`}>{children}</div>
+const Container: FC<IContainerProps> = ({
+	children,
+	className = '',
+	...rest
+}) => (
+	<div className={`${styles.Container} ${className}`} {...rest}>
+		{children}
+	</div>
 );
 export default Container;

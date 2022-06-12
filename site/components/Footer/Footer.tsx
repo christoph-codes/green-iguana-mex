@@ -13,6 +13,7 @@ export type TFooterProps = {
 	copyright?: string;
 	poweredbyTKC?: boolean;
 	img?: string;
+	rest?: any[];
 };
 
 const Footer: FC<TFooterProps> = ({
@@ -27,9 +28,13 @@ const Footer: FC<TFooterProps> = ({
 	poweredbyTKC = true,
 	className,
 	img,
+	...rest
 }) => (
 	<>
-		<footer className={`${styles.Footer} ${className} 🔥bg-primary`}>
+		<footer
+			className={`${styles.Footer} ${className} 🔥bg-primary`}
+			{...rest}
+		>
 			<Container className={styles.Footer__container}>
 				{img && (
 					<Image
