@@ -69,6 +69,10 @@ const JobListing: FC<TJobListingProps> = ({
 			label: 'Growth Opportunities',
 		},
 	];
+	const scrollToApply = () => {
+		const element = document.getElementById('apply');
+		element?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+	};
 	return (
 		<Page
 			metaData={metaData}
@@ -84,7 +88,7 @@ const JobListing: FC<TJobListingProps> = ({
 				)}
 				<Button
 					className={styles.JobListing__apply_btn}
-					href="#apply"
+					onClick={scrollToApply}
 					variant="secondary"
 				>
 					Apply Now
@@ -154,7 +158,7 @@ const JobListing: FC<TJobListingProps> = ({
 				** FORM WILL GO HERE! **
 				<Button
 					className={styles.JobListing__careers_btn}
-					href="#apply"
+					href="/careers"
 					variant="primary-outline"
 				>
 					‹ Back to Careers
