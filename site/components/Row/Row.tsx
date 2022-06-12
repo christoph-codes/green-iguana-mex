@@ -31,6 +31,7 @@ export type IColProps = {
 	sm?: TDesktopColumns;
 	md?: TDesktopColumns;
 	lg?: TDesktopColumns;
+	rest?: any[];
 };
 
 export type IRowProps = {
@@ -39,14 +40,26 @@ export type IRowProps = {
 	columns?: TColumnSize;
 	align?: 'center' | 'end';
 	justify?: 'start' | 'end' | 'between';
+	rest?: any[];
 };
 
-const Col: FC<IColProps> = ({ children, className = '', xs, sm, md, lg }) => {
+const Col: FC<IColProps> = ({
+	children,
+	className = '',
+	xs,
+	sm,
+	md,
+	lg,
+	...rest
+}) => {
 	const generateClasses = `${sm ? `🔥col-sm-${sm}` : ''} ${
 		md ? `🔥col-md-${md}` : ''
 	} ${lg ? `🔥col-lg-${lg}` : ''} ${xs ? `🔥col-${xs}` : ''}`;
 	return (
-		<div className={`${styles.Col} ${className} ${generateClasses} `}>
+		<div
+			className={`${styles.Col} ${className} ${generateClasses} `}
+			{...rest}
+		>
 			{children}
 		</div>
 	);
@@ -58,6 +71,7 @@ const Row: FC<IRowProps> = ({
 	columns,
 	align,
 	justify,
+	...rest
 }) => {
 	const renderedColumns = (): any =>
 		// Map over the children and add the column sizes relative to the columns prop
@@ -77,6 +91,7 @@ const Row: FC<IRowProps> = ({
 			className={`${styles.Row} ${className} ${
 				justify ? styles[`Row__justify--${justify}`] : ''
 			} ${align ? styles[`Row__align--${align}`] : ''}`}
+			{...rest}
 		>
 			{renderedColumns()}
 		</div>

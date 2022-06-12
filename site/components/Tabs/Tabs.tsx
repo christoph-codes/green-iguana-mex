@@ -10,6 +10,7 @@ export type TTabs = {
 		description?: string;
 		content: ReactElement[];
 	}[];
+	rest?: any[];
 };
 
 export type TMenuGroup = {
@@ -18,7 +19,7 @@ export type TMenuGroup = {
 	content: TMenuItemProps[];
 };
 
-const Tabs: FC<TTabs> = ({ data }) => {
+const Tabs: FC<TTabs> = ({ data, ...rest }) => {
 	const [activeTab, setActiveTab] = useState(0);
 	const lists = data.map((tab, index) => (
 		<>
@@ -49,7 +50,11 @@ const Tabs: FC<TTabs> = ({ data }) => {
 	));
 	return (
 		<>
-			<Row className={styles.Tabs} columns={{ xs: [12, 12], md: [3, 9] }}>
+			<Row
+				className={styles.Tabs}
+				columns={{ xs: [12, 12], md: [3, 9] }}
+				{...rest}
+			>
 				<div>
 					<ul className={styles.Tabs__tablist}>{lists}</ul>
 					<label htmlFor="activeTab" className={styles.Tabs__select}>
