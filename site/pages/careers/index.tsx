@@ -41,7 +41,7 @@ const Careers: NextPage = (): any => (
 				</div>
 			))}
 			<p className="🔥pt-2 🔥text-center">
-				Be sure to constantly check back for more new position postings
+				Be sure to constantly check back for more new current openings
 				coming soon.
 			</p>
 		</Section>
