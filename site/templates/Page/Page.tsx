@@ -1,5 +1,6 @@
 import { ReactNode, FC } from 'react';
 import { useRouter } from 'next/router';
+import { StaticImageData } from 'next/image';
 import Head from 'next/head';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
@@ -13,7 +14,7 @@ export type PageProps = {
 	metaData: {
 		title: string;
 		description: string;
-		image: string;
+		image?: string | StaticImageData | any;
 	};
 	children: ReactNode;
 };
@@ -22,7 +23,7 @@ export type PageProps = {
  */
 const PageTemplate: FC<PageProps> = ({
 	className,
-	metaData = { greenIguanaSEO },
+	metaData = { image: greenIguanaSEO },
 	children,
 }) => {
 	const router = useRouter();
