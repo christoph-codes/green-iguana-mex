@@ -1,7 +1,19 @@
 const appetizers = {
 	title: 'Appetizers',
 	description:
-		'Premium Meats Additional Charge Carne Asada l Charbroiled Chicken l Shrimp',
+	<>
+		<p>
+			Premium Meats Additional Charge Carne Asada l Charbroiled Chicken l Shrimp
+		</p>
+		<p>
+			<strong>Meats:</strong> Bean & Cheese l Shredded Beef l Shredded
+			Chicken l Ground Beef l Chile Verde l Carnitas l Sweet Pork
+		</p>
+		<p>
+			<strong>Premium Meats:</strong> Carne Asada l Charbroiled
+			Chicken l Shrimp. *Additional Charge
+		</p>
+	</>,
 	content: [
 		{
 			title: 'Quesadilla',
@@ -16,7 +28,7 @@ const appetizers = {
 		},
 		{
 			title: 'Carne Asada Fries',
-			price: 11.99,
+			price: 11.49,
 			description:
 				'Mix Cheese l Pico l Sour Cream l Jalapeños l Guacamole',
 		},
@@ -24,16 +36,6 @@ const appetizers = {
 			title: 'Fresh Guacamole & Chips',
 			price: 8.99,
 			description: 'Fresh Tortilla Chips l Pico',
-		},
-		{
-			title: 'Quesadilla',
-			price: 7.99,
-			description:
-				'12” Flour tortilla l Mix Cheese l Pico l Sour Cream l Guacamole',
-		},
-		{
-			title: 'Chip Refill',
-			price: 1.49,
 		},
 		{
 			title: 'Iguana Nachos',

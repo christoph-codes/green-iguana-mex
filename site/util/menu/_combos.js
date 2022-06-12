@@ -15,13 +15,13 @@ const combos = {
 				<strong>Sauces:</strong> Green Sauce l Red Sauce l White Sauce l
 				Tres Quesos
 			</p>
-			<p>
+			<p className='🔥text-tertiary'>
 				<strong>Uno: $8.99</strong> | <strong>Dos: $11.25</strong> |{' '}
 				<strong>Tres: $13.25</strong>
 			</p>
-			<small>* Substitute for a side Salad for only .69¢</small>
+			<p><strong>* Substitute for a side Salad for only .69¢</strong>
 			<br />
-			<small>* Add a Side Salad for only $1.99</small>
+			<strong>* Add a Side Salad for only $1.99</strong></p>
 		</>
 	),
 	content: [
