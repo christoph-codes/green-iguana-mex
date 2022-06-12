@@ -13,9 +13,8 @@ const JobPage = () => {
 				title={job.title}
 				location={job.location}
 				pay={job.pay}
-			>
-				Job: {joblisting}
-			</JobListing>
+				description={job.description}
+			/>
 		);
 	}
 	return null;

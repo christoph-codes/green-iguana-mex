@@ -17,7 +17,7 @@ import styles from './JobListing.module.scss';
 
 export type TJobListingProps = {
 	className?: string;
-	children?: ReactNode;
+	description?: ReactNode;
 	metaData: PageProps['metaData'];
 	title: string;
 	location: string;
@@ -25,7 +25,7 @@ export type TJobListingProps = {
 };
 
 const JobListing: FC<TJobListingProps> = ({
-	children,
+	description,
 	metaData,
 	className,
 	title,
@@ -80,7 +80,9 @@ const JobListing: FC<TJobListingProps> = ({
 					</h4>
 				)}
 			</Section>
-			<Section>{children}</Section>
+			<Section>
+				<p className="🔥text-center">{description}</p>
+			</Section>
 			<Section
 				title="Serving Up Fresh Opportunities! "
 				description="Green Iguana is looking to hire energetic Team Members to join our #greeniguanafamily."
@@ -104,7 +106,10 @@ const JobListing: FC<TJobListingProps> = ({
 				description="Perks as great as our burritos! We offer a variety of perks and benefits for every employee... even you part-timers! *Benefits may vary by career category."
 			>
 				<Row
-					columns={{ xs: [3, 3, 3, 3] }}
+					columns={{
+						xs: [12, 12, 12, 12],
+						md: [3, 3, 3, 3],
+					}}
 					className={styles.JobListing__perks}
 				>
 					{perks.map(({ Icon, label }, index) => (
