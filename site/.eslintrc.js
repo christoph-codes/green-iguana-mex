@@ -37,4 +37,9 @@ module.exports = {
 		'react/jsx-no-constructed-context-values': 0,
 		'import/extensions': 0,
 	},
+	settings: {
+		'import/resolver': {
+			typescript: {}, // this loads <rootdir>/tsconfig.json to eslint
+		},
+	},
 };
