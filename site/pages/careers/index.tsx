@@ -34,13 +34,13 @@ const Careers: NextPage = (): any => (
 								href={`/careers/${job.slug}`}
 								variant="tertiary"
 							>
-								View Details
+								View Position
 							</Button>
 						</div>
 					</Row>
 				</div>
 			))}
-			<p className="🔥pt-2 🔥text-center">
+			<p className="🔥pt-2 🔥text-center 🔥text-greylight">
 				Be sure to constantly check back for more new current openings
 				coming soon.
 			</p>
