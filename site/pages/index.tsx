@@ -3,12 +3,13 @@ import Container from '../components/Container';
 import Section from '../components/Section';
 import Row from '../components/Row';
 import Button from '../components/Button';
-import MenuItem from '../components/MenuItem';
 import PageTemplate from '../templates/Page';
 import greenIguanaSEO from '../assets/images/gim-seo_image.png';
 import homeHero from '../assets/images/home-hero.png';
 import { toastTabLink } from '../util/navLinks';
 import styles from './home/Home.module.scss';
+import CategoryItem from '../components/CategoryItem/CategoryItem';
+import specials from '../util/menu/_specials';
 
 const Home: NextPage = (): any => (
 	<PageTemplate
@@ -68,40 +69,13 @@ const Home: NextPage = (): any => (
 				</Row>
 			</Container>
 		</div>
-		<Section
+		<CategoryItem
 			className={`${styles.Home__hero} 🔥bg-offwhite`}
-			title="Green Iguana Plato Especiales"
-			description="All plates served with Rice, Beans, Lettuce, Pico, Guacomole,
-			Sour Cream, and Corn or Flour Tortillas **Do not include
-			Tortillas"
-		>
-			<MenuItem
-				category="NEW"
-				title="Green Iguana Plato Especiales**"
-				description="Charbroiled Chicken Breast | Green Sauce | Tortilla Strips | Mixed Cheese | Pico | 
-				Guacomole | Sour Cream | Rice | Fresh Veggies."
-				price="12.99"
-			/>
-			<MenuItem
-				title="Green Iguana Plato Especiales**"
-				description="Charbroiled Chicken Breast | Green Sauce | Tortilla Strips | Mixed Cheese | Pico | 
-				Guacomole | Sour Cream | Rice | Fresh Veggies."
-				price="12.99"
-			/>
-			<MenuItem
-				title="Green Iguana Plato Especiales**"
-				description="Charbroiled Chicken Breast | Green Sauce | Tortilla Strips | Mixed Cheese | Pico | 
-				Guacomole | Sour Cream | Rice | Fresh Veggies."
-				price="12.99"
-			/>
-			<Button
-				href="/menu"
-				className="🔥mx-auto 🔥mt-2"
-				variant="secondary"
-			>
-				View Menu
-			</Button>
-		</Section>
+			category={specials}
+		/>
+		<Button href="/menu" className="🔥mx-auto 🔥mt-2" variant="secondary">
+			View Menu
+		</Button>
 	</PageTemplate>
 );
 
