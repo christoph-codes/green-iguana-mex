@@ -1,0 +1,67 @@
+@use '../../styles/colors' as *;
+@use '../../styles/mixins' as *;
+.CategoryItem {
+    padding: 2rem;
+    &__item {
+		display: block;
+		width: 100%;
+		border: none;
+		cursor: pointer;
+		padding: 1.5rem 1rem;
+		list-style-type: none;
+		text-decoration: none;
+		font-weight: bold;
+		color: $primary;
+		transition: all ease-in-out 0.15s;
+		background:
+	    linear-gradient(
+	      to right,
+	      transparent,
+		  transparent
+	    ),
+	    linear-gradient(
+	      to right,
+	      $primary,
+	      $primaryhover
+	  	);
+		background-color: $offwhite;
+		background-size: 0px 100%;
+		background-position: 0% 100%, 100% 100%;
+		background-repeat: no-repeat;
+		transition: background-size color 200ms;
+		flex-grow: 1;
+    	text-align: center;
+		&:last-child {
+			border-bottom: solid 2px $primaryhover;
+		}
+		&:hover {
+			text-decoration: none;
+			color: $white;
+			background-size: 100% 100%;
+		}
+		&--active {
+			color: $white;
+			background-size: 100% 100%;
+		}
+	}
+	&__content {
+		padding: 2rem 1rem;
+		&__description {
+			border-bottom: solid 2px $offwhite;
+		}
+		&__columns {
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+			column-gap: 2rem;
+			&__column {
+				width: calc(50% - 2rem);
+				flex-shrink: 0;
+				padding: 0 0 1.5rem;
+				@include maxq(48rem) {
+					width: 100%;
+				}
+			}
+		}
+	}
+}
