@@ -1,4 +1,5 @@
 import type { NextPage } from 'next';
+import Image from 'next/image';
 import Container from '../components/Container';
 import Section from '../components/Section';
 import Row from '../components/Row';
@@ -7,9 +8,15 @@ import PageTemplate from '../templates/Page';
 import greenIguanaSEO from '../assets/images/gim-seo_image.png';
 import homeHero from '../assets/images/home-hero.png';
 import { toastTabLink } from '../util/navLinks';
-import styles from './home/Home.module.scss';
 import CategoryItem from '../components/CategoryItem/CategoryItem';
 import specials from '../util/menu/_specials';
+// Images
+import margaritas from '../assets/images/gim_margaritas.jpg';
+import mangoMargarita from '../assets/images/gim_mango_marg.jpg';
+import shrimp from '../assets/images/gim_shrimp.jpg';
+import shreddedBeef from '../assets/images/gim_shredded_beef.jpg';
+// Styles
+import styles from './home/Home.module.scss';
 
 const Home: NextPage = (): any => (
 	<PageTemplate
@@ -69,6 +76,30 @@ const Home: NextPage = (): any => (
 				</Row>
 			</Container>
 		</div>
+		<Section>
+			<Row className={styles.Home__gallery}>
+				<Image
+					layout="responsive"
+					src={margaritas}
+					alt="Margaritas from Green Iguana Mexican Restaurant"
+				/>
+				<Image
+					layout="responsive"
+					src={shrimp}
+					alt="Shrimp Plate from Green Iguana Mexican Restaurant"
+				/>
+				<Image
+					layout="responsive"
+					src={mangoMargarita}
+					alt="Mango Margarita from Green Iguana Mexican Restaurant"
+				/>
+				<Image
+					layout="responsive"
+					src={shreddedBeef}
+					alt="Shredded Beef Plate from Green Iguana Mexican Restaurant"
+				/>
+			</Row>
+		</Section>
 		<CategoryItem
 			className={`${styles.Home__hero} 🔥bg-offwhite`}
 			category={specials}
