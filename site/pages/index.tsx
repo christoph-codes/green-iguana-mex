@@ -11,10 +11,10 @@ import { toastTabLink } from '../util/navLinks';
 import CategoryItem from '../components/CategoryItem/CategoryItem';
 import specials from '../util/menu/_specials';
 // Images
-import margaritas from '../assets/images/gim_margaritas.jpg';
-import mangoMargarita from '../assets/images/gim_mango_marg.jpg';
-import shrimp from '../assets/images/gim_shrimp.jpg';
-import shreddedBeef from '../assets/images/gim_shredded_beef.jpg';
+import margaritas from '../assets/images/gim_margaritas.png';
+import mangoMargarita from '../assets/images/gim_mango_marg.png';
+import shrimp from '../assets/images/gim_shrimp.png';
+import shreddedBeef from '../assets/images/gim_shredded_beef.png';
 // Styles
 import styles from './home/Home.module.scss';
 
@@ -79,21 +79,25 @@ const Home: NextPage = (): any => (
 		<Section>
 			<Row className={styles.Home__gallery}>
 				<Image
+					className={styles.Home__gallery__item}
 					layout="responsive"
 					src={margaritas}
 					alt="Margaritas from Green Iguana Mexican Restaurant"
 				/>
 				<Image
+					className={styles.Home__gallery__item}
 					layout="responsive"
 					src={shrimp}
 					alt="Shrimp Plate from Green Iguana Mexican Restaurant"
 				/>
 				<Image
+					className={styles.Home__gallery__item}
 					layout="responsive"
 					src={mangoMargarita}
 					alt="Mango Margarita from Green Iguana Mexican Restaurant"
 				/>
 				<Image
+					className={styles.Home__gallery__item}
 					layout="responsive"
 					src={shreddedBeef}
 					alt="Shredded Beef Plate from Green Iguana Mexican Restaurant"
