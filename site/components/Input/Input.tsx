@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { useForm } from '../../providers/FormContext';
-import inputValidations from '../../util/inputValidations';
+import inputValidations, { EErrorMessages } from '../../util/inputValidations';
 import styles from './Input.module.scss';
 
 export type TInputProps = {
@@ -9,7 +9,7 @@ export type TInputProps = {
 	placeholder?: string;
 	label: string;
 	required: boolean;
-	validation: string[];
+	validation: EErrorMessages[];
 };
 
 const Input: FC<TInputProps> = ({
@@ -22,15 +22,17 @@ const Input: FC<TInputProps> = ({
 }) => {
 	const { form, formUpdate, errors, errorUpdate } = useForm();
 	const validate = (inputValue: any) => {
-		validation.forEach((iv) => {
-			if (inputValidations[iv as keyof typeof inputValidations]) {
+		validation.forEach((iv: EErrorMessages) => {
+			if (
+				inputValidations[iv as unknown as keyof typeof EErrorMessages]
+			) {
 				// isValid returns `true` or `string of error message`
 				// checks validation
 				const isValid =
-					inputValidations[iv as keyof typeof inputValidations](
-						inputValue
-					);
-				errorUpdate(name, isValid);
+					inputValidations[
+						iv as unknown as keyof typeof EErrorMessages
+					](inputValue);
+				errorUpdate(name, iv, isValid);
 			} else {
 				throw new Error('Not a valid input validator.');
 			}
