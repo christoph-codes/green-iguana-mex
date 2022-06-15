@@ -19,7 +19,6 @@ const inputValidations = {
 	},
 	EMAIL(value: any) {
 		const pattern = /[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/;
-		console.log('pattern', pattern.test(value));
 		if (!pattern.test(value)) {
 			return EErrorMessages.EMAIL;
 		} 
