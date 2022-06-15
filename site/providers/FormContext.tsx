@@ -1,4 +1,5 @@
 import { createContext, FC, useContext, useState } from 'react';
+import { EErrorMessages } from '../util/inputValidations';
 
 export interface IFormProviderProps {
 	children: any;
@@ -13,7 +14,7 @@ export type TFormContext = {
 	formUpdate: (e: any) => void;
 	errors: TError[];
 	// eslint-disable-next-line no-unused-vars
-	errorUpdate: (name: string, value: any) => void;
+	errorUpdate: (name: string, inputVal: EErrorMessages, value: any) => void;
 };
 export const FormContext = createContext<TFormContext>({
 	form: {},
@@ -32,8 +33,40 @@ const FormProvider: FC<IFormProviderProps> = ({ children }) => {
 			[name]: value,
 		});
 	};
-	const errorUpdate = (name: string, validity: string | true) => {
+	const errorUpdate = (
+		name: string,
+		inputVal: EErrorMessages,
+		validity: string | true
+	) => {
 		if (typeof validity !== 'string') {
+			// if the validity returns true
+			let msgExists = false;
+			// Find error message that needs to be removed.
+			const cleanErrors: (TError | string[])[] = errors.map((err) => {
+				if (
+					err.messages.includes(
+						EErrorMessages[
+							inputVal as unknown as keyof typeof EErrorMessages
+						]
+					)
+				) {
+					msgExists = true;
+					const existingMsg = err.messages.indexOf(
+						EErrorMessages[
+							inputVal as unknown as keyof typeof EErrorMessages
+						]
+					);
+					if (existingMsg !== -1) {
+						return err.messages.splice(existingMsg, 1);
+					}
+					return err;
+				}
+				return err;
+			});
+
+			if (msgExists) {
+				setErrors(cleanErrors);
+			}
 			setErrors(errors.filter((err) => err.key !== name));
 		} else {
 			let exists = false;
@@ -45,13 +78,11 @@ const FormProvider: FC<IFormProviderProps> = ({ children }) => {
 					if (!err.messages.includes(validity)) {
 						err.messages.push(validity);
 					}
-					return err;
 				}
 				return err;
 			});
 
 			if (!exists) newErrors.push({ key: name, messages: [validity] });
-
 			setErrors(newErrors);
 		}
 	};
