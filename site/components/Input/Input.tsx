@@ -33,7 +33,6 @@ const Input: FC<TInputProps> = ({
 				errorUpdate(name, isValid);
 			} else {
 				throw new Error('Not a valid input validator.');
-				// console.error('Not a valid input validator.');
 			}
 		});
 	};
