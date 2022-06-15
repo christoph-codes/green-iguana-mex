@@ -51,7 +51,7 @@ const Input: FC<TInputProps> = ({
 					required={required}
 					onBlur={() => validate(form[name as keyof typeof form])}
 				/>
-				{errors.length &&
+				{errors.length > 0 &&
 					errors.map(
 						(err) =>
 							err.key === name && (
