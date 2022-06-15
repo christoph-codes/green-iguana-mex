@@ -1,4 +1,10 @@
-import { createContext, FC, useContext, useState } from 'react';
+import {
+	ChangeEventHandler,
+	createContext,
+	FC,
+	useContext,
+	useState,
+} from 'react';
 import { EErrorMessages } from '../util/inputValidations';
 
 export interface IFormProviderProps {
@@ -10,8 +16,7 @@ export type TError = {
 };
 export type TFormContext = {
 	form: {};
-	// eslint-disable-next-line no-unused-vars
-	formUpdate: (e: any) => void;
+	formUpdate: ChangeEventHandler<HTMLInputElement>;
 	errors: TError[];
 	// eslint-disable-next-line no-unused-vars
 	errorUpdate: (name: string, inputVal: EErrorMessages, value: any) => void;
@@ -42,30 +47,35 @@ const FormProvider: FC<IFormProviderProps> = ({ children }) => {
 			// if the validity returns true
 			let msgExists = false;
 			// Find error message that needs to be removed.
-			const cleanErrors: (TError | string[])[] = errors.map((err) => {
+			const redCleanErrors = errors.reduce((pv: string[], cv: TError) => {
 				if (
-					err.messages.includes(
+					cv.messages.includes(
 						EErrorMessages[
 							inputVal as unknown as keyof typeof EErrorMessages
 						]
 					)
 				) {
 					msgExists = true;
-					const existingMsg = err.messages.indexOf(
+					const existingMsg = cv.messages.indexOf(
 						EErrorMessages[
 							inputVal as unknown as keyof typeof EErrorMessages
 						]
 					);
 					if (existingMsg !== -1) {
-						return err.messages.splice(existingMsg, 1);
+						const test = cv.messages.splice(existingMsg, 1);
+						return [...pv, ...test];
 					}
-					return err;
 				}
-				return err;
-			});
+				return [...cv.messages];
+			}, []);
+
+			const cleanedErrors: TError[] = [
+				...errors,
+				{ key: name, messages: redCleanErrors },
+			];
 
 			if (msgExists) {
-				setErrors(cleanErrors);
+				setErrors(cleanedErrors);
 			}
 			setErrors(errors.filter((err) => err.key !== name));
 		} else {
