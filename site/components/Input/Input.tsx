@@ -48,7 +48,7 @@ const Input: FC<TInputProps> = ({
 					placeholder={placeholder}
 					type={type}
 					id={name}
-					value={form[name as keyof typeof form]}
+					value={form[name as keyof typeof form] || ''}
 					onChange={formUpdate}
 					required={required}
 					onBlur={() => validate(form[name as keyof typeof form])}
