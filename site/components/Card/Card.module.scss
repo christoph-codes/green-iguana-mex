@@ -1,0 +1,11 @@
+@use '../../styles/colors' as *;
+.Card {
+    box-shadow: 0 0 1rem -0.5rem $greylight;
+    border-radius: 1rem;
+    padding: 3rem;
+    h4 {
+        padding-bottom: 1rem;
+        margin-bottom: 1rem;
+        border-bottom: solid 1px $whitegrey;
+    }
+}
