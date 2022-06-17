@@ -1,4 +1,4 @@
-import { FaFacebookF, FaTwitter } from 'react-icons/fa';
+import { FaFacebookF, FaInstagram } from 'react-icons/fa';
 
 export const toastTabLink = `https://www.toasttab.com/greeniguanastg/v3?utmCampaign=website`;
 
@@ -10,16 +10,17 @@ export const navLinks = [
 		label: 'Gift Cards',
 		path: 'http://www.toasttab.com/greeniguanastg/giftcards?utmCampaign=website',
 		external: true,
+		newTab: true,
 	},
 	{
-		path: 'https://facebook.com/green-iguana',
+		path: 'https://www.facebook.com/greeniguana2016/',
 		icon: <FaFacebookF size={32} />,
 		newTab: true,
 		external: true,
 	},
 	{
-		path: 'https://twitter.com/green-iguana',
-		icon: <FaTwitter size={32} />,
+		path: 'https://www.instagram.com/greeniguanamex/',
+		icon: <FaInstagram size={32} />,
 		newTab: true,
 		external: true,
 	},
