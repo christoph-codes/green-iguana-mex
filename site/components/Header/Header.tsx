@@ -52,14 +52,15 @@ const Header: FC<THeaderProps> = ({ links, sticky, className, ...rest }) => {
 									key={index}
 								>
 									<Link
-										target={
-											link.newTab ? '_blank' : '_self'
-										}
-										// passHref={!!link.external}
 										href={link.path}
+										passHref={link.newTab}
 									>
 										{/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-										<a>
+										<a
+											target={
+												link.newTab ? '_blank' : '_self'
+											}
+										>
 											{link.icon && link.icon}
 											{link.label}
 										</a>
@@ -73,7 +74,7 @@ const Header: FC<THeaderProps> = ({ links, sticky, className, ...rest }) => {
 									]
 								}
 							>
-								<Button href={toastTabLink}>
+								<Button href={toastTabLink} target="_blank">
 									Order Online
 								</Button>
 							</li>
