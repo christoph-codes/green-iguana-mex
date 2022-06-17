@@ -77,7 +77,10 @@ const Home: NextPage = (): any => (
 			</Container>
 		</div>
 		<Section>
-			<Row className={styles.Home__gallery}>
+			<Row
+				columns={{ xs: [6, 6, 6, 6], md: [3, 3, 3, 3] }}
+				className={styles.Home__gallery}
+			>
 				<Image
 					className={styles.Home__gallery__item}
 					layout="responsive"
