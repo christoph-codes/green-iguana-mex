@@ -111,9 +111,11 @@ const Home: NextPage = (): any => (
 			className={`${styles.Home__hero} 🔥bg-offwhite`}
 			category={specials}
 		/>
-		<Button href="/menu" className="🔥mx-auto 🔥mt-2" variant="secondary">
-			View Menu
-		</Button>
+		<Section className="🔥pt-0">
+			<Button className="🔥mx-auto" href="/menu" variant="secondary">
+				View Menu
+			</Button>
+		</Section>
 	</PageTemplate>
 );
 
