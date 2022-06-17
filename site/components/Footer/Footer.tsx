@@ -55,13 +55,14 @@ const Footer: FC<TFooterProps> = ({
 								>
 									<Link
 										href={link.path}
-										target={
-											link.newTab ? '_blank' : '_self'
-										}
-										passHref={!!link.external}
+										passHref={link.newTab}
 									>
 										{/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-										<a>
+										<a
+											target={
+												link.newTab ? '_blank' : '_self'
+											}
+										>
 											{link.icon && link.icon}
 											{link.label}
 										</a>

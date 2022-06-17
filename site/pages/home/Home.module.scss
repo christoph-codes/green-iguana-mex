@@ -36,4 +36,11 @@
 			color: $white;
 		}
 	}
+	&__gallery {
+		display: flex;
+		gap: 1rem;
+		&__item {
+			border-radius: 0.5rem;
+		}
+	}
 }
