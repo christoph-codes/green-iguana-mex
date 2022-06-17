@@ -48,7 +48,7 @@ const Home: NextPage = (): any => (
 						Place your order online or checkout our menu before you
 						come visit us!
 					</p>
-					<Button fullWidth href={toastTabLink}>
+					<Button fullWidth href={toastTabLink} target="_blank">
 						Order Online
 					</Button>
 					<Button variant="tertiary-outline" fullWidth href="/menu">
