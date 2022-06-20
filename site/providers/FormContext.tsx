@@ -1,103 +1,65 @@
-import {
-	ChangeEventHandler,
-	createContext,
-	FC,
-	useContext,
-	useState,
-} from 'react';
-import { EErrorMessages } from '../util/inputValidations';
+/* eslint-disable no-unused-vars */
+import { ChangeEvent, createContext, FC, useContext, useState } from 'react';
+import inputValidations, { EErrorMessages } from '../util/inputValidations';
 
 export interface IFormProviderProps {
 	children: any;
 }
-export type TError = {
-	key: string;
-	messages: string[];
-};
+
 export type TFormContext = {
-	form: {};
-	formUpdate: ChangeEventHandler<HTMLInputElement>;
-	errors: TError[];
-	// eslint-disable-next-line no-unused-vars
-	errorUpdate: (name: string, inputVal: EErrorMessages, value: any) => void;
+	form: {
+		[name: string]: {
+			value: any;
+			isNotValid: string[];
+		};
+	};
+	formUpdate: (
+		e: ChangeEvent<HTMLInputElement>,
+		validation: EErrorMessages[]
+	) => void;
 };
+
 export const FormContext = createContext<TFormContext>({
 	form: {},
 	formUpdate: () => {},
-	errors: [],
-	errorUpdate: () => {},
 });
 
 const FormProvider: FC<IFormProviderProps> = ({ children }) => {
 	const [form, setForm] = useState({});
-	const [errors, setErrors] = useState<TError[]>([]);
-	const formUpdate = (e: any) => {
+	const formUpdate = (
+		e: ChangeEvent<HTMLInputElement>,
+		validation: EErrorMessages[]
+	) => {
 		const { name, value } = e.target;
+		const validate = () =>
+			validation.map((iv: EErrorMessages) => {
+				if (
+					inputValidations[
+						iv as unknown as keyof typeof EErrorMessages
+					]
+				) {
+					// isValid returns `true` or `string of error message`
+					// checks validation
+					const isValid =
+						inputValidations[
+							iv as unknown as keyof typeof EErrorMessages
+						](value);
+					console.log('isValid', isValid);
+					return isValid;
+				}
+				throw new Error('Not a valid input validator.');
+			});
+		console.log('validate FUN:', validate());
 		setForm({
 			...form,
-			[name]: value,
+			[name]: {
+				value,
+				isNotValid: [...validate()],
+			},
 		});
 	};
-	const errorUpdate = (
-		name: string,
-		inputVal: EErrorMessages,
-		validity: string | true
-	) => {
-		if (typeof validity !== 'string') {
-			// if the validity returns true
-			let msgExists = false;
-			// Find error message that needs to be removed.
-			const redCleanErrors = errors.reduce((pv: string[], cv: TError) => {
-				if (
-					cv.messages.includes(
-						EErrorMessages[
-							inputVal as unknown as keyof typeof EErrorMessages
-						]
-					)
-				) {
-					msgExists = true;
-					const existingMsg = cv.messages.indexOf(
-						EErrorMessages[
-							inputVal as unknown as keyof typeof EErrorMessages
-						]
-					);
-					if (existingMsg !== -1) {
-						const test = cv.messages.splice(existingMsg, 1);
-						return [...pv, ...test];
-					}
-				}
-				return [...cv.messages];
-			}, []);
-
-			const cleanedErrors: TError[] = [
-				...errors,
-				{ key: name, messages: redCleanErrors },
-			];
-
-			if (msgExists) {
-				setErrors(cleanedErrors);
-			}
-			setErrors(errors.filter((err) => err.key !== name));
-		} else {
-			let exists = false;
-			const newErrors = errors.map((err) => {
-				if (exists) return err;
-
-				if (err.key === name) {
-					exists = true;
-					if (!err.messages.includes(validity)) {
-						err.messages.push(validity);
-					}
-				}
-				return err;
-			});
-
-			if (!exists) newErrors.push({ key: name, messages: [validity] });
-			setErrors(newErrors);
-		}
-	};
 	return (
-		<FormContext.Provider value={{ form, formUpdate, errors, errorUpdate }}>
+		<FormContext.Provider value={{ form, formUpdate }}>
 			{children}
 		</FormContext.Provider>
 	);
