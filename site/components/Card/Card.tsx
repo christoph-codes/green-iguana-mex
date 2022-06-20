@@ -18,20 +18,17 @@ const Card: FC<TCardProps> = ({
 	description,
 	image,
 	rest,
-}) => {
-	console.log('Card');
-	return (
-		<div className={`${styles.Card} ${className}`} {...rest}>
-			{image && (
-				<Image className={styles.Card__image} src={image} alt={title} />
-			)}
-			<div className={styles.Card__content}>
-				{title && <h4>{title}</h4>}
-				{description && <p>{description}</p>}
-				{children}
-			</div>
+}) => (
+	<div className={`${styles.Card} ${className}`} {...rest}>
+		{image && (
+			<Image className={styles.Card__image} src={image} alt={title} />
+		)}
+		<div className={styles.Card__content}>
+			{title && <h4>{title}</h4>}
+			{description && <p>{description}</p>}
+			{children}
 		</div>
-	);
-};
+	</div>
+);
 
 export default Card;
