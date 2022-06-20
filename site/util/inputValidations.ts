@@ -9,20 +9,20 @@ const inputValidations = {
 		if (value === '') {
 			return EErrorMessages.REQUIRED;
 		} 
-		return true;
+		return '';
 	},
 	OVERFIVE(value: any) {
 		if (value?.length < 5) {
 			return EErrorMessages.OVERFIVE;
 		} 
-		return true;
+		return '';
 	},
 	EMAIL(value: any) {
 		const pattern = /[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/;
 		if (!pattern.test(value)) {
 			return EErrorMessages.EMAIL;
 		} 
-		return true;
+		return '';
 	},
 };
 
