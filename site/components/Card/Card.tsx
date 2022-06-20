@@ -8,6 +8,7 @@ export type TCardProps = {
 	title?: string;
 	description?: string;
 	image?: StaticImageData;
+	shadow?: boolean;
 	rest?: any[];
 };
 
@@ -18,8 +19,14 @@ const Card: FC<TCardProps> = ({
 	description,
 	image,
 	rest,
+	shadow,
 }) => (
-	<div className={`${styles.Card} ${className}`} {...rest}>
+	<div
+		className={`${styles.Card} ${className} ${
+			shadow ? styles.Card__shadow : ''
+		}`}
+		{...rest}
+	>
 		{image && (
 			<Image className={styles.Card__image} src={image} alt={title} />
 		)}
