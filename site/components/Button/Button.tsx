@@ -14,6 +14,7 @@ export type TButtonProps = {
 		| 'inactive';
 	href?: 'string';
 	fullWidth?: boolean;
+	rest?: any[];
 };
 
 const Button: FC<TButtonProps> = ({
@@ -22,6 +23,7 @@ const Button: FC<TButtonProps> = ({
 	variant = 'primary',
 	fullWidth,
 	href,
+	...rest
 }) => {
 	const Tag: 'a' | 'button' = href ? 'a' : 'button';
 	return (
@@ -31,6 +33,7 @@ const Button: FC<TButtonProps> = ({
 			className={`${styles.Button} ${className} ${
 				variant ? styles[`Button__${variant}`] : ''
 			} ${fullWidth ? styles.Button__fullWidth : ''}`}
+			{...rest}
 		>
 			{children}
 		</Tag>
