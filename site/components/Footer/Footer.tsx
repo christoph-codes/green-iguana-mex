@@ -13,6 +13,7 @@ export type TFooterProps = {
 	copyright?: string;
 	poweredbyTKC?: boolean;
 	img?: string;
+	rest?: any[];
 };
 
 const Footer: FC<TFooterProps> = ({
@@ -27,9 +28,13 @@ const Footer: FC<TFooterProps> = ({
 	poweredbyTKC = true,
 	className,
 	img,
+	...rest
 }) => (
 	<>
-		<footer className={`${styles.Footer} ${className} 🔥bg-primary`}>
+		<footer
+			className={`${styles.Footer} ${className} 🔥bg-primary`}
+			{...rest}
+		>
 			<Container className={styles.Footer__container}>
 				{img && (
 					<Image
@@ -50,13 +55,14 @@ const Footer: FC<TFooterProps> = ({
 								>
 									<Link
 										href={link.path}
-										target={
-											link.newTab ? '_blank' : '_self'
-										}
-										passHref={!!link.external}
+										passHref={link.newTab}
 									>
 										{/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-										<a>
+										<a
+											target={
+												link.newTab ? '_blank' : '_self'
+											}
+										>
 											{link.icon && link.icon}
 											{link.label}
 										</a>

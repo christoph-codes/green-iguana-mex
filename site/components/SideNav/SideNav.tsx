@@ -10,13 +10,20 @@ export type TSideNav = {
 	isOpen?: boolean;
 	className?: string;
 	toggleSideNav: () => void;
+	rest?: any[];
 };
 
-const SideNav: FC<TSideNav> = ({ isOpen, toggleSideNav, className }) => (
+const SideNav: FC<TSideNav> = ({
+	isOpen,
+	toggleSideNav,
+	className,
+	...rest
+}) => (
 	<aside
 		className={`${styles.SideNav} ${className} ${
 			isOpen ? styles.SideNav__isOpen : ''
 		}`}
+		{...rest}
 	>
 		<li
 			className={`${styles.SideNav__link} ${styles['SideNav__link--button']}`}

@@ -8,9 +8,9 @@ const fajitas = {
 			Includes Onions l Bell Peppers l Pico l Lime l Guacamole l Sour
 			Cream l Rice l Beans
 			<br />
-			<small>
+			<strong>
 				Smother your fajitas with cheese & sauce for only $1.99
-			</small>
+			</strong>
 		</>
 	),
 	content: [

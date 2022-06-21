@@ -5,7 +5,7 @@ const specials = {
 			All Plates served with Rice l Beans l Lettuce l Pico l Guacamole l
 			Sour Cream l Corn or Flour Tortillas
 			<br />
-			<small>** Do not include tortillas.</small>
+			<strong>** Do not include tortillas.</strong>
 		</>
 	),
 	content: [

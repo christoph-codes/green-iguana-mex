@@ -26,7 +26,7 @@
 	row-gap: $gap;
 }
 .Col {
-	flex: 1 0 0;
+	flex: 1 0 auto;
 	&[class*=🔥col-] {
 		flex-grow: 0;
 		flex-shrink: 1;

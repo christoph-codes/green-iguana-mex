@@ -1,0 +1,21 @@
+@use '../../styles/colors' as *;
+.Card {
+    border-radius: 1rem;
+    padding: 1rem;
+    h4 {
+        margin-bottom: 1rem;
+    }
+    &__shadow {
+        box-shadow: 0 0 1rem -0.5rem $greylight;
+        padding: 2rem;
+    }
+    &__description {
+        color: $greylight;
+    }
+    &__price {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: $tertiary;
+        margin-bottom: 0;
+    }
+}

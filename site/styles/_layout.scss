@@ -3,21 +3,21 @@ $maxColumns: 12;
 $gap: 1rem;
 
 $columns: (
-	'1': calc(((1 / $maxColumns) * $pageWidth)),
-	'2':  calc(((2 / $maxColumns) * $pageWidth)),
-	'3':  calc(((3 / $maxColumns) * $pageWidth)),
-	'4':  calc(((4 / $maxColumns) * $pageWidth)),
-	'5':  calc(((5 / $maxColumns) * $pageWidth)),
-	'6':  calc(((6 / $maxColumns) * $pageWidth)),
-	'7':  calc(((7 / $maxColumns) * $pageWidth)),
-	'8':  calc(((8 / $maxColumns) * $pageWidth)),
-	'9':  calc(((9 / $maxColumns) * $pageWidth)),
-	'10':  calc(((10 / $maxColumns) * $pageWidth)),
-	'11':  calc(((11 / $maxColumns) * $pageWidth)),
-	'12':  calc(((12 / $maxColumns) * $pageWidth)),
+	'1': calc(((1 / $maxColumns) * $pageWidth) - $gap),
+	'2':  calc(((2 / $maxColumns) * $pageWidth) - $gap),
+	'3':  calc(((3 / $maxColumns) * $pageWidth) - $gap),
+	'4':  calc(((4 / $maxColumns) * $pageWidth) - $gap),
+	'5':  calc(((5 / $maxColumns) * $pageWidth) - $gap),
+	'6':  calc(((6 / $maxColumns) * $pageWidth) - $gap),
+	'7':  calc(((7 / $maxColumns) * $pageWidth) - $gap),
+	'8':  calc(((8 / $maxColumns) * $pageWidth) - $gap),
+	'9':  calc(((9 / $maxColumns) * $pageWidth) - $gap),
+	'10':  calc(((10 / $maxColumns) * $pageWidth) - $gap),
+	'11':  calc(((11 / $maxColumns) * $pageWidth) - $gap),
+	'12':  calc(((12 / $maxColumns) * $pageWidth) - $gap),
 );
 $columnsUtilities: (
-	'col': 'flex-basis',
+	'col': 'width',
 );
 
 @function calculateColumnWidth($numberOfColumns) {

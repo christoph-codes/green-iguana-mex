@@ -8,6 +8,7 @@ export type TMenuItemProps = {
 	price: string;
 	category?: string;
 	className?: string;
+	rest?: any[];
 };
 
 const MenuItem: FC<TMenuItemProps> = ({
@@ -16,8 +17,9 @@ const MenuItem: FC<TMenuItemProps> = ({
 	price,
 	category,
 	className,
+	...rest
 }) => (
-	<article className={`${styles.MenuItem} ${className}`}>
+	<article className={`${styles.MenuItem} ${className}`} {...rest}>
 		<Row columns={{ xs: [8, 4] }}>
 			<div className={styles.MenuItem__text}>
 				<h4>

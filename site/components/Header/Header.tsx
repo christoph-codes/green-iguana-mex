@@ -23,15 +23,17 @@ export type THeaderProps = {
 	sticky?: boolean;
 	links?: TLink[];
 	className?: string;
+	rest?: any[];
 };
 
-const Header: FC<THeaderProps> = ({ links, sticky, className }) => {
+const Header: FC<THeaderProps> = ({ links, sticky, className, ...rest }) => {
 	const { isOpen, toggleSideNav } = useSideNav();
 	return (
 		<header
 			className={`${styles.Header} ${className} ${
 				sticky ? styles.Header__sticky : ''
 			}`}
+			{...rest}
 		>
 			<Container className={styles.Header__container}>
 				<Link href="/">
@@ -50,14 +52,15 @@ const Header: FC<THeaderProps> = ({ links, sticky, className }) => {
 									key={index}
 								>
 									<Link
-										target={
-											link.newTab ? '_blank' : '_self'
-										}
-										// passHref={!!link.external}
 										href={link.path}
+										passHref={link.newTab}
 									>
 										{/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-										<a>
+										<a
+											target={
+												link.newTab ? '_blank' : '_self'
+											}
+										>
 											{link.icon && link.icon}
 											{link.label}
 										</a>
@@ -71,7 +74,7 @@ const Header: FC<THeaderProps> = ({ links, sticky, className }) => {
 									]
 								}
 							>
-								<Button href={toastTabLink}>
+								<Button href={toastTabLink} target="_blank">
 									Order Online
 								</Button>
 							</li>

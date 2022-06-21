@@ -1,13 +1,21 @@
 import type { NextPage } from 'next';
+import Image from 'next/image';
 import Container from '../components/Container';
 import Section from '../components/Section';
 import Row from '../components/Row';
 import Button from '../components/Button';
-import MenuItem from '../components/MenuItem';
 import PageTemplate from '../templates/Page';
 import greenIguanaSEO from '../assets/images/gim-seo_image.png';
 import homeHero from '../assets/images/home-hero.png';
 import { toastTabLink } from '../util/navLinks';
+import CategoryItem from '../components/CategoryItem/CategoryItem';
+import specials from '../util/menu/_specials';
+// Images
+import margaritas from '../assets/images/gim_margaritas.png';
+import mangoMargarita from '../assets/images/gim_mango_marg.png';
+import shrimp from '../assets/images/gim_shrimp.png';
+import shreddedBeef from '../assets/images/gim_shredded_beef.png';
+// Styles
 import styles from './home/Home.module.scss';
 
 const Home: NextPage = (): any => (
@@ -40,7 +48,7 @@ const Home: NextPage = (): any => (
 						Place your order online or checkout our menu before you
 						come visit us!
 					</p>
-					<Button fullWidth href={toastTabLink}>
+					<Button fullWidth href={toastTabLink} target="_blank">
 						Order Online
 					</Button>
 					<Button variant="tertiary-outline" fullWidth href="/menu">
@@ -68,37 +76,43 @@ const Home: NextPage = (): any => (
 				</Row>
 			</Container>
 		</div>
-		<Section
-			className={`${styles.Home__hero} 🔥bg-offwhite`}
-			title="Green Iguana Plato Especiales"
-			description="All plates served with Rice, Beans, Lettuce, Pico, Guacomole,
-			Sour Cream, and Corn or Flour Tortillas **Do not include
-			Tortillas"
-		>
-			<MenuItem
-				category="NEW"
-				title="Green Iguana Plato Especiales**"
-				description="Charbroiled Chicken Breast | Green Sauce | Tortilla Strips | Mixed Cheese | Pico | 
-				Guacomole | Sour Cream | Rice | Fresh Veggies."
-				price="12.99"
-			/>
-			<MenuItem
-				title="Green Iguana Plato Especiales**"
-				description="Charbroiled Chicken Breast | Green Sauce | Tortilla Strips | Mixed Cheese | Pico | 
-				Guacomole | Sour Cream | Rice | Fresh Veggies."
-				price="12.99"
-			/>
-			<MenuItem
-				title="Green Iguana Plato Especiales**"
-				description="Charbroiled Chicken Breast | Green Sauce | Tortilla Strips | Mixed Cheese | Pico | 
-				Guacomole | Sour Cream | Rice | Fresh Veggies."
-				price="12.99"
-			/>
-			<Button
-				href="/menu"
-				className="🔥mx-auto 🔥mt-2"
-				variant="secondary"
+		<Section>
+			<Row
+				columns={{ xs: [6, 6, 6, 6], md: [3, 3, 3, 3] }}
+				className={styles.Home__gallery}
 			>
+				<Image
+					className={styles.Home__gallery__item}
+					layout="responsive"
+					src={margaritas}
+					alt="Margaritas from Green Iguana Mexican Restaurant"
+				/>
+				<Image
+					className={styles.Home__gallery__item}
+					layout="responsive"
+					src={shrimp}
+					alt="Shrimp Plate from Green Iguana Mexican Restaurant"
+				/>
+				<Image
+					className={styles.Home__gallery__item}
+					layout="responsive"
+					src={mangoMargarita}
+					alt="Mango Margarita from Green Iguana Mexican Restaurant"
+				/>
+				<Image
+					className={styles.Home__gallery__item}
+					layout="responsive"
+					src={shreddedBeef}
+					alt="Shredded Beef Plate from Green Iguana Mexican Restaurant"
+				/>
+			</Row>
+		</Section>
+		<CategoryItem
+			className={`${styles.Home__hero} 🔥bg-offwhite`}
+			category={specials}
+		/>
+		<Section className="🔥pt-0">
+			<Button className="🔥mx-auto" href="/menu" variant="secondary">
 				View Menu
 			</Button>
 		</Section>

@@ -2,11 +2,24 @@ const chimichangas = {
 	title: 'Chimichangas',
 	description: (
 		<>
-			*Served with Rice and Beans.
+			<p>*Served with Rice and Beans.</p>
+			<p>
+				Premium Meats Additional Charge Carne Asada l Charbroiled Chicken l Shrimp
+			</p>
+			<p>
+				<strong>Meats:</strong> Bean & Cheese l Shredded Beef l Shredded
+				Chicken l Ground Beef l Chile Verde l Carnitas l Sweet Pork
+			</p>
+			<p>
+				<strong>Premium Meats:</strong> Carne Asada l Charbroiled
+				Chicken l Shrimp. *Additional Charge
+			</p>
+			<p>
+				<strong>Sauces:</strong> Green Sauce l Red Sauce l White Sauce l Tres Quesos
+			</p>
+			<strong>*Substitute for a side Salad for only .69¢.</strong>
 			<br />
-			<small>*Substitute for a side Salad for only .69¢.</small>
-			<br />
-			<small>*Add a Side Salad for only $1.99.</small>
+			<strong>*Add a Side Salad for only $1.99.</strong>
 		</>
 	),
 	content: [
@@ -23,10 +36,6 @@ const chimichangas = {
 						<strong>Meats:</strong> Bean & Cheese l Shredded Beef l
 						Shredded Chicken l Ground Beef l Chile Verde l Carnitas
 						l Sweet Pork
-					</small>
-					<small>
-						<strong>Sauces:</strong> Green Sauce l Red Sauce l White
-						Sauce l Tres Quesos
 					</small>
 				</>
 			),

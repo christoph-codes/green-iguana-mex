@@ -3,7 +3,7 @@ const kids = {
 	description: (
 		<>
 			<p>Served with Rice & Beans or french fries & Soft drink</p>
-			<p>
+			<p className='🔥text-tertiary'>
 				<strong>
 					** Only for Kids 8 & under **
 					<br />

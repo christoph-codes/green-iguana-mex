@@ -19,19 +19,23 @@ const Ensaladas = {
 			title: 'Iguana Taco Salad',
 			description: (
 				<>
-					Choose From Charbroiled Chicken l Ground Beef l Sweet Pork l
-					Shredded Beef l Carnitas
-					<br />
-					<small>
-						Includes Deep l Fried Tortilla l Rice l Beans l Romaine
-						Lettuce l Olives l Tomatoes l Guacamole l Sour Cream l
-						Cheese
-					</small>
-					<br />
-					<small>Make Large $12.49</small>
+					<p>
+						Choose From Charbroiled Chicken l Ground Beef l Sweet
+						Pork l Shredded Beef l Carnitas
+					</p>
+					<p>
+						<strong>
+							Includes Deep l Fried Tortilla l Rice l Beans l
+							Romaine Lettuce l Olives l Tomatoes l Guacamole l
+							Sour Cream l Cheese
+						</strong>
+					</p>
+					<p className="🔥text-tertiary">
+						<strong>Small $10.49</strong> |{' '}
+						<strong>Large $12.49</strong>
+					</p>
 				</>
 			),
-			price: 10.49,
 		},
 		{
 			title: 'Southwestern Salad',
@@ -52,7 +56,7 @@ const Ensaladas = {
 					<br />
 					<small>
 						Includes Avocado l Tortilla Strips l Pico l Peppers l
-						Cotija Chees
+						Cotija Cheese
 					</small>
 				</>
 			),

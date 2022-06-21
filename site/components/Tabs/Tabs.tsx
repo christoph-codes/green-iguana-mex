@@ -1,8 +1,8 @@
 import { ReactElement, FC, useState } from 'react';
-import MenuItem, { TMenuItemProps } from '../MenuItem';
-import Section from '../Section';
+import { TMenuItemProps } from '../MenuItem';
 import Row from '../Row';
 import styles from './Tabs.module.scss';
+import CategoryItem from '../CategoryItem/CategoryItem';
 
 export type TTabs = {
 	data: {
@@ -10,15 +10,16 @@ export type TTabs = {
 		description?: string;
 		content: ReactElement[];
 	}[];
+	rest?: any[];
 };
 
 export type TMenuGroup = {
 	title: string;
-	description?: string;
+	description?: string | ReactElement;
 	content: TMenuItemProps[];
 };
 
-const Tabs: FC<TTabs> = ({ data }) => {
+const Tabs: FC<TTabs> = ({ data, ...rest }) => {
 	const [activeTab, setActiveTab] = useState(0);
 	const lists = data.map((tab, index) => (
 		<>
@@ -49,7 +50,11 @@ const Tabs: FC<TTabs> = ({ data }) => {
 	));
 	return (
 		<>
-			<Row className={styles.Tabs} columns={{ xs: [12, 12], md: [3, 9] }}>
+			<Row
+				className={styles.Tabs}
+				columns={{ xs: [12, 12], md: [3, 9] }}
+				{...rest}
+			>
 				<div>
 					<ul className={styles.Tabs__tablist}>{lists}</ul>
 					<label htmlFor="activeTab" className={styles.Tabs__select}>
@@ -64,32 +69,7 @@ const Tabs: FC<TTabs> = ({ data }) => {
 						</select>
 					</label>
 				</div>
-				<Section className={`${styles.Tabs__content}`}>
-					{data[activeTab]?.title && (
-						<h3
-							className={`${styles.Tabs__content__title} 🔥text-center 🔥mb-1`}
-						>
-							{data[activeTab]?.title}
-						</h3>
-					)}
-					{data[activeTab]?.description && (
-						<div
-							className={`${styles.Tabs__content__description} p 🔥text-center 🔥mb-2 🔥pb-2`}
-						>
-							{data[activeTab]?.description}
-						</div>
-					)}
-					<div className={styles.Tabs__content__columns}>
-						{data[activeTab]?.content?.map((foodCategory: any) => (
-							<MenuItem
-								className={
-									styles.Tabs__content__columns__column
-								}
-								{...foodCategory}
-							/>
-						))}
-					</div>
-				</Section>
+				<CategoryItem category={data[activeTab]} />
 			</Row>
 		</>
 	);

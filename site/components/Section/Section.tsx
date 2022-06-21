@@ -11,6 +11,7 @@ export type ISectionProps = {
 	bgImg?: StaticImageData;
 	title?: string;
 	description?: string;
+	rest?: any[];
 };
 
 const Section: FC<ISectionProps> = ({
@@ -21,6 +22,7 @@ const Section: FC<ISectionProps> = ({
 	bgImg,
 	title,
 	description,
+	...rest
 }) => {
 	const content = (
 		<>
@@ -44,6 +46,7 @@ const Section: FC<ISectionProps> = ({
 					  }
 					: {}
 			}
+			{...rest}
 		>
 			{!hideContainer ? <Container>{content}</Container> : content}
 		</section>

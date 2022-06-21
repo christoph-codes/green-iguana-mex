@@ -1,0 +1,12 @@
+@use '../../styles/colors' as *;
+.Careers {
+    &__job {
+        border-bottom: solid 1px $offwhite;
+        padding: 1rem 0 2rem;
+        &__cta {
+            button {
+                margin-left: auto;
+            }
+        }
+    }
+}
