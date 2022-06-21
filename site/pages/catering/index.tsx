@@ -8,6 +8,7 @@ import MenuItem from '../../components/MenuItem';
 import Button from '../../components/Button';
 import partyPacks from '../../util/catering/_partyPacks';
 import styles from './CateringPage.module.scss';
+import cateringImg from '../../assets/images/gim-catering.jpg';
 
 export type TCateringContent = {
 	size: string;
@@ -31,6 +32,7 @@ const CateringPage: NextPage = (): any => (
 		}}
 		className={styles.CateringPage}
 	>
+		<Section bgImg={cateringImg} className={styles.CateringPage__hero} />
 		<Section
 			title="Catering Menu"
 			description="Call to Order - (435)628-4863"
