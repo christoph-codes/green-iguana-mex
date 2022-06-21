@@ -22,11 +22,27 @@ const Input: FC<TInputProps> = ({
 }) => {
 	const { form, formUpdate } = useForm();
 	return (
-		<label htmlFor={name}>
+		<label className={`${styles.Input}`} htmlFor={name}>
 			<>
-				<span className={styles.Input__label}>{label}</span>
+				<span
+					className={`${styles.Input__label} ${
+						form[name as keyof typeof form]?.isNotValid.some(
+							(e) => e !== ''
+						)
+							? styles['Input__label--error']
+							: ''
+					}`}
+				>
+					{label}
+				</span>
 				<input
-					className={`${styles.Input__input}`}
+					className={`${styles.Input__input} ${
+						form[name as keyof typeof form]?.isNotValid.some(
+							(e) => e !== ''
+						)
+							? styles['Input__input--error']
+							: ''
+					}`}
 					name={name}
 					placeholder={placeholder}
 					type={type}
@@ -35,10 +51,21 @@ const Input: FC<TInputProps> = ({
 					onChange={(e) => formUpdate(e, validation)}
 					required={required}
 				/>
-				{form[name as keyof typeof form]?.isNotValid.length > 0 &&
-					form[name as keyof typeof form]?.isNotValid.map(
-						(err) => err !== '' && <p>{err}</p>
-					)}
+				{form[name as keyof typeof form]?.isNotValid.length > 0 && (
+					<ul className={styles.Input__errors}>
+						{form[name as keyof typeof form]?.isNotValid.map(
+							(err, index) =>
+								err !== '' && (
+									<li
+										key={index}
+										className={styles.Input__errors__error}
+									>
+										{err}
+									</li>
+								)
+						)}
+					</ul>
+				)}
 			</>
 		</label>
 	);
