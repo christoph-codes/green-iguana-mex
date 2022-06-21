@@ -19,14 +19,21 @@ const Ensaladas = {
 			title: 'Iguana Taco Salad',
 			description: (
 				<>
-					<p>Choose From Charbroiled Chicken l Ground Beef l Sweet Pork l Shredded Beef l Carnitas</p>
+					<p>
+						Choose From Charbroiled Chicken l Ground Beef l Sweet
+						Pork l Shredded Beef l Carnitas
+					</p>
 					<p>
 						<strong>
-						Includes Deep l Fried Tortilla l Rice l Beans l Romaine
-						Lettuce l Olives l Tomatoes l Guacamole l Sour Cream l
-						Cheese</strong>
+							Includes Deep l Fried Tortilla l Rice l Beans l
+							Romaine Lettuce l Olives l Tomatoes l Guacamole l
+							Sour Cream l Cheese
+						</strong>
 					</p>
-					<p className='🔥text-tertiary'><strong>Small $12.49</strong> | <strong>Large $12.49</strong></p>
+					<p className="🔥text-tertiary">
+						<strong>Small $10.49</strong> |{' '}
+						<strong>Large $12.49</strong>
+					</p>
 				</>
 			),
 		},
