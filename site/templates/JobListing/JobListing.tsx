@@ -4,8 +4,8 @@ import {
 	FaCalendarAlt,
 	FaChartLine,
 	FaMoneyBillWave,
-	FaPiggyBank,
-	FaStethoscope,
+	// FaPiggyBank,
+	// FaStethoscope,
 	FaTag,
 	FaUmbrellaBeach,
 } from 'react-icons/fa';
@@ -36,10 +36,10 @@ const JobListing: FC<TJobListingProps> = ({
 	pay,
 }) => {
 	const perks = [
-		{
-			Icon: FaStethoscope,
-			label: 'Health Benefits',
-		},
+		// {
+		// 	Icon: FaStethoscope,
+		// 	label: 'Health Benefits',
+		// },
 		{
 			Icon: FaCalendarAlt,
 			label: 'Flexible Schedule',
@@ -56,10 +56,10 @@ const JobListing: FC<TJobListingProps> = ({
 			Icon: FaUmbrellaBeach,
 			label: 'Paid Time Off',
 		},
-		{
-			Icon: FaPiggyBank,
-			label: '401k',
-		},
+		// {
+		// 	Icon: FaPiggyBank,
+		// 	label: '401k',
+		// },
 		{
 			Icon: FaTag,
 			label: 'Employee Discounts',
