@@ -1,9 +1,17 @@
 /* eslint-disable no-unused-vars */
-import { ChangeEvent, createContext, FC, useContext, useState } from 'react';
+import {
+	ChangeEvent,
+	createContext,
+	FC,
+	FormEvent,
+	useContext,
+	useState,
+} from 'react';
 import inputValidations, { EErrorMessages } from '../util/inputValidations';
 
 export interface IFormProviderProps {
 	children: any;
+	submit: (_: any) => void;
 }
 
 export type TFormContext = {
@@ -17,14 +25,16 @@ export type TFormContext = {
 		e: ChangeEvent<HTMLInputElement>,
 		validation: EErrorMessages[]
 	) => void;
+	submission: (_: FormEvent<HTMLFormElement>, submitFunc: Function) => void;
 };
 
 export const FormContext = createContext<TFormContext>({
 	form: {},
 	formUpdate: () => {},
+	submission: () => {},
 });
 
-const FormProvider: FC<IFormProviderProps> = ({ children }) => {
+const FormProvider: FC<IFormProviderProps> = ({ children, submit }) => {
 	const [form, setForm] = useState({});
 	const formUpdate = (
 		e: ChangeEvent<HTMLInputElement>,
@@ -44,12 +54,10 @@ const FormProvider: FC<IFormProviderProps> = ({ children }) => {
 						inputValidations[
 							iv as unknown as keyof typeof EErrorMessages
 						](value);
-					console.log('isValid', isValid);
 					return isValid;
 				}
 				throw new Error('Not a valid input validator.');
 			});
-		console.log('validate FUN:', validate());
 		setForm({
 			...form,
 			[name]: {
@@ -58,8 +66,16 @@ const FormProvider: FC<IFormProviderProps> = ({ children }) => {
 			},
 		});
 	};
+	const submission = (
+		e: FormEvent<HTMLFormElement>,
+		submitFunc: Function
+	): void => {
+		e.preventDefault();
+		console.log('submission', form);
+		submitFunc(form);
+	};
 	return (
-		<FormContext.Provider value={{ form, formUpdate }}>
+		<FormContext.Provider value={{ form, formUpdate, submission }}>
 			{children}
 		</FormContext.Provider>
 	);

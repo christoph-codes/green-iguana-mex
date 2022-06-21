@@ -19,6 +19,7 @@ const ContactPage: NextPage = (): any => (
 			description="Contact Green Iguana Mexican Restaurant today. We look forward to hearing from you!"
 		>
 			<Form
+				onSubmit={() => console.log}
 				submitButton={{
 					children: 'Submit',
 				}}
