@@ -1,8 +1,9 @@
-import { FC } from 'react';
+import { FC, useState, ChangeEvent } from 'react';
+import inputValidations, { EErrorMessages } from '../../util/inputValidations';
 // eslint-disable-next-line import/no-unresolved
-import FormProvider from '../../providers/FormContext';
 import Button, { TButtonProps } from '../Button';
 import Input, { TInputProps } from '../Input';
+import Loader from '../Loader';
 import styles from './Form.module.scss';
 
 export type TFormProps = {
@@ -18,17 +19,67 @@ const Form: FC<TFormProps> = ({
 	onSubmit,
 	submitButton,
 }) => {
+	const [form, setForm] = useState({});
+	const formUpdate = (
+		e: ChangeEvent<HTMLInputElement>,
+		validation: EErrorMessages[]
+	) => {
+		const { name, value } = e.target;
+		const validate = () =>
+			validation.map((iv: EErrorMessages) => {
+				if (
+					inputValidations[
+						iv as unknown as keyof typeof EErrorMessages
+					]
+				) {
+					// isValid returns `true` or `string of error message`
+					// checks validation
+					const isValid =
+						inputValidations[
+							iv as unknown as keyof typeof EErrorMessages
+						](value);
+					return isValid;
+				}
+				throw new Error('Not a valid input validator.');
+			});
+		setForm({
+			...form,
+			[name]: {
+				value,
+				isNotValid: [...validate()],
+			},
+		});
+	};
 	const renderInputs = inputs.map((input, index) => (
-		<Input key={index} {...input} />
+		<Input key={index} form={form} onChange={formUpdate} {...input} />
 	));
+	const [submitting, setSubmitting] = useState(false);
+	const submit = (e: ChangeEvent<HTMLFormElement>) => {
+		e.preventDefault();
+		setSubmitting(true);
+
+		setTimeout(() => {
+			setSubmitting(false);
+			onSubmit();
+		}, 2000);
+	};
 
 	return (
-		<FormProvider onSubmit={onSubmit}>
-			<form className={`${styles.Form} ${className}`}>
-				{renderInputs}
-				<Button type="submit" {...submitButton} />
-			</form>
-		</FormProvider>
+		<form
+			className={`${styles.Form} ${className}`}
+			onSubmit={(e: ChangeEvent<HTMLFormElement>) => submit(e)}
+		>
+			{renderInputs}
+			<Button type="submit" {...submitButton}>
+				{submitting ? (
+					<>
+						<Loader className="🔥mr-1" /> Loading{' '}
+					</>
+				) : (
+					submitButton.children
+				)}
+			</Button>
+		</form>
 	);
 };
 
