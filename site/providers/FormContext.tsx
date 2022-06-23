@@ -68,7 +68,6 @@ const FormProvider: FC<IFormProviderProps> = ({ children, onSubmit }) => {
 		});
 	};
 	const submission = () => {
-		console.log('submission', form);
 		onSubmit(form);
 	};
 	return (
