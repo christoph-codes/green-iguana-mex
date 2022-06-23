@@ -8,10 +8,11 @@ import {
 	useState,
 } from 'react';
 import inputValidations, { EErrorMessages } from '../util/inputValidations';
+import Form from '../components/Form';
 
 export interface IFormProviderProps {
 	children: any;
-	submit: (_: any) => void;
+	onSubmit: (_: any) => void;
 }
 
 export type TFormContext = {
@@ -25,7 +26,7 @@ export type TFormContext = {
 		e: ChangeEvent<HTMLInputElement>,
 		validation: EErrorMessages[]
 	) => void;
-	submission: (_: FormEvent<HTMLFormElement>, submitFunc: Function) => void;
+	submission: (submitFunc: Function) => void;
 };
 
 export const FormContext = createContext<TFormContext>({
@@ -34,7 +35,7 @@ export const FormContext = createContext<TFormContext>({
 	submission: () => {},
 });
 
-const FormProvider: FC<IFormProviderProps> = ({ children, submit }) => {
+const FormProvider: FC<IFormProviderProps> = ({ children, onSubmit }) => {
 	const [form, setForm] = useState({});
 	const formUpdate = (
 		e: ChangeEvent<HTMLInputElement>,
@@ -66,17 +67,13 @@ const FormProvider: FC<IFormProviderProps> = ({ children, submit }) => {
 			},
 		});
 	};
-	const submission = (
-		e: FormEvent<HTMLFormElement>,
-		submitFunc: Function
-	): void => {
-		e.preventDefault();
+	const submission = () => {
 		console.log('submission', form);
-		submitFunc(form);
+		onSubmit(form);
 	};
 	return (
 		<FormContext.Provider value={{ form, formUpdate, submission }}>
-			{children}
+			<Form onSubmit={submission}>{children}</Form>
 		</FormContext.Provider>
 	);
 };

@@ -1,6 +1,6 @@
-import { FC, FormEvent } from 'react';
+import { FC } from 'react';
 // eslint-disable-next-line import/no-unresolved
-import FormProvider, { useForm } from '../../providers/FormContext';
+import FormProvider from '../../providers/FormContext';
 import Button, { TButtonProps } from '../Button';
 import Input, { TInputProps } from '../Input';
 import styles from './Form.module.scss';
@@ -18,19 +18,13 @@ const Form: FC<TFormProps> = ({
 	onSubmit,
 	submitButton,
 }) => {
-	const { submission } = useForm();
 	const renderInputs = inputs.map((input, index) => (
 		<Input key={index} {...input} />
 	));
 
 	return (
-		<FormProvider submit={onSubmit}>
-			<form
-				className={`${styles.Form} ${className}`}
-				onSubmit={(e: FormEvent<HTMLFormElement>) =>
-					submission(e, onSubmit)
-				}
-			>
+		<FormProvider onSubmit={onSubmit}>
+			<form className={`${styles.Form} ${className}`}>
 				{renderInputs}
 				<Button type="submit" {...submitButton} />
 			</form>
