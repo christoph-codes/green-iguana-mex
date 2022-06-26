@@ -1,5 +1,6 @@
 import { FC, useState, ChangeEvent } from 'react';
 import inputValidations, { EErrorMessages } from '../../util/inputValidations';
+import { emailSubmit } from '../../util/helpers';
 // eslint-disable-next-line import/no-unresolved
 import Button, { TButtonProps } from '../Button';
 import Input, { TInputProps } from '../Input';
@@ -9,7 +10,8 @@ import styles from './Form.module.scss';
 export type TFormProps = {
 	inputs: TInputProps[];
 	className?: string;
-	onSubmit: () => void;
+	// eslint-disable-next-line no-unused-vars
+	onSubmit: (e: {}) => void;
 	submitButton: TButtonProps;
 };
 
@@ -58,9 +60,12 @@ const Form: FC<TFormProps> = ({
 		e.preventDefault();
 		setSubmitting(true);
 
+		const emailSubmission: { message: string; data: {} } =
+			emailSubmit(form);
+		onSubmit(emailSubmission);
+
 		setTimeout(() => {
 			setSubmitting(false);
-			onSubmit();
 		}, 2000);
 	};
 
