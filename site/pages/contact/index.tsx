@@ -6,8 +6,8 @@ import Form from '../../components/Form';
 import styles from './ContactPage.module.scss';
 
 const ContactPage: NextPage = (): any => {
-	const submitContact = () => {
-		console.log('Fire Contact Form');
+	const submitContact = (value: any) => {
+		console.log('Fire Contact Form', value);
 	};
 	return (
 		<PageTemplate
