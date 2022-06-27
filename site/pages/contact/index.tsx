@@ -1,4 +1,5 @@
 import type { NextPage } from 'next';
+import { useRouter } from 'next/router';
 import PageTemplate from '../../templates/Page';
 import Section from '../../components/Section';
 import Card from '../../components/Card';
@@ -6,8 +7,10 @@ import Form from '../../components/Form';
 import styles from './ContactPage.module.scss';
 
 const ContactPage: NextPage = (): any => {
+	const router = useRouter();
 	const submitContact = (value: any) => {
-		console.log('Fire Contact Form', value);
+		console.log(value);
+		router.push('/contact/thank-you');
 	};
 	return (
 		<PageTemplate
@@ -30,6 +33,7 @@ const ContactPage: NextPage = (): any => {
 					</p>
 					<Form
 						onSubmit={submitContact}
+						formName="contact"
 						submitButton={{
 							children: 'Submit',
 						}}
