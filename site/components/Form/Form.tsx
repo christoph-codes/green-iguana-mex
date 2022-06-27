@@ -13,6 +13,7 @@ export type TFormProps = {
 	// eslint-disable-next-line no-unused-vars
 	onSubmit: (e: {}) => void;
 	submitButton: TButtonProps;
+	formName: string;
 };
 
 const Form: FC<TFormProps> = ({
@@ -20,6 +21,7 @@ const Form: FC<TFormProps> = ({
 	className = '',
 	onSubmit,
 	submitButton,
+	formName,
 }) => {
 	const [form, setForm] = useState({});
 	const formUpdate = (
@@ -60,13 +62,16 @@ const Form: FC<TFormProps> = ({
 		e.preventDefault();
 		setSubmitting(true);
 
-		const emailSubmission: { message: string; data: {} } =
-			emailSubmit(form);
-		onSubmit(emailSubmission);
+		const emailSubmission: { message: string; data: {} } = emailSubmit({
+			...form,
+			formType: formName,
+		});
+		const response = onSubmit(emailSubmission);
 
 		setTimeout(() => {
 			setSubmitting(false);
 		}, 2000);
+		return { emailSubmission, response };
 	};
 
 	return (
