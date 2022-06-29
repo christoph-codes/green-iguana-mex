@@ -9,8 +9,7 @@ import styles from './ContactPage.module.scss';
 const ContactPage: NextPage = (): any => {
 	const router = useRouter();
 	const submitContact = (value: any) => {
-		console.log(value);
-		router.push('/contact/thank-you');
+		router.push('/contact/thank-you', value);
 	};
 	return (
 		<PageTemplate
