@@ -2,7 +2,8 @@ import { FC, useState, ChangeEvent } from 'react';
 import inputValidations, { EErrorMessages } from '../../util/inputValidations';
 import { emailSubmit } from '../../util/helpers';
 // eslint-disable-next-line import/no-unresolved
-import Button, { TButtonProps } from '../Button';
+import Button from '../Button';
+import { TButtonProps } from '../Button/Button';
 import Input, { TInputProps } from '../Input';
 import Loader from '../Loader';
 import styles from './Form.module.scss';
