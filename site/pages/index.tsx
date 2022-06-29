@@ -32,7 +32,7 @@ const Home: NextPage = (): any => (
 			className={`${styles.Home__hero} 🔥bg-primary`}
 			bgImg={homeHero}
 		>
-			<Row columns={{ xs: [12, 12], md: [8, 4] }} align="center" noGap>
+			<Row columns={{ xs: [12, 12], md: [8, 4] }} align="center">
 				<article className={styles.Home__hero__text}>
 					<h1>Welcome Home</h1>
 					<p>
