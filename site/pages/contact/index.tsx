@@ -17,7 +17,6 @@ const ContactPage: NextPage = (): any => {
 				title: 'Contact | Green Iguana Mexican Restaurant',
 				description:
 					'Contact Green Iguana Mexican Restaurant and Order Online Today!',
-				image: '/image-url',
 			}}
 			className={styles.Contact}
 		>

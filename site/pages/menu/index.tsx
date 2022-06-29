@@ -11,7 +11,6 @@ const MenuPage: NextPage = (): any => (
 			title: 'Menu | Green Iguana Mexican Restaurant',
 			description:
 				'View our Green Iguana Mexican Restaurant Menu and Order Online Today!',
-			image: '/image-url',
 		}}
 		className={styles.Menu}
 	>

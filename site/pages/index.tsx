@@ -5,7 +5,6 @@ import Section from '../components/Section';
 import Row from '../components/Row';
 import Button from '../components/Button';
 import PageTemplate from '../templates/Page';
-import greenIguanaSEO from '../assets/images/gim-seo_image.png';
 import homeHero from '../assets/images/home-hero.png';
 import { toastTabLink } from '../util/navLinks';
 import CategoryItem from '../components/CategoryItem/CategoryItem';
@@ -24,7 +23,6 @@ const Home: NextPage = (): any => (
 			title: 'Green Iguana Mexican Restaurant | St. George Utah',
 			description:
 				'Green Iguana Mexican Restaurant is a down-to-earth, family-owned eatery serving hearty, familiar Mexican plates, plus beer & margaritas.',
-			image: greenIguanaSEO,
 		}}
 		className={styles.Home}
 	>

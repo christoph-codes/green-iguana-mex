@@ -29,7 +29,6 @@ const CateringPage: NextPage = (): any => (
 			title: 'Catering | Green Iguana Mexican Restaurant',
 			description:
 				'Green Iguana Mexican Restaurant catering is like no other, offering authentic home cooked mexican food right to the venue of your choice!',
-			image: '/image-url',
 		}}
 		className={styles.CateringPage}
 	>
