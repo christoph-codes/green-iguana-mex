@@ -1,3 +1,4 @@
+import { Fragment } from 'react';
 import type { NextPage } from 'next';
 import PageTemplate from '../../templates/Page';
 import Section from '../../components/Section';
@@ -39,10 +40,8 @@ const CateringPage: NextPage = (): any => (
 			className="🔥pb-0"
 		>
 			{catering.map((category: TCatering, index) => (
-				<>
-					<h3 key={index} className="🔥text-center 🔥mb-2">
-						{category.title}
-					</h3>
+				<Fragment key={index}>
+					<h3 className="🔥text-center 🔥mb-2">{category.title}</h3>
 					<Row
 						columns={{ xs: [12, 12, 12], md: [6, 6, 6] }}
 						className={styles.CateringPage__category__row}
@@ -62,7 +61,7 @@ const CateringPage: NextPage = (): any => (
 							)
 						)}
 					</Row>
-				</>
+				</Fragment>
 			))}
 		</Section>
 		<Section className="🔥pt-0 🔥pb-0">
@@ -88,7 +87,6 @@ const CateringPage: NextPage = (): any => (
 						title={item.title}
 						description={item.description}
 						price={item.price}
-						shadow
 					>
 						<p>{item.description}</p>
 					</MenuItem>
