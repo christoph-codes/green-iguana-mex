@@ -5,7 +5,6 @@ import Head from 'next/head';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import iguana from '../../assets/images/iguana.svg';
-import greenIguanaSEO from '../../assets/images/gim-seo_image.png';
 import { navLinks } from '../../util/navLinks';
 import styles from './Page.module.scss';
 
@@ -23,7 +22,12 @@ export type PageProps = {
  */
 const PageTemplate: FC<PageProps> = ({
 	className,
-	metaData = { image: greenIguanaSEO },
+	metaData = {
+		title: 'Green Iguana Mexican Restaurant in St. George Utah',
+		image: '/gim-seo_image.png',
+		description:
+			'Down-to-earth, family-owned eatery serving hearty, familiar Mexican plates, plus beer & margaritas.',
+	},
 	children,
 }) => {
 	const router = useRouter();
@@ -46,33 +50,6 @@ const PageTemplate: FC<PageProps> = ({
 				<meta content="follow, index" name="robots" />
 				<meta content="#0BAA6D" name="theme-color" />
 				<meta content="#0BAA6D" name="msapplication-TileColor" />
-				<meta
-					content="/favicons/browserconfig.xml"
-					name="msapplication-config"
-				/>
-				<link
-					href="/favicon@3x.png"
-					rel="apple-touch-icon"
-					sizes="180x180"
-				/>
-				<link
-					href="/favicon@2x.png"
-					rel="icon"
-					sizes="32x32"
-					type="image/png"
-				/>
-				<link
-					href="/favicon@3x.png"
-					rel="icon"
-					sizes="16x16"
-					type="image/png"
-				/>
-				<link href="/favicons/site.webmanifest" rel="manifest" />
-				<link
-					color="#5bbad5"
-					href="/favicons/safari-pinned-tab.svg"
-					rel="mask-icon"
-				/>
 				<link href="/favicon.ico" rel="shortcut icon" />
 
 				{url && <link href={canonical} rel="canonical" />}
@@ -83,13 +60,12 @@ const PageTemplate: FC<PageProps> = ({
 					property="og:description"
 				/>
 				<meta content={canonical} property="og:url" />
-				{/* <meta
-					content='t28Kl2fGmZjIEgh6q3mGsf-7gGb8115VMQm1qbMMIKc'
-					name='google-site-verification'
-				/> */}
 				{metaData.image && (
 					<>
-						<meta content={metaData.image} property="og:image" />
+						<meta
+							content="/gim-seo_image.png"
+							property="og:image"
+						/>
 						<meta
 							content={metaData.description}
 							property="og:image:alt"
