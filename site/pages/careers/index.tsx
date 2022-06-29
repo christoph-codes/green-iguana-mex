@@ -12,7 +12,6 @@ const Careers: NextPage = (): any => (
 			title: 'Careers | Green Iguana Mexican Restaurant',
 			description:
 				'Green Iguana is looking to hire energetic Team Members to join our  #greeniguanafamily!',
-			image: '/image-url',
 		}}
 		className={styles.Careers}
 	>

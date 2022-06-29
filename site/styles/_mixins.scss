@@ -42,3 +42,13 @@
 		}
 	}
 }
+
+@mixin animate($animation,$duration,$method,$infinite){
+    animation: $animation $duration $method $infinite;
+}
+
+@mixin keyframes($name){
+    @keyframes #{$name}{
+        @content;
+    }
+}

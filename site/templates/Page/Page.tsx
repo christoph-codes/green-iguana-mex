@@ -5,7 +5,7 @@ import Head from 'next/head';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import iguana from '../../assets/images/iguana.svg';
-import { navLinks } from '../../util/navLinks';
+import { headerLinks, footerLinks } from '../../util/navLinks';
 import styles from './Page.module.scss';
 
 export type PageProps = {
@@ -73,11 +73,11 @@ const PageTemplate: FC<PageProps> = ({
 					</>
 				)}
 			</Head>
-			<Header sticky links={navLinks} />
+			<Header sticky links={headerLinks} />
 			<main className={`${styles.PageTemplate} ${className}`}>
 				{children}
 			</main>
-			<Footer img={iguana} links={navLinks} />
+			<Footer img={iguana} links={footerLinks} />
 		</>
 	);
 };

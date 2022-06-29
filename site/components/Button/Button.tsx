@@ -14,7 +14,7 @@ export type TButtonProps = {
 		| 'inactive';
 	href?: 'string';
 	fullWidth?: boolean;
-	rest?: any;
+	rest?: any[];
 };
 
 const Button: FC<TButtonProps> = ({

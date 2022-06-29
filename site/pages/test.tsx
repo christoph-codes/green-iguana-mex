@@ -10,7 +10,6 @@ const Test: NextPage = (): any => (
 		metaData={{
 			title: 'Test Page',
 			description: 'This is a test description',
-			image: '/image-url',
 		}}
 	>
 		<Container>

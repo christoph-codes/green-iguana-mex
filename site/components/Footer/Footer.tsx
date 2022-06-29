@@ -44,9 +44,10 @@ const Footer: FC<TFooterProps> = ({
 					/>
 				)}
 				<div className={styles.Footer__content}>
-					{links && (
-						<nav className={styles.Footer__content__nav}>
-							{mobileLinks.map((link: TLink, index: number) => (
+					<nav className={styles.Footer__content__nav}>
+						{mobileLinks
+							.slice(0, 5)
+							.map((link: TLink, index: number) => (
 								<li
 									key={index}
 									className={
@@ -69,8 +70,34 @@ const Footer: FC<TFooterProps> = ({
 									</Link>
 								</li>
 							))}
-						</nav>
-					)}
+					</nav>
+					<nav className={styles.Footer__content__nav}>
+						{mobileLinks
+							.slice(5)
+							.map((link: TLink, index: number) => (
+								<li
+									key={index}
+									className={
+										styles.Footer__content__nav__link
+									}
+								>
+									<Link
+										href={link.path}
+										passHref={link.newTab}
+									>
+										{/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+										<a
+											target={
+												link.newTab ? '_blank' : '_self'
+											}
+										>
+											{link.icon && link.icon}
+											{link.label}
+										</a>
+									</Link>
+								</li>
+							))}
+					</nav>
 					<hr />
 					<p className="🔥text-center">{copyright}</p>
 				</div>

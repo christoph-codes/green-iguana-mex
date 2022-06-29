@@ -1,0 +1,32 @@
+@use '../../styles/colors' as *;
+.Input {
+	display: block;
+	margin-bottom: 1rem;
+	&__label {
+		font-size: 0.875rem;
+		color: $grey;
+		&:focus {
+			font-weight: bold;
+			color: $primary;
+		}
+		&--error {
+			color: $tertiary;
+		}
+	}
+	&__input {
+		padding: 1rem 1.5rem;
+		border-radius: 0.25rem;
+		width: 100%;
+		border-color: $greylight;
+		border-style: solid;
+		border-width: 1px;
+		&--error {
+			border-color: $tertiary;
+		}
+	}
+	&__errors {
+		&__error {
+			font-size: 0.875rem;
+		}
+	}
+}

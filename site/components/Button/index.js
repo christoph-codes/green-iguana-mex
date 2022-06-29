@@ -1,1 +1,1 @@
-export { default } from './Button.tsx';
+export { default, TButtonProps } from './Button.tsx';
