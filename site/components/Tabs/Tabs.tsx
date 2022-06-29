@@ -1,4 +1,4 @@
-import { ReactElement, FC, useState } from 'react';
+import { ReactElement, FC, useState, Fragment } from 'react';
 import { TMenuItemProps } from '../MenuItem';
 import Row from '../Row';
 import styles from './Tabs.module.scss';
@@ -22,18 +22,17 @@ export type TMenuGroup = {
 const Tabs: FC<TTabs> = ({ data, ...rest }) => {
 	const [activeTab, setActiveTab] = useState(0);
 	const lists = data.map((tab, index) => (
-		<>
+		<Fragment key={index}>
 			<button
 				type="button"
 				className={`${styles.Tabs__item} ${
 					index === activeTab ? styles[`Tabs__item--active`] : ''
 				}`}
 				onClick={() => setActiveTab(index)}
-				key={index}
 			>
 				{tab.title}
 			</button>
-		</>
+		</Fragment>
 	));
 	const options = data.map((tab, index) => (
 		<>
