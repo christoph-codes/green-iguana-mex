@@ -66,12 +66,11 @@ const Form: FC<TFormProps> = ({
 			...form,
 			formType: formName,
 		});
-		const response = onSubmit(emailSubmission);
 
 		setTimeout(() => {
 			setSubmitting(false);
 		}, 2000);
-		return { emailSubmission, response };
+		return onSubmit(emailSubmission);
 	};
 
 	return (
