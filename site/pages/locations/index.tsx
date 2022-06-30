@@ -37,11 +37,9 @@ const LocationsPage: NextPage = (): any => (
 					>
 						<Image
 							className="🔥mb-2"
-							width={300}
-							height={200}
-							layout="intrinsic"
 							src={greenIguanaBuilding}
 							alt="Green Iguana Exterior of the building"
+							placeholder="blur"
 						/>
 						<h3>
 							Green Iguana
