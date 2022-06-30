@@ -7,12 +7,12 @@ const sides = {
 			price: '$22.99',
 			description: '10 is suggested serving size',
 		},
-		{
-			size: '3/4 Pan Side',
-			qty: '15-20 ppl',
-			price: '$29.99',
-			description: '15 is suggested serving size',
-		},
+		// {
+		// 	size: '3/4 Pan Side',
+		// 	qty: '15-20 ppl',
+		// 	price: '$29.99',
+		// 	description: '15 is suggested serving size',
+		// },
 		{
 			size: 'Full Pan Side',
 			qty: '25-30 ppl',
