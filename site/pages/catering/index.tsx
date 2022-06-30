@@ -81,6 +81,7 @@ const CateringPage: NextPage = (): any => (
 		>
 			<Row columns={{ xs: [12, 12, 12], md: [4, 4, 4] }}>
 				{partyPacks.content.map((item: any, index) => (
+					<Card shadow>
 					<MenuItem
 						key={index}
 						title={item.title}
@@ -89,6 +90,7 @@ const CateringPage: NextPage = (): any => (
 					>
 						<p>{item.description}</p>
 					</MenuItem>
+					</Card>
 				))}
 			</Row>
 		</Section>
