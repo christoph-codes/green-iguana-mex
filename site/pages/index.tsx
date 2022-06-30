@@ -81,25 +81,21 @@ const Home: NextPage = (): any => (
 			>
 				<Image
 					className={styles.Home__gallery__item}
-					layout="responsive"
 					src={margaritas}
 					alt="Margaritas from Green Iguana Mexican Restaurant"
 				/>
 				<Image
 					className={styles.Home__gallery__item}
-					layout="responsive"
 					src={shrimp}
 					alt="Shrimp Plate from Green Iguana Mexican Restaurant"
 				/>
 				<Image
 					className={styles.Home__gallery__item}
-					layout="responsive"
 					src={mangoMargarita}
 					alt="Mango Margarita from Green Iguana Mexican Restaurant"
 				/>
 				<Image
 					className={styles.Home__gallery__item}
-					layout="responsive"
 					src={shreddedBeef}
 					alt="Shredded Beef Plate from Green Iguana Mexican Restaurant"
 				/>
