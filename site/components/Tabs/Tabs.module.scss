@@ -70,8 +70,8 @@
 	    ),
 	    linear-gradient(
 	      to right,
-	      $primary,
-	      $primaryhover
+	      $whitegrey,
+	      $offwhite
 	  	);
 		background-color: $offwhite;
 		background-size: 0px 100%;
@@ -85,12 +85,21 @@
 		}
 		&:hover {
 			text-decoration: none;
-			color: $white;
+			color: $primary;
 			background-size: 100% 100%;
 		}
 		&--active {
 			color: $white;
 			background-size: 100% 100%;
+			background-position: 100% 100%, 0% 100%;
+			background-image: linear-gradient(
+				to right,
+				$primary,
+				$primaryhover
+			);
+			&:hover {
+				color: $white;
+			}
 		}
 	}
 	&__content {

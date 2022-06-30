@@ -35,7 +35,13 @@ const CateringPage: NextPage = (): any => (
 		<Section bgImg={cateringImg} className={styles.CateringPage__hero} />
 		<Section
 			title="Catering Menu"
-			description="Call to Order - (435)628-4863"
+			description={
+				<>
+					Please place order 24 hours before time of pick up to allow
+					your order to be ready on time!
+					<br /> <strong>Call to Order (435) 628-4863</strong>
+				</>
+			}
 			className="🔥pb-0"
 		>
 			{catering.map((category: TCatering, index) => (
@@ -81,14 +87,16 @@ const CateringPage: NextPage = (): any => (
 		>
 			<Row columns={{ xs: [12, 12, 12], md: [4, 4, 4] }}>
 				{partyPacks.content.map((item: any, index) => (
-					<MenuItem
-						key={index}
-						title={item.title}
-						description={item.description}
-						price={item.price}
-					>
-						<p>{item.description}</p>
-					</MenuItem>
+					<Card shadow>
+						<MenuItem
+							key={index}
+							title={item.title}
+							description={item.description}
+							price={item.price}
+						>
+							<p>{item.description}</p>
+						</MenuItem>
+					</Card>
 				))}
 			</Row>
 		</Section>
