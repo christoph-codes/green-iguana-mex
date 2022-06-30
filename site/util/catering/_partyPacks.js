@@ -22,7 +22,7 @@ const partyPacks = {
 					<br />
 					(Sour Cream on the side) <br />
 					Small Pan of Rice for 10, small Pan of Beans for 10. Chips
-					w/a Quart of Salsa
+					with a Quart of Salsa
 				</>
 			),
 		},
@@ -37,7 +37,7 @@ const partyPacks = {
 					<br />
 					(Sour Cream & Guacamole on the side) <br />
 					Small Pan of Rice for 10, small Pan of Beans for 10. Chips
-					w/a Quart of Salsa
+					with a Quart of Salsa
 				</>
 			),
 		},
@@ -56,7 +56,7 @@ const partyPacks = {
 					<br />
 					(Sour Cream & Guacamole on the side) <br />
 					Small Pan of Rice for 10, small Pan of Beans for 10. Chips
-					w/a Quart of Salsa
+					with a Quart of Salsa
 				</>
 			),
 		},
