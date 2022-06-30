@@ -4,7 +4,7 @@ import Section from '../../components/Section';
 import styles from './MenuPage.module.scss';
 import Tabs from '../../components/Tabs';
 import menu from '../../util/menu';
-import menuImg from '../../assets/images/gim-menu.jpg';
+import menuImg from '../../assets/images/gim-menu2.jpg';
 
 const MenuPage: NextPage = (): any => (
 	<PageTemplate
