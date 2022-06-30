@@ -4,6 +4,7 @@ import Section from '../../components/Section';
 import styles from './MenuPage.module.scss';
 import Tabs from '../../components/Tabs';
 import menu from '../../util/menu';
+import menuImg from '../../assets/images/gim-menu.jpg';
 
 const MenuPage: NextPage = (): any => (
 	<PageTemplate
@@ -14,6 +15,7 @@ const MenuPage: NextPage = (): any => (
 		}}
 		className={styles.Menu}
 	>
+		<Section bgImg={menuImg} className={styles.Menu__hero} />
 		<Section className="🔥pt-2 🔥pb-1" title="Menu">
 			<Tabs data={menu} />
 		</Section>
