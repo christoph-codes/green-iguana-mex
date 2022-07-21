@@ -60,18 +60,9 @@ const PageTemplate: FC<PageProps> = ({
 					property="og:description"
 				/>
 				<meta content={canonical} property="og:url" />
-				{metaData.image && (
-					<>
-						<meta
-							content="/gim-seo_image.png"
-							property="og:image"
-						/>
-						<meta
-							content={metaData.description}
-							property="og:image:alt"
-						/>
-					</>
-				)}
+				<meta content="/gim-seo_image.png" property="og:image" />
+				<meta content="summary_large_image" name="twitter:card" />
+				<meta content={metaData.description} property="og:image:alt" />
 			</Head>
 			<Header sticky links={headerLinks} />
 			<main className={`${styles.PageTemplate} ${className}`}>
