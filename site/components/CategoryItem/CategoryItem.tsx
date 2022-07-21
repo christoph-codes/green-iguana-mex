@@ -27,8 +27,9 @@ const CategoryItem: FC<TCategoryItemProps> = ({ category }) => (
 			</div>
 		)}
 		<div className={styles.CategoryItem__columns}>
-			{category.content?.map((foodCategory: any) => (
+			{category.content?.map((foodCategory: any, index: number) => (
 				<MenuItem
+					key={index}
 					className={styles.CategoryItem__columns__column}
 					{...foodCategory}
 				/>
