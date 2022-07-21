@@ -4,11 +4,10 @@ import {
 	FaCalendarAlt,
 	FaChartLine,
 	FaMoneyBillWave,
-	// FaPiggyBank,
-	// FaStethoscope,
 	FaTag,
 	FaUmbrellaBeach,
 } from 'react-icons/fa';
+import { MdAttachEmail } from 'react-icons/md';
 import { GiTacos } from 'react-icons/gi';
 import Button from '../../components/Button';
 import Row from '../../components/Row';
@@ -79,6 +78,13 @@ const JobListing: FC<TJobListingProps> = ({
 			className={`${styles.JobListing} ${className}`}
 		>
 			<Section bgColor="primary" className="🔥text-center">
+				<Button
+					className={`${styles.JobListing__careers_btn} 🔥mb-2`}
+					href="/careers"
+					variant="light-outline"
+				>
+					‹ Back to Careers
+				</Button>
 				{title && <h1 className="🔥text-white">{title}</h1>}
 				{location && <h3 className="🔥text-secondary">{location}</h3>}
 				{pay && (
@@ -151,17 +157,23 @@ const JobListing: FC<TJobListingProps> = ({
 				</Row>
 			</Section>
 			<Section
+				className="🔥text-center"
 				title="Piqued your interest? "
 				description="We would love to meet you, so apply today!"
 				id="apply"
 			>
-				** FORM WILL GO HERE! **
+				<MdAttachEmail className="🔥text-secondary" size={60} />
+				<h3 className="🔥text-center 🔥mb-2">
+					Please email us your resume to be considered for this
+					position and we will get back to you if you are a great fit
+					for our team!
+				</h3>
 				<Button
 					className={styles.JobListing__careers_btn}
-					href="/careers"
+					href="mailto:greeniguana16@gmail.com"
 					variant="primary-outline"
 				>
-					‹ Back to Careers
+					Email greeniguana16@gmail.com
 				</Button>
 			</Section>
 		</Page>

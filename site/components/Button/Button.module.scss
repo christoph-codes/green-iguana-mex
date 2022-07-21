@@ -88,4 +88,14 @@
 			color: $tertiaryhover;
 		}
 	}
+	&__light-outline {
+		background-color: transparent;
+		border-color: $white;
+		color: $white;
+		&:hover {
+			background-color: $offwhite;
+			border-color: $white;
+			color: $white;
+		}
+	}
 }
