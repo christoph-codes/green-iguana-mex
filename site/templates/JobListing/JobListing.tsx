@@ -162,13 +162,17 @@ const JobListing: FC<TJobListingProps> = ({
 				description="We would love to meet you, so apply today!"
 				id="apply"
 			>
-				** FORM WILL GO HERE! **
+				<h3 className="🔥text-center 🔥mb-2">
+					Please email us your resume to be considered for this
+					position and we will get back to you if you are a great fit
+					for our team!
+				</h3>
 				<Button
 					className={styles.JobListing__careers_btn}
-					href="/careers"
+					href="mailto:greeniguana16@gmail.com"
 					variant="primary-outline"
 				>
-					‹ Back to Careers
+					Email greeniguana16@gmail.com
 				</Button>
 			</Section>
 		</Page>
