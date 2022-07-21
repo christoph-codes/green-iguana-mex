@@ -4,8 +4,6 @@ import {
 	FaCalendarAlt,
 	FaChartLine,
 	FaMoneyBillWave,
-	// FaPiggyBank,
-	// FaStethoscope,
 	FaTag,
 	FaUmbrellaBeach,
 } from 'react-icons/fa';
