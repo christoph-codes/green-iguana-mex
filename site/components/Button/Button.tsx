@@ -11,7 +11,8 @@ export type TButtonProps = {
 		| 'secondary-outline'
 		| 'tertiary'
 		| 'tertiary-outline'
-		| 'inactive';
+		| 'inactive'
+		| 'light-outline';
 	href?: 'string';
 	fullWidth?: boolean;
 	rest?: any[];
