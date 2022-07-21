@@ -25,6 +25,13 @@ const SideNav: FC<TSideNav> = ({
 		}`}
 		{...rest}
 	>
+		<button
+			className={styles.SideNav__close}
+			type="button"
+			onClick={() => toggleSideNav()}
+		>
+			Close <IoCloseCircle size={32} />
+		</button>
 		<li
 			className={`${styles.SideNav__link} ${styles['SideNav__link--button']}`}
 		>
@@ -46,13 +53,6 @@ const SideNav: FC<TSideNav> = ({
 				</Link>
 			</li>
 		))}
-		<button
-			className={styles.SideNav__close}
-			type="button"
-			onClick={() => toggleSideNav()}
-		>
-			Close <IoCloseCircle size={32} />
-		</button>
 	</aside>
 );
 
