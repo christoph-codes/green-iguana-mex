@@ -79,6 +79,13 @@ const JobListing: FC<TJobListingProps> = ({
 			className={`${styles.JobListing} ${className}`}
 		>
 			<Section bgColor="primary" className="🔥text-center">
+				<Button
+					className={`${styles.JobListing__careers_btn} 🔥mb-2`}
+					href="/careers"
+					variant="light-outline"
+				>
+					‹ Back to Careers
+				</Button>
 				{title && <h1 className="🔥text-white">{title}</h1>}
 				{location && <h3 className="🔥text-secondary">{location}</h3>}
 				{pay && (
