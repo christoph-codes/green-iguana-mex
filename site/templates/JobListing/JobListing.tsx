@@ -9,6 +9,7 @@ import {
 	FaTag,
 	FaUmbrellaBeach,
 } from 'react-icons/fa';
+import { MdAttachEmail } from 'react-icons/md';
 import { GiTacos } from 'react-icons/gi';
 import Button from '../../components/Button';
 import Row from '../../components/Row';
@@ -158,10 +159,12 @@ const JobListing: FC<TJobListingProps> = ({
 				</Row>
 			</Section>
 			<Section
+				className="🔥text-center"
 				title="Piqued your interest? "
 				description="We would love to meet you, so apply today!"
 				id="apply"
 			>
+				<MdAttachEmail className="🔥text-secondary" size={60} />
 				<h3 className="🔥text-center 🔥mb-2">
 					Please email us your resume to be considered for this
 					position and we will get back to you if you are a great fit
