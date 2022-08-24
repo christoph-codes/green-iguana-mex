@@ -28,7 +28,7 @@
 .Col {
 	flex: 1 0 auto;
 	&[class*=🔥col-] {
-		flex-grow: 0;
+		flex-grow: 1;
 		flex-shrink: 1;
 	}
 }

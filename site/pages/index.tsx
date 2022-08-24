@@ -57,7 +57,7 @@ const Home: NextPage = (): any => (
 		</Section>
 		<div className={styles.Home__actions}>
 			<Container>
-				<Row>
+				<Row columns={{ xs: [12, 12, 12], md: [3, 3, 3] }}>
 					<p>
 						850 S Bluff Street
 						<br />

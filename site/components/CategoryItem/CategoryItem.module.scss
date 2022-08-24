@@ -2,6 +2,9 @@
 @use '../../styles/mixins' as *;
 .CategoryItem {
     padding: 2rem;
+	@media(max-width: 25.875rem) {
+		padding: 2rem 0;
+	}
     &__item {
 		display: block;
 		width: 100%;
