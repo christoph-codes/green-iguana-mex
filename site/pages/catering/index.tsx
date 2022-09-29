@@ -56,7 +56,9 @@ const CateringPage: NextPage = (): any => (
 								<Card
 									key={idx}
 									title={item.size}
-									description={`Qty: ${item.qty}`}
+									description={
+										item.qty && `Qty: ${item?.qty}`
+									}
 									price={item.price}
 									className={`${styles.CateringPage__category} 🔥text-center`}
 									shadow
