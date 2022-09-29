@@ -41,15 +41,27 @@ const LocationsPage: NextPage = (): any => (
 							alt="Green Iguana Exterior of the building"
 							placeholder="blur"
 						/>
-						<h3>
+						<h4>
 							Green Iguana
 							<br /> Mexican Restaurant
-						</h3>
+						</h4>
+						<hr />
 						<p>
-							<strong>St. George Location</strong>
+							<strong>Address:</strong>
+							<br />
+							850 S Bluff St, St. George, UT 84770
 						</p>
-						<p>850 S Bluff St, St. George, UT 84770</p>
-						<p>1 (435) 628-4863</p>
+						<p>
+							<strong>Phone:</strong>
+							<br />1 (435) 628-4863
+						</p>
+						<p>
+							<strong>Hours:</strong>
+							<br />
+							Monday - Saturday @ 11am - 9pm
+							<br />
+							Closed on Sundays
+						</p>
 					</div>
 				</article>
 			</Row>
