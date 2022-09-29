@@ -1,8 +1,14 @@
 @use './reset';
 @use './utilities';
 @use './typography';
+@use './colors' as *;
+
 body {
 	position: relative;
 	overflow-x: hidden;
 	padding-bottom: env(safe-area-inset-bottom);
+}
+hr {
+	border: solid 0.5px $whitegrey;
+	margin: 1rem 0;
 }
