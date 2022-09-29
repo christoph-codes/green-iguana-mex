@@ -64,8 +64,8 @@ const Home: NextPage = (): any => (
 						St. George, UT 84770
 					</p>
 					<p>
-						Tuesday - Saturday @ 11am - 9pm <br />
-						Sunday @ 11am - 8pm
+						Monday - Saturday @ 11am - 9pm <br />
+						Closed on Sundays
 					</p>
 					<p>
 						Phone Number <br />

@@ -24,6 +24,24 @@ const ContactPage: NextPage = (): any => {
 				title="Contact"
 				description="Contact Green Iguana Mexican Restaurant today. We look forward to hearing from you!"
 			>
+				<article className="🔥text-center">
+					<p>
+						<strong>Address:</strong>
+						<br />
+						850 S Bluff St, St. George, UT 84770
+					</p>
+					<p>
+						<strong>Phone:</strong>
+						<br />1 (435) 628-4863
+					</p>
+					<p>
+						<strong>Hours:</strong>
+						<br />
+						Monday - Saturday @ 11am - 9pm
+						<br />
+						Closed on Sundays
+					</p>
+				</article>
 				<Card shadow className={styles.Contact__form_card}>
 					<p>
 						Please fill out the fields below and you will hear from
