@@ -108,13 +108,9 @@ const Footer: FC<TFooterProps> = ({
 			<div className="🔥bg-grey 🔥text-center 🔥py-h">
 				<p className="🔥text-white 🔥m-0">
 					Site made with <FaHeart color="#FFC924" /> by{' '}
-					<Link
-						target="_blank"
-						className="🔥text-white"
-						href="https://thekirkconcept.com"
-					>
+					<Link target="_blank" href="https://thekirkconcept.com">
 						{/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-						<a>
+						<a className="🔥text-white">
 							<Nobr>The Kirk Concept</Nobr>
 						</a>
 					</Link>
