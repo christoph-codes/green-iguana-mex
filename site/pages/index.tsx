@@ -1,5 +1,6 @@
 import type { NextPage } from 'next';
 import Image from 'next/image';
+import Link from 'next/link';
 import Container from '../components/Container';
 import Section from '../components/Section';
 import Row from '../components/Row';
@@ -16,6 +17,7 @@ import shrimp from '../assets/images/gim_shrimp.png';
 import shreddedBeef from '../assets/images/gim_shredded_beef.png';
 // Styles
 import styles from './home/Home.module.scss';
+import Nobr from '../components/Nobr';
 
 const Home: NextPage = (): any => (
 	<PageTemplate
@@ -41,10 +43,10 @@ const Home: NextPage = (): any => (
 				<article
 					className={`${styles.Home__hero__welcome_card} 🔥bg-white 🔥p-2`}
 				>
-					<h2>Come Visit Us Today!</h2>
+					<h2>We Are Open!</h2>
 					<p>
 						Place your order online or checkout our menu before you
-						come visit us!
+						come visit us in <Nobr>St. George!</Nobr>
 					</p>
 					<Button fullWidth href={toastTabLink} target="_blank">
 						Order Online
@@ -66,12 +68,16 @@ const Home: NextPage = (): any => (
 						Located in the Red Lion Hotel
 					</p>
 					<p>
+						Hours:
+						<br />
 						Monday - Saturday @ 11am - 9pm <br />
 						Closed on Sundays
 					</p>
 					<p>
-						Phone Number <br />
-						435-628-4863
+						Contact: <br />
+						Phone Number: 435-628-4863
+						<br />
+						<Link href={toastTabLink}>Order Online</Link>
 					</p>
 				</Row>
 			</Container>
