@@ -62,6 +62,8 @@ const Home: NextPage = (): any => (
 						850 S Bluff Street
 						<br />
 						St. George, UT 84770
+						<br />
+						Located in the Red Lion Hotel
 					</p>
 					<p>
 						Monday - Saturday @ 11am - 9pm <br />
