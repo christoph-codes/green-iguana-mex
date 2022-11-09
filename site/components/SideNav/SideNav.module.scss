@@ -74,11 +74,8 @@
 		transition: background-color 0.15s ease-in-out;
 		margin-bottom: 1rem;;
 		&:hover {
-			background-color: $greylight;
+			background-color: $whitegrey;
 			color: $grey;
-		}
-		&:hover {
-			color: $greyhover;
 		}
 	}
 }

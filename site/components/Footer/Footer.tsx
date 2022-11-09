@@ -6,6 +6,7 @@ import THeaderProps, { TLink } from '../Header';
 import Container from '../Container';
 import styles from './Footer.module.scss';
 import { mobileLinks } from '../../util/navLinks';
+import Nobr from '../Nobr';
 
 export type TFooterProps = {
 	className?: string;
@@ -107,9 +108,11 @@ const Footer: FC<TFooterProps> = ({
 			<div className="🔥bg-grey 🔥text-center 🔥py-h">
 				<p className="🔥text-white 🔥m-0">
 					Site made with <FaHeart color="#FFC924" /> by{' '}
-					<Link href="https://thekirkconcept.com">
+					<Link target="_blank" href="https://thekirkconcept.com">
 						{/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-						<a className="🔥text-white">The Kirk Concept</a>
+						<a className="🔥text-white">
+							<Nobr>The Kirk Concept</Nobr>
+						</a>
 					</Link>
 				</p>
 			</div>

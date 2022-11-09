@@ -50,6 +50,8 @@ const LocationsPage: NextPage = (): any => (
 							<strong>Address:</strong>
 							<br />
 							850 S Bluff St, St. George, UT 84770
+							<br />
+							<strong>Located in the Red Lion Hotel</strong>
 						</p>
 						<p>
 							<strong>Phone:</strong>
