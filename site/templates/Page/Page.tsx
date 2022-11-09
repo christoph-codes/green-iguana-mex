@@ -7,6 +7,7 @@ import Footer from '../../components/Footer';
 import iguana from '../../assets/images/iguana.svg';
 import { headerLinks, footerLinks } from '../../util/navLinks';
 import styles from './Page.module.scss';
+import AnnouncementBar from '../../components/AnnouncementBar/AnnouncementBar';
 
 export type PageProps = {
 	className?: string;
@@ -64,6 +65,7 @@ const PageTemplate: FC<PageProps> = ({
 				<meta content="summary_large_image" name="twitter:card" />
 				<meta content={metaData.description} property="og:image:alt" />
 			</Head>
+			<AnnouncementBar>We Are Open!</AnnouncementBar>
 			<Header sticky links={headerLinks} />
 			<main className={`${styles.PageTemplate} ${className}`}>
 				{children}
