@@ -1,5 +1,5 @@
 const seafood = {
-	title: 'Marisocs (Seafood)',
+	title: 'Mariscos (Seafood)',
 	description: 'All Plates Served with Rice and Beans.',
 	content: [
 		{
