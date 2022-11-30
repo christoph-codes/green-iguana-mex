@@ -2,7 +2,10 @@ const burritos = {
 	title: 'Grande Burritos',
 	description: (
 		<>
-			<p>Choose From Green l White l Red or Tres Quesos Sauce. Includes Rice l Beans.</p>
+			<p>
+				Choose From Green l White l Red or Tres Quesos Sauce. Includes
+				Rice l Beans.
+			</p>
 			<p>Add Lettuce & Tomatoes to any Burrito for $1.99 </p>
 			<p>
 				<strong>
@@ -15,7 +18,7 @@ const burritos = {
 	content: [
 		{
 			title: 'Albañil Burrito',
-			description: `Choice of Carne Asada or Charbroiled Chicken l Chorizo l Refried Beans l Jalapenos l Pico l Guacamole l Cheese`,
+			description: `Choice of Carne Asada or Charbroiled Chicken l Chorizo l Refried Beans l Jalapeños l Pico l Guacamole l Cheese`,
 			price: 12.99,
 		},
 		{
@@ -25,7 +28,13 @@ const burritos = {
 		},
 		{
 			title: 'Fajita Burrito',
-			description: <>Choice of Carne Asada or Charbroiled Chicken l Peppers l Onions l Pico l Guacamole l Sour Cream l Cheese. <strong>Add Shrimp for $2.99</strong></>,
+			description: (
+				<>
+					Choice of Carne Asada or Charbroiled Chicken l Peppers l
+					Onions l Pico l Guacamole l Sour Cream l Cheese.{' '}
+					<strong>Add Shrimp for $2.99</strong>
+				</>
+			),
 			price: 12.49,
 		},
 		{
