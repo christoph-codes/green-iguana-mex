@@ -65,7 +65,9 @@ const PageTemplate: FC<PageProps> = ({
 				<meta content="summary_large_image" name="twitter:card" />
 				<meta content={metaData.description} property="og:image:alt" />
 			</Head>
-			<AnnouncementBar>We Are Open!</AnnouncementBar>
+			<AnnouncementBar>
+				Temporarily Closed Due To Construction. Reopening Soon!
+			</AnnouncementBar>
 			<Header sticky links={headerLinks} />
 			<main className={`${styles.PageTemplate} ${className}`}>
 				{children}
