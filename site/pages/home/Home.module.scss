@@ -56,4 +56,24 @@
 			border-radius: 0.5rem;
 		}
 	}
+	&__newMenu {
+		display: flex;
+		justify-content: center;
+		gap: 2rem;
+		@media(max-width:48rem) {
+			flex-direction: column;
+		}
+		&__step {
+			background-color: $primarylight;
+			padding: 2rem;
+			border-radius: 0.5rem;
+			h3 {
+				font-size: 1.5rem;
+			}
+			h2 {
+				margin: 0;
+				font-size: 3rem;
+			}
+		}
+	}
 }
