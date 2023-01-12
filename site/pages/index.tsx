@@ -82,10 +82,10 @@ const Home: NextPage = (): any => (
 				</Row>
 			</Container>
 		</div>
-		<Section>
+		<Section className="🔥pb-0">
 			<Row
 				columns={{ xs: [6, 6, 6, 6], md: [3, 3, 3, 3] }}
-				className={styles.Home__gallery}
+				className={`${styles.Home__gallery}`}
 			>
 				<Image
 					className={styles.Home__gallery__item}
@@ -109,15 +109,37 @@ const Home: NextPage = (): any => (
 				/>
 			</Row>
 		</Section>
-		<CategoryItem
-			className={`${styles.Home__hero} 🔥bg-offwhite`}
-			category={specials}
-		/>
+		<Section title="New Menu">
+			<p className="🔥text-center 🔥pb-2 🔥pt-1">
+				View our new menu as things are changing to feature your
+				favorite dishes. <br />3 Easy steps to ordering to get you to
+				enjoy your meal sooner!
+			</p>
+			<div className={styles.Home__newMenu}>
+				<article className={`${styles.Home__newMenu__step} `}>
+					<h3>Step 1:</h3>
+					<h2>Choose Your Entree</h2>
+				</article>
+				<article className={`${styles.Home__newMenu__step} `}>
+					<h3>Step 2:</h3>
+					<h2>Choose Your Protein</h2>
+				</article>
+				<article className={`${styles.Home__newMenu__step} `}>
+					<h3>Step 3:</h3>
+					<h2>Choose Your Extras</h2>
+				</article>
+			</div>
+		</Section>
+
 		<Section className="🔥pt-0">
-			<Button className="🔥mx-auto" href="/menu" variant="secondary">
-				View Menu
+			<Button className="🔥mx-auto" href="/menu" variant="tertiary">
+				View New Menu
 			</Button>
 		</Section>
+		{/* <CategoryItem
+			className={`${styles.Home__hero} 🔥bg-offwhite`}
+			category={specials}
+		/> */}
 	</PageTemplate>
 );
 
