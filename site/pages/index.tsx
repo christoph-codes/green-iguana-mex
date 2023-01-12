@@ -114,7 +114,7 @@ const Home: NextPage = (): any => (
 				/>
 			</Row>
 		</Section>
-		<Section title="New Menu">
+		<Section title="New Menu" className="🔥pb-2">
 			<p className="🔥text-center 🔥pb-2 🔥pt-1">
 				View our new menu as things are changing to feature your
 				favorite dishes. <br />3 Easy steps to ordering to get you to
