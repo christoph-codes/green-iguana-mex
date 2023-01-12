@@ -45,9 +45,9 @@ const Home: NextPage = (): any => (
 				>
 					<h2 className="🔥text-tertiary">Under Construction!</h2>
 					<p>
-						As we are under construction, we are making some changes
-						you will love but cant share yet. In the meantime check
-						out our new menu!
+						{`As we are under construction, we are making some changes
+						you will love but can't share yet. In the meantime check
+						out our new menu!`}
 					</p>
 					{/* <p>
 						Place your order online or checkout our menu before you
