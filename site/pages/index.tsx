@@ -8,8 +8,8 @@ import Button from '../components/Button';
 import PageTemplate from '../templates/Page';
 import homeHero from '../assets/images/home-hero.png';
 import { toastTabLink } from '../util/navLinks';
-import CategoryItem from '../components/CategoryItem/CategoryItem';
-import specials from '../util/menu/_specials';
+// import CategoryItem from '../components/CategoryItem/CategoryItem';
+// import specials from '../util/menu/_specials';
 // Images
 import margaritas from '../assets/images/gim_margaritas.png';
 import mangoMargarita from '../assets/images/gim_mango_marg.png';
@@ -17,7 +17,7 @@ import shrimp from '../assets/images/gim_shrimp.png';
 import shreddedBeef from '../assets/images/gim_shredded_beef.png';
 // Styles
 import styles from './home/Home.module.scss';
-import Nobr from '../components/Nobr';
+// import Nobr from '../components/Nobr';
 
 const Home: NextPage = (): any => (
 	<PageTemplate
