@@ -43,11 +43,16 @@ const Home: NextPage = (): any => (
 				<article
 					className={`${styles.Home__hero__welcome_card} 🔥bg-white 🔥p-2`}
 				>
-					<h2>We Are Open!</h2>
+					<h2>Under Construction!</h2>
 					<p>
+						As we are under construction, we are making some changes
+						you will love but cant share yet. In the meantime check
+						out our new menu!
+					</p>
+					{/* <p>
 						Place your order online or checkout our menu before you
 						come visit us in <Nobr>St. George!</Nobr>
-					</p>
+					</p> */}
 					<Button fullWidth href={toastTabLink} target="_blank">
 						Order Online
 					</Button>
