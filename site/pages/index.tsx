@@ -43,7 +43,7 @@ const Home: NextPage = (): any => (
 				<article
 					className={`${styles.Home__hero__welcome_card} 🔥bg-white 🔥p-2`}
 				>
-					<h2>Under Construction!</h2>
+					<h2 className="🔥text-tertiary">Under Construction!</h2>
 					<p>
 						As we are under construction, we are making some changes
 						you will love but cant share yet. In the meantime check
