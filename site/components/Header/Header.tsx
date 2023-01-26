@@ -7,7 +7,7 @@ import greenIguanaLogo from '../../assets/images/green-iguana-logo.png';
 import styles from './Header.module.scss';
 import Container from '../Container';
 import Button from '../Button';
-import { toastTabLink } from '../../util/navLinks';
+// import { toastTabLink } from '../../util/navLinks';
 // eslint-disable-next-line import/no-unresolved
 import { useSideNav } from '../../providers/SideNavProvider';
 

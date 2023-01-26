@@ -7,7 +7,7 @@ import Row from '../components/Row';
 import Button from '../components/Button';
 import PageTemplate from '../templates/Page';
 import homeHero from '../assets/images/home_hero_2_bg.png';
-import { toastTabLink } from '../util/navLinks';
+// import { toastTabLink } from '../util/navLinks';
 // import CategoryItem from '../components/CategoryItem/CategoryItem';
 // import specials from '../util/menu/_specials';
 // Images
@@ -78,7 +78,8 @@ const Home: NextPage = (): any => (
 						Contact: <br />
 						Phone Number: 435-628-4863
 						<br />
-						<Link href={toastTabLink}>Order Online</Link>
+						{/* <Link href={toastTabLink}>Order Online</Link> */}
+						<Link href="/menu">View Menu</Link>
 					</p>
 				</Row>
 			</Container>
