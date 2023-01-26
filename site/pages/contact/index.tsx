@@ -5,6 +5,7 @@ import Section from '../../components/Section';
 import Card from '../../components/Card';
 import Form from '../../components/Form';
 import styles from './ContactPage.module.scss';
+import { address, hours } from '../../util/content';
 
 const ContactPage: NextPage = (): any => {
 	const router = useRouter();
@@ -28,7 +29,7 @@ const ContactPage: NextPage = (): any => {
 					<p>
 						<strong>Address:</strong>
 						<br />
-						850 S Bluff St, St. George, UT 84770
+						{address}
 						<br />
 						<strong>Located in the Red Lion Hotel</strong>
 					</p>
@@ -39,9 +40,7 @@ const ContactPage: NextPage = (): any => {
 					<p>
 						<strong>Hours:</strong>
 						<br />
-						Monday - Saturday @ 11am - 9pm
-						<br />
-						Closed on Sundays
+						{hours}
 					</p>
 				</article>
 				<Card shadow className={styles.Contact__form_card}>

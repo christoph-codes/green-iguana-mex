@@ -7,6 +7,7 @@ import Container from '../Container';
 import styles from './Footer.module.scss';
 import { mobileLinks } from '../../util/navLinks';
 import Nobr from '../Nobr';
+import { address } from '../../util/content';
 
 export type TFooterProps = {
 	className?: string;
@@ -21,9 +22,9 @@ const Footer: FC<TFooterProps> = ({
 	links,
 	copyright = (
 		<>
-			2022 © Green Iguana Mexican Restaurant. <br /> 850 S. Bluff Street,
-			St. George, UT 84770.
-			<br /> All Rights Reserved.
+			{new Date().getFullYear()} © Green Iguana Mexican Restaurant. All
+			Rights Reserved.
+			<br /> {address}
 		</>
 	),
 	poweredbyTKC = true,
