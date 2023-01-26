@@ -6,7 +6,7 @@ import Section from '../components/Section';
 import Row from '../components/Row';
 import Button from '../components/Button';
 import PageTemplate from '../templates/Page';
-import homeHero from '../assets/images/home-hero.png';
+import homeHero from '../assets/images/home_hero_2_bg.png';
 import { toastTabLink } from '../util/navLinks';
 // import CategoryItem from '../components/CategoryItem/CategoryItem';
 // import specials from '../util/menu/_specials';
@@ -17,6 +17,7 @@ import shrimp from '../assets/images/gim_shrimp.png';
 import shreddedBeef from '../assets/images/gim_shredded_beef.png';
 // Styles
 import styles from './home/Home.module.scss';
+import { address, hours } from '../util/content';
 // import Nobr from '../components/Nobr';
 
 const Home: NextPage = (): any => (
@@ -32,30 +33,29 @@ const Home: NextPage = (): any => (
 			className={`${styles.Home__hero} 🔥bg-primary`}
 			bgImg={homeHero}
 		>
-			<Row columns={{ xs: [12, 12], md: [8, 4] }} align="center">
+			<Row
+				columns={{ xs: [12, 12], md: [6, 4] }}
+				align="center"
+				justify="between"
+			>
 				<article className={styles.Home__hero__text}>
 					<h1>Welcome Home</h1>
 					<p>
-						Down-to-earth, family-owned eatery serving hearty,
-						familiar Mexican plates, plus beer & margaritas.
+						Experience authentic Mexican flavors like never before
+						with our new simplified menu.
 					</p>
 				</article>
 				<article
 					className={`${styles.Home__hero__welcome_card} 🔥bg-white 🔥p-2`}
 				>
-					<h2 className="🔥text-tertiary">Under Construction!</h2>
+					<h2 className="🔥text-tertiary">Reopening Soon!</h2>
 					<p>
-						{`As we are under construction, we are making some changes
-						you will love but can't share yet. In the meantime check
-						out our new menu!`}
+						Get ready for a whole new dining experience as Green
+						Iguana reopens in a brand new location.
 					</p>
-					{/* <p>
-						Place your order online or checkout our menu before you
-						come visit us in <Nobr>St. George!</Nobr>
-					</p> */}
-					<Button fullWidth href={toastTabLink} target="_blank">
+					{/* <Button fullWidth href={toastTabLink} target="_blank">
 						Order Online
-					</Button>
+					</Button> */}
 					<Button variant="tertiary-outline" fullWidth href="/menu">
 						View Menu
 					</Button>
@@ -66,17 +66,13 @@ const Home: NextPage = (): any => (
 			<Container>
 				<Row columns={{ xs: [12, 12, 12], md: [3, 3, 3] }}>
 					<p>
-						850 S Bluff Street
-						<br />
-						St. George, UT 84770
-						<br />
-						Located in the Red Lion Hotel
+						Address: <br />
+						{address}
 					</p>
 					<p>
 						Hours:
 						<br />
-						Monday - Saturday @ 11am - 9pm <br />
-						Closed on Sundays
+						{hours}
 					</p>
 					<p>
 						Contact: <br />
