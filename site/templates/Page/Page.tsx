@@ -66,7 +66,8 @@ const PageTemplate: FC<PageProps> = ({
 				<meta content={metaData.description} property="og:image:alt" />
 			</Head>
 			<AnnouncementBar>
-				Temporarily Closed Due To Construction. Reopening Soon!
+				Temporarily Closed Due To Construction. Reopening at the end of
+				February!
 			</AnnouncementBar>
 			<Header sticky links={headerLinks} />
 			<main className={`${styles.PageTemplate} ${className}`}>

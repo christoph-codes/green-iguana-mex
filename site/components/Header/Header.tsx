@@ -7,7 +7,7 @@ import greenIguanaLogo from '../../assets/images/green-iguana-logo.png';
 import styles from './Header.module.scss';
 import Container from '../Container';
 import Button from '../Button';
-import { toastTabLink } from '../../util/navLinks';
+// import { toastTabLink } from '../../util/navLinks';
 // eslint-disable-next-line import/no-unresolved
 import { useSideNav } from '../../providers/SideNavProvider';
 
@@ -74,8 +74,11 @@ const Header: FC<THeaderProps> = ({ links, sticky, className, ...rest }) => {
 									]
 								}
 							>
-								<Button href={toastTabLink} target="_blank">
+								{/* <Button href={toastTabLink} target="_blank">
 									Order Online
+								</Button> */}
+								<Button href="/menu" target="_blank">
+									View Menu
 								</Button>
 							</li>
 						</nav>

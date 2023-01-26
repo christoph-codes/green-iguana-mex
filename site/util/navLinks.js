@@ -1,7 +1,5 @@
 import { FaFacebookF, FaInstagram } from 'react-icons/fa';
 
-export const toastTabLink = `https://www.toasttab.com/greeniguanastg/v3?utmCampaign=website`;
-
 export const headerLinks = [
 	{ label: 'Menu', path: '/menu' },
 	{ label: 'Catering', path: '/catering' },

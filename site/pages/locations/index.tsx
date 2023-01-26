@@ -5,6 +5,7 @@ import Section from '../../components/Section';
 import styles from './LocationsPage.module.scss';
 import greenIguanaBuilding from '../../assets/images/green-iguana-building.jpg';
 import Row from '../../components/Row';
+import { address, hours } from '../../util/content';
 
 const LocationsPage: NextPage = (): any => (
 	<PageTemplate
@@ -49,7 +50,7 @@ const LocationsPage: NextPage = (): any => (
 						<p>
 							<strong>Address:</strong>
 							<br />
-							850 S Bluff St, St. George, UT 84770
+							{address}
 							<br />
 							<strong>Located in the Red Lion Hotel</strong>
 						</p>
@@ -60,9 +61,7 @@ const LocationsPage: NextPage = (): any => (
 						<p>
 							<strong>Hours:</strong>
 							<br />
-							Monday - Saturday @ 11am - 9pm
-							<br />
-							Closed on Sundays
+							{hours}
 						</p>
 					</div>
 				</article>
