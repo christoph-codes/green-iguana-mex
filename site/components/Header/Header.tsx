@@ -74,8 +74,11 @@ const Header: FC<THeaderProps> = ({ links, sticky, className, ...rest }) => {
 									]
 								}
 							>
-								<Button href={toastTabLink} target="_blank">
+								{/* <Button href={toastTabLink} target="_blank">
 									Order Online
+								</Button> */}
+								<Button href="/menu" target="_blank">
+									View Menu
 								</Button>
 							</li>
 						</nav>
