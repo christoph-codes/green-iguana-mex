@@ -1,9 +1,8 @@
 @use '../../styles/colors' as *;
 @use '../../styles/mixins' as *;
 .Header {
-	background-color: $secondary;
+	background-color: $primary;
 	padding: 0.5rem 0;
-	border-bottom: solid 2px $secondaryhover;
 	&__sticky {
 		position: sticky;
 		top: 0;
@@ -14,7 +13,7 @@
 		justify-content: space-between;
 		align-items: center;
 		&__logo {
-			max-width: 4rem;
+			max-width: 14rem;
 			cursor: pointer;
 		}
 		&__nav {
@@ -32,15 +31,15 @@
 					padding: 0 0.5rem;
 				}
 				> a {
-					color: $grey !important;
+					color: $white !important;
 					font-family: 'Kanit', sans-serif;
 					&:hover {
-						color: $primary !important;
+						color: $secondary !important;
 					}
 				}
 				&:last-child {
 					a {
-						color: $white !important;
+						color: $grey !important;
 						margin-bottom: 0;
 					}
 				}
@@ -50,7 +49,7 @@
 			display: none;
 			background-color: transparent;
 			border: none;
-			color: $grey;
+			color: $white;
 			cursor: pointer;
 			@include maxq(48rem) {
 				display: block;
