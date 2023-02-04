@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { FC } from 'react';
 import { IoCloseCircle } from 'react-icons/io5';
 import { GiHamburgerMenu } from 'react-icons/gi';
-import greenIguanaLogo from '../../assets/images/green-iguana-logo.png';
+import greenIguanaLogo from '../../assets/images/green-iguana-logo-new_light.svg';
 import styles from './Header.module.scss';
 import Container from '../Container';
 import Button from '../Button';
@@ -77,7 +77,10 @@ const Header: FC<THeaderProps> = ({ links, sticky, className, ...rest }) => {
 								{/* <Button href={toastTabLink} target="_blank">
 									Order Online
 								</Button> */}
-								<Button href="/menu" target="_blank">
+								<Button
+									href="/menu"
+									variant="secondary"
+								>
 									View Menu
 								</Button>
 							</li>
