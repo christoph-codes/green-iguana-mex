@@ -9,11 +9,11 @@ const JobPage = () => {
 	if (job) {
 		return (
 			<JobListing
-				metaData={{ title: job.title, description: job.description }}
-				title={job.title}
-				location={job.location}
-				pay={job.pay}
-				description={job.description}
+				metaData={{
+					title: job.title,
+					description: job.shortDescription,
+				}}
+				job={job}
 			/>
 		);
 	}

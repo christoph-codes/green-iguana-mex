@@ -1,4 +1,4 @@
-import { FC, ReactNode } from 'react';
+import { FC } from 'react';
 import Image from 'next/image';
 import {
 	FaCalendarAlt,
@@ -16,24 +16,23 @@ import Page from '../Page';
 import { PageProps } from '../Page/Page';
 import gimInterior from '../../assets/images/gim-interior.jpg';
 import styles from './JobListing.module.scss';
+import { IJobListing } from '../../util/joblistings';
 
 export type TJobListingProps = {
 	className?: string;
-	description?: ReactNode;
 	metaData: PageProps['metaData'];
-	title: string;
-	location: string;
-	pay?: string;
+	job: IJobListing;
 };
 
-const JobListing: FC<TJobListingProps> = ({
-	description,
-	metaData,
-	className,
-	title,
-	location,
-	pay,
-}) => {
+const JobListing: FC<TJobListingProps> = ({ metaData, className, job }) => {
+	const {
+		title,
+		shortDescription,
+		qualifications,
+		longDescription,
+		location,
+		pay,
+	} = job;
 	const perks = [
 		// {
 		// 	Icon: FaStethoscope,
@@ -92,6 +91,7 @@ const JobListing: FC<TJobListingProps> = ({
 						<strong>{pay}</strong>
 					</h4>
 				)}
+
 				<Button
 					className={styles.JobListing__apply_btn}
 					onClick={scrollToApply}
@@ -101,7 +101,22 @@ const JobListing: FC<TJobListingProps> = ({
 				</Button>
 			</Section>
 			<Section className="🔥pb-0">
-				<p className="🔥text-center">{description}</p>
+				<h3>Job Details</h3>
+				{shortDescription && <p>{shortDescription}</p>}
+				{longDescription &&
+					longDescription.map((qual, index) => (
+						<p key={index}>{qual}</p>
+					))}
+				{qualifications && (
+					<>
+						<h3>Qualificatioins</h3>
+						<ul>
+							{qualifications.map((qual, index) => (
+								<li key={index}>{qual}</li>
+							))}
+						</ul>
+					</>
+				)}
 			</Section>
 			<Section
 				title="Serving Up Fresh Opportunities! "
