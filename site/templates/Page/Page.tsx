@@ -52,9 +52,27 @@ const PageTemplate: FC<PageProps> = ({
 				<meta content="#0BAA6D" name="theme-color" />
 				<meta content="#0BAA6D" name="msapplication-TileColor" />
 				<link href="/favicon.ico" rel="shortcut icon" />
+				<link
+					href="/favicon@3x.png"
+					rel="apple-touch-icon"
+					sizes="180x180"
+				/>
+				<link
+					href="/favicon@2x.png"
+					rel="icon"
+					sizes="32x32"
+					type="image/png"
+				/>
+				<link
+					href="/favicon.png"
+					rel="icon"
+					sizes="16x16"
+					type="image/png"
+				/>
 
 				{url && <link href={canonical} rel="canonical" />}
 				<meta content="en_US" property="og:locale" />
+				{/** Facebook OG */}
 				<meta content={metaData.title} property="og:title" />
 				<meta
 					content={metaData.description}
@@ -62,8 +80,15 @@ const PageTemplate: FC<PageProps> = ({
 				/>
 				<meta content={canonical} property="og:url" />
 				<meta content="/gim-seo_image.png" property="og:image" />
-				<meta content="summary_large_image" name="twitter:card" />
 				<meta content={metaData.description} property="og:image:alt" />
+				{/** Twitter OG */}
+				<meta content="summary_large_image" name="twitter:card" />
+				{/* <meta content="@thekirkconcept" name="twitter:site" /> */}
+				<meta
+					content={metaData.description}
+					name="twitter:description"
+				/>
+				<meta content="/gim-seo_image.png" name="twitter:image" />
 			</Head>
 			<AnnouncementBar>
 				Temporarily Closed Due To Construction. Reopening at the end of
