@@ -30,8 +30,6 @@ const ContactPage: NextPage = (): any => {
 						<strong>Address:</strong>
 						<br />
 						{address}
-						<br />
-						<strong>Located in the Red Lion Hotel</strong>
 					</p>
 					<p>
 						<strong>Phone:</strong>
