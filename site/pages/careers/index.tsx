@@ -26,7 +26,7 @@ const Careers: NextPage = (): any => (
 					<Row columns={{ xs: [10, 2] }} justify="between">
 						<div className={styles.Careers__job__content}>
 							<h3>{job.title}</h3>
-							<p>{job.description}</p>
+							<p>{job.shortDescription}</p>
 						</div>
 						<div className={styles.Careers__job__cta}>
 							<Button
