@@ -117,6 +117,12 @@ const JobListing: FC<TJobListingProps> = ({ metaData, className, job }) => {
 						</ul>
 					</>
 				)}
+				<p>
+					We offer a flexible schedule, competitive pay, and
+					opportunities for growth and advancement within the company.
+					Apply now and join our team in serving delicious Mexican
+					cuisine to our customers!
+				</p>
 			</Section>
 			<Section
 				title="Serving Up Fresh Opportunities! "
