@@ -87,7 +87,7 @@ export const newMenuOptions: TMenuOption[] = [
         title: 'Step 3: Choose Your Extras',
         options: [
             {
-                title: 'Signature Sauces (All Sauces Are Mile)',
+                title: 'Signature Sauces (All Sauces Are Mild)',
                 description:
                     'Green (Roasted Tomatillo | Red (Guajillo Chile) | White (Creamy) Signature Sauce',
             },

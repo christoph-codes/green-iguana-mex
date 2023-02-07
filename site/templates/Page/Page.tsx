@@ -79,7 +79,10 @@ const PageTemplate: FC<PageProps> = ({
 					property="og:description"
 				/>
 				<meta content={canonical} property="og:url" />
-				<meta content="/gim-seo_image_new.png" property="og:image" />
+				<meta
+					content={`${canonical}/gim-seo_image_new.png`}
+					property="og:image"
+				/>
 				<meta content={metaData.description} property="og:image:alt" />
 				{/** Twitter OG */}
 				<meta content="summary_large_image" name="twitter:card" />
@@ -88,7 +91,10 @@ const PageTemplate: FC<PageProps> = ({
 					content={metaData.description}
 					name="twitter:description"
 				/>
-				<meta content="/gim-seo_image_new.png" name="twitter:image" />
+				<meta
+					content={`${canonical}/gim-seo_image_new.png`}
+					name="twitter:image"
+				/>
 			</Head>
 			<AnnouncementBar>
 				Temporarily Closed Due To Construction. Reopening at the end of
