@@ -10,8 +10,10 @@ import homeHero from '../assets/images/home_hero_2_bg.png';
 // import CategoryItem from '../components/CategoryItem/CategoryItem';
 // import specials from '../util/menu/_specials';
 // Images
-import margaritas from '../assets/images/gim_margaritas.png';
-import mangoMargarita from '../assets/images/gim_mango_marg.png';
+// import margaritas from '../assets/images/gim_margaritas.png';
+// import mangoMargarita from '../assets/images/gim_mango_marg.png';
+import meal1 from '../assets/images/gim-catering.png';
+import meal2 from '../assets/images/gim-menu.png';
 import shrimp from '../assets/images/gim_shrimp.png';
 import shreddedBeef from '../assets/images/gim_shredded_beef.png';
 // Styles
@@ -91,8 +93,8 @@ const Home: NextPage = (): any => (
 			>
 				<Image
 					className={styles.Home__gallery__item}
-					src={margaritas}
-					alt="Margaritas from Green Iguana Mexican Restaurant"
+					src={meal1}
+					alt="Taco Plate from Green Iguana Mexican Restaurant"
 				/>
 				<Image
 					className={styles.Home__gallery__item}
@@ -101,8 +103,8 @@ const Home: NextPage = (): any => (
 				/>
 				<Image
 					className={styles.Home__gallery__item}
-					src={mangoMargarita}
-					alt="Mango Margarita from Green Iguana Mexican Restaurant"
+					src={meal2}
+					alt="Nachos from Green Iguana Mexican Restaurant"
 				/>
 				<Image
 					className={styles.Home__gallery__item}
