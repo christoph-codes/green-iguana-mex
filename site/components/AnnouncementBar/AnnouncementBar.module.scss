@@ -1,9 +1,9 @@
 @use '../../styles/colors' as *;
 .AnnouncementBar {
-	background-color: $tertiary;
+	background-color: $secondary;
 	padding: 0.5rem;
 	h4 {
-		color: $white;
+		color: $grey;
 		font-size: 1rem;
 		text-align: center;
 		margin-bottom: 0;
