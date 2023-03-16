@@ -59,7 +59,7 @@ const Home: NextPage = (): any => (
 						Order Online
 					</Button>
 					<Button variant="tertiary-outline" fullWidth href="/menu">
-						View Menu
+						View New Menu
 					</Button>
 				</article>
 			</Row>
@@ -136,7 +136,11 @@ const Home: NextPage = (): any => (
 		</Section>
 
 		<Section className="🔥pt-0">
-			<Button className="🔥mx-auto" href="/menu" variant="secondary">
+			<Button
+				className="🔥mx-auto"
+				href="/menu"
+				variant="tertiary-outline"
+			>
 				View New Menu
 			</Button>
 		</Section>
