@@ -97,8 +97,8 @@ const PageTemplate: FC<PageProps> = ({
 				/>
 			</Head>
 			<AnnouncementBar>
-				Temporarily Closed Due To Construction. Reopening at the end of
-				February!
+				Now OPEN for dine-in and take-out. 250 Red Cliffs Drive #14A
+				St.George, UT 84790
 			</AnnouncementBar>
 			<Header sticky links={headerLinks} />
 			<main className={`${styles.PageTemplate} ${className}`}>

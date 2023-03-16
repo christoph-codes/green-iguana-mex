@@ -9,7 +9,7 @@ import MenuItem from '../../components/MenuItem';
 import Button from '../../components/Button';
 import partyPacks from '../../util/catering/_partyPacks';
 import styles from './CateringPage.module.scss';
-import cateringImg from '../../assets/images/gim-catering.jpg';
+import cateringImg from '../../assets/images/gim-catering.png';
 
 export type TCateringContent = {
 	size: string;

@@ -7,17 +7,18 @@ import Row from '../components/Row';
 import Button from '../components/Button';
 import PageTemplate from '../templates/Page';
 import homeHero from '../assets/images/home_hero_2_bg.png';
-// import { toastTabLink } from '../util/navLinks';
 // import CategoryItem from '../components/CategoryItem/CategoryItem';
 // import specials from '../util/menu/_specials';
 // Images
-import margaritas from '../assets/images/gim_margaritas.png';
-import mangoMargarita from '../assets/images/gim_mango_marg.png';
+// import margaritas from '../assets/images/gim_margaritas.png';
+// import mangoMargarita from '../assets/images/gim_mango_marg.png';
+import meal1 from '../assets/images/gim-catering.png';
+import meal2 from '../assets/images/gim-menu.png';
 import shrimp from '../assets/images/gim_shrimp.png';
 import shreddedBeef from '../assets/images/gim_shredded_beef.png';
 // Styles
 import styles from './home/Home.module.scss';
-import { address, hours } from '../util/content';
+import { address, hours, toastTabLink } from '../util/content';
 // import Nobr from '../components/Nobr';
 
 const Home: NextPage = (): any => (
@@ -48,16 +49,17 @@ const Home: NextPage = (): any => (
 				<article
 					className={`${styles.Home__hero__welcome_card} 🔥bg-white 🔥p-2`}
 				>
-					<h2 className="🔥text-tertiary">Reopening Soon!</h2>
+					<h2 className="🔥text-primary">Now Open!</h2>
 					<p>
-						Get ready for a whole new dining experience as Green
-						Iguana reopens in a brand new location.
+						We are now open for Dine-in and Takeout! Come visit us
+						at our new location. <br />
+						<strong>{address}</strong>
 					</p>
-					{/* <Button fullWidth href={toastTabLink} target="_blank">
+					<Button fullWidth href={toastTabLink} target="_blank">
 						Order Online
-					</Button> */}
+					</Button>
 					<Button variant="tertiary-outline" fullWidth href="/menu">
-						View Menu
+						View New Menu
 					</Button>
 				</article>
 			</Row>
@@ -78,7 +80,7 @@ const Home: NextPage = (): any => (
 						Contact: <br />
 						Phone Number: 435-628-4863
 						<br />
-						{/* <Link href={toastTabLink}>Order Online</Link> */}
+						<Link href={toastTabLink}>Order Online</Link>
 						<Link href="/menu">View Menu</Link>
 					</p>
 				</Row>
@@ -91,8 +93,8 @@ const Home: NextPage = (): any => (
 			>
 				<Image
 					className={styles.Home__gallery__item}
-					src={margaritas}
-					alt="Margaritas from Green Iguana Mexican Restaurant"
+					src={meal1}
+					alt="Taco Plate from Green Iguana Mexican Restaurant"
 				/>
 				<Image
 					className={styles.Home__gallery__item}
@@ -101,8 +103,8 @@ const Home: NextPage = (): any => (
 				/>
 				<Image
 					className={styles.Home__gallery__item}
-					src={mangoMargarita}
-					alt="Mango Margarita from Green Iguana Mexican Restaurant"
+					src={meal2}
+					alt="Nachos from Green Iguana Mexican Restaurant"
 				/>
 				<Image
 					className={styles.Home__gallery__item}
@@ -134,7 +136,11 @@ const Home: NextPage = (): any => (
 		</Section>
 
 		<Section className="🔥pt-0">
-			<Button className="🔥mx-auto" href="/menu" variant="tertiary">
+			<Button
+				className="🔥mx-auto"
+				href="/menu"
+				variant="tertiary-outline"
+			>
 				View New Menu
 			</Button>
 		</Section>
