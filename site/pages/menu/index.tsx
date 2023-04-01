@@ -2,11 +2,11 @@ import type { NextPage } from 'next';
 import PageTemplate from '../../templates/Page';
 import Section from '../../components/Section';
 import styles from './MenuPage.module.scss';
-// import Tabs from '../../components/Tabs';
-// import menu from '../../util/menu';
+import Tabs from '../../components/Tabs';
+import menu from '../../util/menu';
 import menuImg from '../../assets/images/gim-menu2.jpg';
-import { newMenuOptions } from '../../util/menu/newMenu';
-import MenuItem from '../../components/MenuItem';
+// import { newMenuOptions } from '../../util/menu/newMenu';
+// import MenuItem from '../../components/MenuItem';
 
 const MenuPage: NextPage = (): any => (
 	<PageTemplate
@@ -19,8 +19,8 @@ const MenuPage: NextPage = (): any => (
 	>
 		<Section bgImg={menuImg} className={styles.Menu__hero} />
 		<Section className="🔥pt-2 🔥pb-1">
-			{/* <Tabs data={menu} /> */}
-			<h1 className={styles.Menu__title}>
+			<Tabs data={menu} />
+			{/* <h1 className={styles.Menu__title}>
 				Menu<span>NEW!</span>
 			</h1>
 			<p className="🔥text-center 🔥py-2">
@@ -43,7 +43,7 @@ const MenuPage: NextPage = (): any => (
 						))}
 					</div>
 				</div>
-			))}
+			))} */}
 		</Section>
 	</PageTemplate>
 );
