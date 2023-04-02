@@ -7,8 +7,8 @@ import Row from '../components/Row';
 import Button from '../components/Button';
 import PageTemplate from '../templates/Page';
 import homeHero from '../assets/images/home_hero_2_bg.png';
-// import CategoryItem from '../components/CategoryItem/CategoryItem';
-// import specials from '../util/menu/_specials';
+import CategoryItem from '../components/CategoryItem/CategoryItem';
+import specials from '../util/menu/_specials';
 // Images
 // import margaritas from '../assets/images/gim_margaritas.png';
 // import mangoMargarita from '../assets/images/gim_mango_marg.png';
@@ -59,7 +59,7 @@ const Home: NextPage = (): any => (
 						Order Online
 					</Button>
 					<Button variant="tertiary-outline" fullWidth href="/menu">
-						View New Menu
+						View Menu
 					</Button>
 				</article>
 			</Row>
@@ -113,7 +113,7 @@ const Home: NextPage = (): any => (
 				/>
 			</Row>
 		</Section>
-		<Section title="New Menu" className="🔥pb-2">
+		{/* <Section title="New Menu" className="🔥pb-2">
 			<p className="🔥text-center 🔥pb-2 🔥pt-1">
 				View our new menu as things are changing to feature your
 				favorite dishes. <br />3 Easy steps to ordering to get you to
@@ -133,21 +133,21 @@ const Home: NextPage = (): any => (
 					<h2>Choose Your Extras</h2>
 				</article>
 			</div>
-		</Section>
+		</Section> */}
 
+		<CategoryItem
+			className={`${styles.Home__hero} 🔥bg-offwhite`}
+			category={specials}
+		/>
 		<Section className="🔥pt-0">
 			<Button
 				className="🔥mx-auto"
 				href="/menu"
 				variant="tertiary-outline"
 			>
-				View New Menu
+				View Menu
 			</Button>
 		</Section>
-		{/* <CategoryItem
-			className={`${styles.Home__hero} 🔥bg-offwhite`}
-			category={specials}
-		/> */}
 	</PageTemplate>
 );
 
