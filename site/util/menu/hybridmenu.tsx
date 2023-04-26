@@ -95,6 +95,89 @@ export const newMenuOptions: any[] = [
 		],
 	},
 	{
+		title: 'Entreés',
+		description: (
+			<>
+				<p>
+					<strong>Choice of 1 Meat Option Per Item</strong>
+					<br />
+					Carnitas | Cheese | Chile Verde | Shredded Beef | Shredded
+					Chicken | Sweet Pork | Ground Beef | Fajita Veggies
+					<br />
+					<strong>** Premium Meats Additional Charge **</strong>
+					<br />
+					Carne Asada | Charboiled Chicken | Shrimp | Spinach
+					Artichoke Chicken
+					<br />
+					<strong>Choice of Sauces</strong>
+					<br />
+					Green Sauce | White Sauce | Red Sauce | Tres Quesos
+				</p>
+			</>
+		),
+		options: [
+			{
+				title: 'Chimichangas',
+				price: '11.99',
+				description: (
+					<>
+						<p>Includes Rice & Beans</p>
+						<p>
+							<strong>Choice of Meat & Sauce</strong>
+							<br />
+							Deep Fried Tortilla with Cheese | Guacamole | Sour
+							Cream
+						</p>
+					</>
+				),
+			},
+			{
+				title: 'Iguana Salad',
+				price: '11.99',
+				description: (
+					<>
+						<p>
+							<strong>Choice of Meat & Dressing</strong>
+							<br />
+							Deep Fried Tortilla | Rice | Beans | Romaine Lettuce
+							| Olives | Tomatoes | Guacamole | Sour Cream |
+							Cheese
+						</p>
+					</>
+				),
+			},
+			{
+				title: 'Burritos',
+				price: '11.99',
+				description: (
+					<>
+						<p>
+							Includes Rice & Beans <br />
+							<strong>Choice of Meat & Sauce</strong>
+							<br />
+							Rice | Pico | Cheese
+						</p>
+					</>
+				),
+			},
+			{
+				title: 'Nachos',
+				price: '11.50',
+				description: (
+					<>
+						<p>
+							<strong>Choice of Meat</strong>
+							<br />
+							Fresh Tortilla Chips | Mix Cheese | Refried Beans |
+							Red Sauce | Tomatoes | Onions | Olives | Jalapeños |
+							Sour Cream | Guacamole
+						</p>
+					</>
+				),
+			},
+		],
+	},
+	{
 		title: 'Appetizers',
 		options: [
 			{
@@ -127,6 +210,101 @@ export const newMenuOptions: any[] = [
 						<br />
 						16oz |{' '}
 						<strong className="🔥text-tertiary">$8.99</strong>
+					</>
+				),
+			},
+		],
+	},
+	{
+		title: 'Iguana Combos',
+		description: (
+			<>
+				<p>Served with Rice & Beans</p>
+				<p>
+					<strong>Choice of 1 Meat Option Per Item</strong>
+					<br />
+					Carnitas | Cheese | Chile Verde | Shredded Beef | Shredded
+					Chicken | Sweet Pork | Ground Beef | Fajita Veggies
+					<br />
+					<strong>** Premium Meats Additional Charge **</strong>
+					<br />
+					Carne Asada | Charboiled Chicken | Shrimp | Spinach
+					Artichoke Chicken
+					<br />
+					<strong>Choice of Sauces</strong>
+					<br />
+					Green Sauce | White Sauce | Red Sauce | Tres Quesos
+				</p>
+				<p className="🔥text-teritary">
+					<strong>Uno $8.99 | Dos $11.25 | Tres $13.25</strong>
+				</p>
+			</>
+		),
+		options: [
+			{
+				title: 'Enchilada',
+				description: (
+					<>
+						<p>
+							<strong>Choice of Meat & Sauce</strong>
+							<br />
+							Cheese | Sour Cream
+						</p>
+					</>
+				),
+			},
+			{
+				title: 'Tostada',
+				description: (
+					<>
+						<p>
+							<strong>Choice of Meat</strong>
+							<br />
+							Beans | Lettuce | Tomatoes | Sour Cream | Cheese
+						</p>
+					</>
+				),
+			},
+			{
+				title: 'Flautas (2)',
+				description: (
+					<>
+						<p>
+							Deep Fired Flour Tortialla
+							<br />
+							<strong>Choice of</strong>
+							<br />
+							Shredded Chicken | Carnitas | Sweet Pork | Shredded
+							Beef
+							<br />
+							<strong>Also Includes:</strong> Guacamole | Sour
+							Cream | Cheese
+						</p>
+					</>
+				),
+			},
+			{
+				title: 'Tacos',
+				description: (
+					<>
+						<p>
+							Soft or Hard Shell
+							<br />
+							<strong>Choice of Meat </strong>
+							<br />
+							Lettuce | Cheese | Tomatoes
+						</p>
+					</>
+				),
+			},
+			{
+				title: 'Chile Relleno',
+				description: (
+					<>
+						<p>
+							Roasted Green Poblano Chili | Cheese | Dipped in Egg
+							Batter | Deep Fried | Smothered in Oregano Salsa
+						</p>
 					</>
 				),
 			},
