@@ -1,5 +1,5 @@
 import type { NextPage } from 'next';
-import Image from 'next/image';
+// import Image from 'next/image';
 import Link from 'next/link';
 import Container from '../components/Container';
 import Section from '../components/Section';
@@ -13,12 +13,13 @@ import hybridMenu from '../util/menu/hybridmenu';
 // Images
 // import margaritas from '../assets/images/gim_margaritas.png';
 // import mangoMargarita from '../assets/images/gim_mango_marg.png';
-import meal1 from '../assets/images/gim-catering.png';
-import meal2 from '../assets/images/gim-menu.png';
-import shrimp from '../assets/images/gim_shrimp.png';
-import shreddedBeef from '../assets/images/gim_shredded_beef.png';
+// import meal1 from '../assets/images/gim-catering.png';
+// import meal2 from '../assets/images/gim-menu.png';
+// import shrimp from '../assets/images/gim_shrimp.png';
+// import shreddedBeef from '../assets/images/gim_shredded_beef.png';
 // Styles
 import styles from './home/Home.module.scss';
+import menuStyles from './menu/MenuPage.module.scss';
 import { address, hours, toastTabLink } from '../util/content';
 import MenuItem from '../components/MenuItem/MenuItem';
 // import Nobr from '../components/Nobr';
@@ -88,7 +89,7 @@ const Home: NextPage = (): any => (
 				</Row>
 			</Container>
 		</div>
-		<Section className="🔥pb-0">
+		{/* <Section className="🔥pb-0">
 			<Row
 				columns={{ xs: [6, 6, 6, 6], md: [3, 3, 3, 3] }}
 				className={`${styles.Home__gallery}`}
@@ -114,7 +115,7 @@ const Home: NextPage = (): any => (
 					alt="Shredded Beef Plate from Green Iguana Mexican Restaurant"
 				/>
 			</Row>
-		</Section>
+		</Section> */}
 		{/* <Section title="New Menu" className="🔥pb-2">
 			<p className="🔥text-center 🔥pb-2 🔥pt-1">
 				View our new menu as things are changing to feature your
@@ -141,32 +142,34 @@ const Home: NextPage = (): any => (
 			className={`${styles.Home__hero} 🔥bg-offwhite`}
 			category={specials}
 		/> */}
-		{hybridMenu.slice(0, 5).map((step, idx) => (
-			<div key={idx} className={styles.Menu__step}>
-				<h3 className="🔥justify-center">{step.title}</h3>
-				{step.description && (
-					<div className="🔥text-center">{step.description}</div>
-				)}
-				<div className={styles.Menu__options}>
-					{step.options.map((opt: any, index: number) => (
-						<MenuItem
-							className={styles.Menu__options__option}
-							key={index}
-							title={opt.title}
-							description={opt.description}
-							price={opt.price}
-						/>
-					))}
+		<Section title="New Menu" className="🔥pb-2">
+			{hybridMenu.slice(0, 1).map((step, idx) => (
+				<div key={idx} className={menuStyles.Menu__step}>
+					<h3 className="🔥justify-center">{step.title}</h3>
+					{step.description && (
+						<div className="🔥text-center">{step.description}</div>
+					)}
+					<div className={menuStyles.Menu__options}>
+						{step.options.map((opt: any, index: number) => (
+							<MenuItem
+								className={menuStyles.Menu__options__option}
+								key={index}
+								title={opt.title}
+								description={opt.description}
+								price={opt.price}
+							/>
+						))}
+					</div>
 				</div>
-			</div>
-		))}
-		<Section className="🔥pt-0">
+			))}
+		</Section>
+		<Section className="🔥pt-2 🔥pb-1">
 			<Button
 				className="🔥mx-auto"
 				href="/menu"
 				variant="tertiary-outline"
 			>
-				View Menu
+				View Full Menu
 			</Button>
 		</Section>
 	</PageTemplate>
