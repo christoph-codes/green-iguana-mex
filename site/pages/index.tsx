@@ -7,8 +7,9 @@ import Row from '../components/Row';
 import Button from '../components/Button';
 import PageTemplate from '../templates/Page';
 import homeHero from '../assets/images/home_hero_2_bg.png';
-import CategoryItem from '../components/CategoryItem/CategoryItem';
-import specials from '../util/menu/_specials';
+// import CategoryItem from '../components/CategoryItem/CategoryItem';
+import hybridMenu from '../util/menu/hybridmenu';
+// import specials from '../util/menu/_specials';
 // Images
 // import margaritas from '../assets/images/gim_margaritas.png';
 // import mangoMargarita from '../assets/images/gim_mango_marg.png';
@@ -19,6 +20,7 @@ import shreddedBeef from '../assets/images/gim_shredded_beef.png';
 // Styles
 import styles from './home/Home.module.scss';
 import { address, hours, toastTabLink } from '../util/content';
+import MenuItem from '../components/MenuItem/MenuItem';
 // import Nobr from '../components/Nobr';
 
 const Home: NextPage = (): any => (
@@ -135,10 +137,29 @@ const Home: NextPage = (): any => (
 			</div>
 		</Section> */}
 
-		<CategoryItem
+		{/* <CategoryItem
 			className={`${styles.Home__hero} 🔥bg-offwhite`}
 			category={specials}
-		/>
+		/> */}
+		{hybridMenu.slice(0, 5).map((step, idx) => (
+			<div key={idx} className={styles.Menu__step}>
+				<h3 className="🔥justify-center">{step.title}</h3>
+				{step.description && (
+					<div className="🔥text-center">{step.description}</div>
+				)}
+				<div className={styles.Menu__options}>
+					{step.options.map((opt: any, index: number) => (
+						<MenuItem
+							className={styles.Menu__options__option}
+							key={index}
+							title={opt.title}
+							description={opt.description}
+							price={opt.price}
+						/>
+					))}
+				</div>
+			</div>
+		))}
 		<Section className="🔥pt-0">
 			<Button
 				className="🔥mx-auto"

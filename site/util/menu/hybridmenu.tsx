@@ -1,4 +1,4 @@
-const newMenuOptions: any[] = [
+export const newMenuOptions: any[] = [
 	{
 		title: 'Plato Especiales Includes',
 		description: (
