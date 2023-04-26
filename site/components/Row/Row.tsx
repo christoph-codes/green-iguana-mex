@@ -36,7 +36,7 @@ export type IColProps = {
 
 export type IRowProps = {
 	children: ReactElement<IColProps>[];
-	className?: string[];
+	className?: string;
 	columns?: TColumnSize;
 	align?: 'center' | 'end';
 	justify?: 'start' | 'end' | 'between';

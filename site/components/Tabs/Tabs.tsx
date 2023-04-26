@@ -4,19 +4,15 @@ import Row from '../Row';
 import styles from './Tabs.module.scss';
 import CategoryItem from '../CategoryItem/CategoryItem';
 
-export type TTabs = {
-	data: {
-		title: string;
-		description?: string;
-		content: ReactElement[];
-	}[];
-	rest?: any[];
-};
-
 export type TMenuGroup = {
 	title: string;
 	description?: string | ReactElement;
 	content: TMenuItemProps[];
+};
+
+export type TTabs = {
+	data: TMenuGroup[];
+	rest?: any[];
 };
 
 const Tabs: FC<TTabs> = ({ data, ...rest }) => {
