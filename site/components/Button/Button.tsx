@@ -13,9 +13,9 @@ export type TButtonProps = {
 		| 'tertiary-outline'
 		| 'inactive'
 		| 'light-outline';
-	href?: 'string';
+	href?: string;
 	fullWidth?: boolean;
-	rest?: any[];
+	target?: HTMLAnchorElement['target'];
 };
 
 const Button: FC<TButtonProps> = ({
