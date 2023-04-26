@@ -2,11 +2,11 @@ import type { NextPage } from 'next';
 import PageTemplate from '../../templates/Page';
 import Section from '../../components/Section';
 import styles from './MenuPage.module.scss';
-import Tabs from '../../components/Tabs';
-import menu from '../../util/menu';
+// import menu from '../../util/menu';
 import menuImg from '../../assets/images/gim-menu2.jpg';
 // import { newMenuOptions } from '../../util/menu/newMenu';
-// import MenuItem from '../../components/MenuItem';
+import MenuItem from '../../components/MenuItem';
+import hybridMenu from '../../util/menu/hybridmenu';
 
 const MenuPage: NextPage = (): any => (
 	<PageTemplate
@@ -19,7 +19,26 @@ const MenuPage: NextPage = (): any => (
 	>
 		<Section bgImg={menuImg} className={styles.Menu__hero} />
 		<Section className="🔥pt-2 🔥pb-1">
-			<Tabs data={menu} />
+			{hybridMenu.map((step, idx) => (
+				<div key={idx} className={styles.Menu__step}>
+					<h3 className="🔥justify-center">{step.title}</h3>
+					{step.description && (
+						<div className="🔥text-center">{step.description}</div>
+					)}
+					<div className={styles.Menu__options}>
+						{step.options.map((opt: any, index: number) => (
+							<MenuItem
+								className={styles.Menu__options__option}
+								key={index}
+								title={opt.title}
+								description={opt.description}
+								price={opt.price}
+							/>
+						))}
+					</div>
+				</div>
+			))}
+			{/* <Tabs data={menu} /> */}
 			{/* <h1 className={styles.Menu__title}>
 				Menu<span>NEW!</span>
 			</h1>

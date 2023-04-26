@@ -15,7 +15,7 @@ export type TDesktopColumns =
 	| 11
 	| 12
 	| 'auto';
-export type TMobileColumns = 1 | 2 | 3 | 4 | 5 | 6 | 'auto';
+export type TMobileColumns = 1 | 2 | 3 | 4 | 5 | 6 | 12 | 'auto';
 
 export type TColumnSize = {
 	xs?: TMobileColumns[];
@@ -36,7 +36,7 @@ export type IColProps = {
 
 export type IRowProps = {
 	children: ReactElement<IColProps>[];
-	className?: string[];
+	className?: string;
 	columns?: TColumnSize;
 	align?: 'center' | 'end';
 	justify?: 'start' | 'end' | 'between';
