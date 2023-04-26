@@ -3,7 +3,7 @@ import Image from 'next/image';
 import PageTemplate from '../../templates/Page';
 import Section from '../../components/Section';
 import styles from './LocationsPage.module.scss';
-import greenIguanaBuilding from '../../assets/images/green-iguana-building.jpg';
+import greenIguanaBuilding from '../../assets/images/gim_new_building.jpg';
 import Row from '../../components/Row';
 import { address, hours } from '../../util/content';
 
@@ -37,12 +37,12 @@ const LocationsPage: NextPage = (): any => (
 						className={`${styles.Locations__details__card} 🔥text-center`}
 					>
 						<Image
-							className="🔥mb-2"
 							src={greenIguanaBuilding}
 							alt="Green Iguana Exterior of the building"
 							placeholder="blur"
+							objectFit="contain"
 						/>
-						<h4>
+						<h4 className="🔥mt-2">
 							Green Iguana
 							<br /> Mexican Restaurant
 						</h4>
