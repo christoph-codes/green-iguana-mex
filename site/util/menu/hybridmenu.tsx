@@ -374,11 +374,11 @@ export const newMenuOptions: any[] = [
 			},
 			{
 				title: 'Guacamole',
-				price: '1.25',
+				price: '1.99',
 			},
 			{
 				title: 'Sour Cream',
-				price: '1.25',
+				price: '1.49',
 			},
 			{
 				title: 'Salsa 3oz',
