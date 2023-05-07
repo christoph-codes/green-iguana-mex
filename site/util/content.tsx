@@ -10,7 +10,9 @@ export const address = (
 
 export const hours = (
 	<>
-		Monday-Saturday @ 11am-9:00PM
+		Monday-Thursday @ 11am-8:00PM
+		<br />
+		Friday-Saturday @ 11am-9:00PM
 		<br />
 		Sunday Closed
 	</>
