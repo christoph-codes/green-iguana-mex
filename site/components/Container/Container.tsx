@@ -3,7 +3,7 @@ import styles from './Container.module.scss';
 
 export type IContainerProps = {
 	children: ReactNode;
-	className?: string[];
+	className?: string;
 	rest?: any[];
 };
 
