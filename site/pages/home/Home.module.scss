@@ -47,6 +47,16 @@
 		* {
 			color: $white;
 		}
+		&__ctaLinks {
+			display: flex;
+			gap: 8px;
+			a {
+				&:first-child {
+					border-right: solid 2px #ffffff;
+					padding-right: 8px;
+				}
+			}
+		}
 	}
 	&__gallery {
 		display: flex;

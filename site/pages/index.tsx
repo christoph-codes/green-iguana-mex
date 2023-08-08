@@ -86,8 +86,10 @@ const Home: NextPage = (): any => (
 						Contact: <br />
 						Phone Number: 435-628-4863
 						<br />
-						<Link href={toastTabLink}>Order Online</Link>
-						<Link href="/menu">View Menu</Link>
+						<span className={styles.Home__actions__ctaLinks}>
+							<Link href={toastTabLink}>Order Online</Link>
+							<Link href="/menu">View Menu</Link>
+						</span>
 					</p>
 				</Row>
 			</Container>
