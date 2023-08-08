@@ -8,6 +8,7 @@ import iguana from '../../assets/images/iguana.svg';
 import { headerLinks, footerLinks } from '../../util/navLinks';
 import styles from './Page.module.scss';
 import AnnouncementBar from '../../components/AnnouncementBar/AnnouncementBar';
+import { THeaderProps } from '../../components/Header/Header';
 
 export type PageProps = {
 	className?: string;
@@ -97,10 +98,10 @@ const PageTemplate: FC<PageProps> = ({
 				/>
 			</Head>
 			<AnnouncementBar>
-				Now OPEN for dine-in and take-out. 250 Red Cliffs Drive #14A
-				St.George, UT 84790
+				Now OPEN Sundays for dine-in and take-out. 250 Red Cliffs Drive
+				#14A St.George, UT 84790
 			</AnnouncementBar>
-			<Header sticky links={headerLinks} />
+			<Header sticky links={headerLinks as THeaderProps['links']} />
 			<main className={`${styles.PageTemplate} ${className}`}>
 				{children}
 			</main>
