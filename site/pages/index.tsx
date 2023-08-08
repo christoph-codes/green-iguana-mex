@@ -1,5 +1,4 @@
 import type { NextPage } from 'next';
-// import Image from 'next/image';
 import Link from 'next/link';
 import Container from '../components/Container';
 import Section from '../components/Section';
@@ -10,6 +9,7 @@ import homeHero from '../assets/images/home_hero_2_bg.png';
 // import CategoryItem from '../components/CategoryItem/CategoryItem';
 import hybridMenu from '../util/menu/hybridmenu';
 // import specials from '../util/menu/_specials';
+
 // Images
 // import margaritas from '../assets/images/gim_margaritas.png';
 // import mangoMargarita from '../assets/images/gim_mango_marg.png';
@@ -17,6 +17,9 @@ import hybridMenu from '../util/menu/hybridmenu';
 // import meal2 from '../assets/images/gim-menu.png';
 // import shrimp from '../assets/images/gim_shrimp.png';
 // import shreddedBeef from '../assets/images/gim_shredded_beef.png';
+// import plate1 from '../assets/images/plate1.jpg';
+// import plate2 from '../assets/images/plate2.jpg';
+
 // Styles
 import styles from './home/Home.module.scss';
 import menuStyles from './menu/MenuPage.module.scss';
@@ -89,33 +92,36 @@ const Home: NextPage = (): any => (
 				</Row>
 			</Container>
 		</div>
-		{/* <Section className="🔥pb-0">
+		<Section className="🔥pb-0">
 			<Row
-				columns={{ xs: [6, 6, 6, 6], md: [3, 3, 3, 3] }}
+				columns={{ xs: [12, 12, 12, 12], md: [3, 3, 3, 3] }}
 				className={`${styles.Home__gallery}`}
 			>
-				<Image
+				<img
 					className={styles.Home__gallery__item}
-					src={meal1}
+					src="/plate2.jpg"
 					alt="Taco Plate from Green Iguana Mexican Restaurant"
 				/>
-				<Image
+
+				<img
 					className={styles.Home__gallery__item}
-					src={shrimp}
-					alt="Shrimp Plate from Green Iguana Mexican Restaurant"
+					src="../plate1.jpg"
+					alt="Enchilada Plate from Green Iguana Mexican Restaurant"
 				/>
-				<Image
+
+				<img
 					className={styles.Home__gallery__item}
-					src={meal2}
-					alt="Nachos from Green Iguana Mexican Restaurant"
+					src="/plate3.jpg"
+					alt="Chimichanga Plate from Green Iguana Mexican Restaurant"
 				/>
-				<Image
+
+				<img
 					className={styles.Home__gallery__item}
-					src={shreddedBeef}
-					alt="Shredded Beef Plate from Green Iguana Mexican Restaurant"
+					src="/plate4.jpg"
+					alt="Enchilada Plate with pepppers from Green Iguana Mexican Restaurant"
 				/>
 			</Row>
-		</Section> */}
+		</Section>
 		{/* <Section title="New Menu" className="🔥pb-2">
 			<p className="🔥text-center 🔥pb-2 🔥pt-1">
 				View our new menu as things are changing to feature your
@@ -142,10 +148,10 @@ const Home: NextPage = (): any => (
 			className={`${styles.Home__hero} 🔥bg-offwhite`}
 			category={specials}
 		/> */}
-		<Section title="New Menu" className="🔥pb-2">
+		<Section className="🔥pb-0">
 			{hybridMenu.slice(0, 1).map((step, idx) => (
 				<div key={idx} className={menuStyles.Menu__step}>
-					<h3 className="🔥justify-center">{step.title}</h3>
+					<h3 className="🔥text-center">{step.title}</h3>
 					{step.description && (
 						<div className="🔥text-center">{step.description}</div>
 					)}
@@ -163,7 +169,7 @@ const Home: NextPage = (): any => (
 				</div>
 			))}
 		</Section>
-		<Section className="🔥pt-2 🔥pb-1">
+		<Section className="🔥pt-0 🔥pb-1">
 			<Button
 				className="🔥mx-auto"
 				href="/menu"
